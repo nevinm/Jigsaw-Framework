@@ -1,0 +1,13 @@
+/* data.customers - MyItems */
+#myitems-supplier-title {
+  background-image: url(images/users.png);
+  background-position: 3px center;
+  background-repeat: no-repeat;
+  padding: 3px 3px 3px 25px;
+  -moz-background-size: 22px auto;
+  -o-background-size: 22px auto;
+  -webkit-background-size: 22px auto;
+  background-size: 22px auto;
+  background-color: transparent;
+  border: none;
+}

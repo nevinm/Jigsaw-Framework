@@ -1,0 +1,82 @@
+﻿@model Jigsaw.Models.LoginModel
+
+@{
+    Layout = null;
+}
+
+<div class="">
+    <form class="smart-form client-form" id="login-form" action="index.html" novalidate="novalidate" data-bind="submit: submitForm, css: { processing: processingForm }">
+        @Html.AntiForgeryToken()
+
+        <div class="well modal-header">
+            <header>
+                Sign In
+            </header>
+        </div>
+
+        <div class="modal-body">
+            <fieldset>
+                <section>
+                    <label class="label">E-mail</label>
+                    <label class="input">
+                        <i class="icon-append fa fa-user"></i>
+                        <input id="UserName" type="text" value="" name="UserName" required data-bind="value: user">
+                        <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter email address/username</b>
+                    </label>
+                </section>
+                <section>
+                    <label class="label">Password</label>
+                    <label class="input">
+                        <i class="icon-append fa fa-lock"></i>
+                        <input id="Password" type="password" name="Password" data-bind="value: password, capsLockWarning: {}">
+                        <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b>
+                    </label>
+                </section>
+                <section>
+                    <label class="checkbox">
+                        <input id="RememberMe" type="checkbox" value="true" name="RememberMe">
+                        <i></i>Stay signed in
+                    </label>
+                </section>
+            </fieldset>
+        </div>
+
+        <div class="well modal-footer">
+            <footer>
+                <button class="btn btn-primary" type="submit" data-bind="enable: !processingForm()">
+                    Sign in
+                </button>
+            </footer>
+        </div>
+
+    </form>
+</div>
+
+
+<!--<section id="login-form">
+    <div data-bind="messageQueue: messageQueue"></div>
+
+    <form action="" data-bind="submit: submitForm, css: { processing: processingForm }">
+        
+        <fieldset>
+            <legend>Log in Form</legend>
+            <ol>
+                <li>
+                    <label for="UserName">User name</label>
+                    <input id="UserName" type="text" value="" name="UserName" required data-bind="value: user">
+                </li>
+                <li>
+                    <label for="Password">Password</label>
+                    <input id="Password" type="password" name="Password" required data-bind="value: password, capsLockWarning: {}">
+                </li>
+                <li>
+                    <input id="RememberMe" type="checkbox" value="true" name="RememberMe">
+                    <label class="checkbox" for="RememberMe">Remember me?</label>
+                </li>
+            </ol>
+
+            <input type="submit" value="Log in" data-bind="enable: !processingForm()" />
+        </fieldset>
+    </form>
+
+</section>-->

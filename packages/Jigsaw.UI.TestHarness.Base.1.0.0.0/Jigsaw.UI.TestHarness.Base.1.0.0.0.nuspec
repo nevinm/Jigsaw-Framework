@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Jigsaw.UI.TestHarness.Base</id>
+    <version>1.0.0.0</version>
+    <title>Jigsaw.UI.TestHarness.Base</title>
+    <authors>QBurst</authors>
+    <owners>QBurst</owners>
+    <licenseUrl>http://www.google.com</licenseUrl>
+    <projectUrl>http://www.google.com</projectUrl>
+    <iconUrl>http://www.google.com</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Jigsaw.UI.TestHarness.Base</description>
+    <releaseNotes />
+    <copyright>Copyright 2015</copyright>
+  </metadata>
+</package>

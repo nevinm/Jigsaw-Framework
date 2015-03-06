@@ -1,0 +1,21 @@
+﻿
+<%
+/* interpolate the title string with the track length */
+var titleText = "'" + rc.title.replace('{0}', "' + tracks().length + '") + "'";
+%>
+
+<div class="track-summary" data-bind="visible: tracks().length, var: { collapsed: ko.observable(<%= !!rc.collapsed %>) }">
+    <div class="header">
+        <span data-bind="text: <%= titleText %>"></span>
+        <div class="extra-buttons" >
+            <span class="up-down" data-bind="checkbox: collapsed"></span>
+        </div>
+    </div>
+
+    <div class="track-list" data-bind="foreach: tracks, visible: !collapsed() ">
+        <div class="track-item" data-bind="html: message, click: navigate"></div>
+    </div>
+</div>
+
+
+

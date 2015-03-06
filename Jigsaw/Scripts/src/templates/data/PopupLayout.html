@@ -1,0 +1,59 @@
+﻿<div id="popupLayout" data-bind="markZIndexBase: 1">
+        <div class="modal-body">
+            <div class="ribbon">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="content-slide">
+                            <div class="ribbon-tab">
+                                <div class="ribbon-section">
+                                    <span data-bind="visible: !isReadOnly()">
+                                        <a class="btn btn-default" data-bind="qclick: save, keyTips: { key : 'VS' }">
+                                            <img src="images/save.png" />
+                                            <p>Save</p>
+                                        </a>
+                                        <a class="btn btn-default" data-bind="qclick: saveAndClose, keyTips: { key : 'VX' }">
+                                            <img src="images/save-close.png" />
+                                            <p>Save + Close</p>
+                                        </a>
+                                    </span>
+
+                                    <a class="btn btn-default" data-bind="qclick: close, keyTips: { key : 'VC' }">
+                                        <img src="images/cancel.png" />
+                                        <p>Close</p>
+                                    </a>
+
+                                    <span class="section-title">Save+Close</span>
+                                </div>
+                                <div class="ribbon-section-sep"></div>
+                                <!-- ko foreach: customCommands.storage -->
+                                <div class="ribbon-section">
+                                    <div data-bind="foreach: storage">
+                                        <a class="ribbon-button ribbon-button-large" data-bind="click: content " href="#">
+                                            <img data-bind="attr: { src: imageUrl }" />
+                                            <p data-bind="html: text"></p>
+                                        </a>
+                                    </div>
+
+                                    <span class="section-title" data-bind="text: text"></span>
+                                </div>
+                                <div class="ribbon-section-sep"></div>
+                                <!-- /ko -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-bind="markErrorCollection: {}">
+                <div data-bind="validationSummary: {}"></div>
+
+                <div data-bind="messageQueue: messageQueue"></div>
+
+                <div id="window-content" class="data-module" data-bind="markReadOnlyTree: isReadOnly">
+                    <%= rc.renderBody %>
+                </div>
+            </div>
+
+        </div>
+
+</div>

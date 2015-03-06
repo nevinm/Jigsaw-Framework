@@ -1,0 +1,10 @@
+﻿/* data - Customers Main*/
+
+@import "../mixins";
+
+
+.customer-active-record .expanded-content {
+    height: 100px;
+    overflow-y: auto;
+}
+

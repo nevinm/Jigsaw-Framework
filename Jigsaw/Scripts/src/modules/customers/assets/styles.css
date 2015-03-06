@@ -1,0 +1,16 @@
+/* data - Customers Main*/
+#viewLayout-content {
+  /*header {
+        .background-image(url('images/users.png'), 22px, left, 3px);
+        margin: 4px;
+    }*/
+}
+#viewLayout-content .jarviswidget div[role="content"] > div {
+  margin-top: -15px;
+}
+#viewLayout-content .jarviswidget #advanced-search-container {
+  margin-top: 5px;
+}
+.k-pane.viewbar-right {
+  overflow-y: hidden;
+}

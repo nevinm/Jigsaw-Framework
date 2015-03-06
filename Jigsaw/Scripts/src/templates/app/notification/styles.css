@@ -1,0 +1,78 @@
+/* app - notification */
+.quick-start .notification {
+  background-image: url(images/local-notifications.png);
+  background-position: 2px center;
+  background-repeat: no-repeat;
+  padding: 2px 2px 2px 22px;
+  -moz-background-size: 20px auto;
+  -o-background-size: 20px auto;
+  -webkit-background-size: 20px auto;
+  background-size: 20px auto;
+  background-color: transparent;
+  margin-top: 5px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.quick-start .notification.global {
+  background-image: url(images/global-notifications.png);
+  background-position: 2px center;
+  background-repeat: no-repeat;
+  padding: 2px 2px 2px 22px;
+  -moz-background-size: 20px auto;
+  -o-background-size: 20px auto;
+  -webkit-background-size: 20px auto;
+  background-size: 20px auto;
+  background-color: transparent;
+}
+.quick-start .notification .notification-count {
+  background-color: #FF0000;
+  border: 1px solid #000000;
+  border-radius: 7px 7px 7px 7px;
+  color: #FFFFFF;
+  display: inline;
+  font-weight: bold;
+  left: -5px;
+  padding: 0 3px;
+  position: relative;
+  right: 0;
+  top: -8px;
+}
+.notification-list .user-name {
+  color: green;
+  font-weight: bold;
+}
+.notification-list .date {
+  color: gray;
+  margin-left: 5px;
+  font-size: 80%;
+  margin-top: 5px;
+  margin-bottom: 1px;
+}
+#ribbon-bar .date {
+  float: right;
+}
+#ribbon-bar .k-tabstrip > .k-content:nth-child(2) .ribbon-section:nth-last-child(2) {
+  /* this makes the ribbon notification panel to cover all remaining space in
+        in the ribbon bar, it's assumed that the panel is on the last ribbon-section */
+  float: none;
+  overflow: hidden;
+}
+#tabStrip .swiper-wrapper .swiper-slide:first-child .content-slide .ribbon-tab .ribbon-section:nth-last-child(2) {
+  /* this makes the ribbon notification panel to cover all remaining space in
+                   in the ribbon bar, it's assumed that the panel is on the last ribbon-section 
+                float: none;
+                overflow: hidden;*/
+  width: 250px;
+  /*.notification-list {
+                    width: 90%;
+                }*/
+}
+.ribbon .notification-list {
+  height: 60px;
+}
+.ribbon .collapsed .notification-list {
+  height: 10px;
+}
+nav ul li .notification a {
+  padding: 0 !important;
+}

@@ -1,0 +1,41 @@
+﻿div.ceToolBar input,table.ceTime input,table.ceTime select,span.ceSaveButton,span.ceDeleteButton,span.ceRulesButton{font-family:Tahoma, Arial;font-size:12px}
+div.ceHelp,input.ceNameBox,input.ceDescriptionBox{color:#444;text-shadow:0 1px 0 rgba(200, 200, 200, 1)}
+table.ceHeader,td.ceDays{font-family:Tahoma,Geneva,sans-serif}
+span.ceFlow,div.ceToolBar,span.ceClause,span.ceOperator,span.ceParenthesis,span.ceNewLine{color:#000}
+span.ceSaveButton{color:#3C6E21}
+span.ceField,span.ceAction{color:#3D751D}
+span.ceDeleteButton{color:#C00}
+input.ceNameBoxDefault,input.ceDescriptionBoxDefault{color:#B1B1B1}
+td.ceDays{font-size:9px;color:#C2DBB4}
+td.ceRollover,table.ceHeader,span.ceWarn{color:#FFF}
+span.ceValue,div.ceError,input.ceError,span.ceEmpty{color:#C94604}
+table.ceCal,table.ceTime,div.ceMenu,div.ceToolBar input,span:hover.ceSaveButton,span:hover.ceDeleteButton,span:hover.ceRulesButton{background-color:#FFF}
+span.ceHighlight{background-color:#FFF34D}
+span.ceWarn{background-color:#F00;background:-webkit-gradient(linear,left top,left bottom,from(#FF7575),to(#F00));background:-moz-linear-gradient(top,#FF7575,#F00)}
+td.ceSelected{background-color:#C7DEBD}
+span.ceCurrent{background-color:#BDC9B7}
+td.ceToday{background-color:#FFB894}
+div.ceRule{border:solid 1px #D8E3D3;background-color:#E8F0E4;background:-webkit-gradient(linear,left top,left bottom,from(#DFF0D8),to(#FFFFFF));background:-moz-linear-gradient(top,#DFF0D8,#FFFFFF);padding:10px}
+div.ceToolBar{border:solid 1px #B3D4A1;background-color:#C1DBB2;background:-webkit-gradient(linear,left top,left bottom,from(#D0E6C3),to(#A6CF8F));background:-moz-linear-gradient(top,#D0E6C3,#A6CF8F);text-shadow:0 1px 0 rgba(234, 234, 234, 1);margin-bottom:7px;padding:3px 6px;white-space:nowrap}
+td.ceRollover,table.ceHeader{background-color:#66944D;background:-webkit-gradient(linear,left top,left bottom,from(#97C47E),to(#66944D));background:-moz-linear-gradient(top,#97C47E,#66944D)}
+div.ceRule,div.ceToolBar{-webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px}
+table.ceCal,table.ceTime,div.ceMenu,div.ceToolBar input,span.ceSaveButton,span.ceDeleteButton,span.ceRulesButton{-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px}
+table.ceHeader,td.ceToday,td.ceRollover,td.ceSelected,span.ceFlow,span.ceField,span.ceAction,span.ceValue,span.ceClause,span.ceOperator,span.ceParenthesis,span.ceTab,span.ceNewLine{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
+span.ceFlow,span.ceAction,span.ceField,table.ceHeader,td.ceDays,span.ceSaveButton,span.ceDeleteButton,span.ceRulesButton{font-weight:bold}
+div.ceHelp{font-size:11px;padding:0 0 8px 0}
+td.ceDay,td.ceToday,td.ceRollover,td.ceDays,td.ceSelected,div.ceHelp{text-align:center}
+div.ceToolBar table td,div.ceMenu table td,table.ceCal table td,table.ceTime table td{vertical-align:middle}
+div.ceMenu table,div.ceMenu table td,div.ceRule span,div.ceToolBar table,div.ceToolBar table td,div.ceToolBar input,table.ceCal table,table.ceCal table td,table.ceTime table,table.ceTime table td{border:0}
+table.ceCal,table.ceTime,div.ceMenu{border:solid 1px #CDCDCD}
+div.ceCursorOuter{border-top:solid 1px #000;border-bottom:solid 1px #000}
+div.ceCursorInner{border-left:solid 1px #000}
+table.ceCal,table.ceTime,div.ceMenu{-moz-box-shadow:2px 2px 4px #ADADAD;-webkit-box-shadow:2px 2px 4px #ADADAD;box-shadow:2px 2px 4px #ADADAD}
+input.ceNameBox,input.ceNameBoxDefault{width:100px}
+input.ceDescriptionBox,input.ceDescriptionBoxDefault{width:170px;margin-left:4px;margin-right:4px}
+div.ceToolBar table,div.ceToolBar table td{padding:0}
+div.ceMenu table td{padding:2px}
+table.ceCal{padding:1px}
+div.ceToolBar input{padding:2px 6px}
+td.ceDay,td.ceToday,td.ceRollover,td.ceDays,td.ceSelected,span:hover.ceSaveButton,span:hover.ceDeleteButton,span:hover.ceRulesButton,span.ceSaveButton,span.ceDeleteButton,span.ceRulesButton{padding:2px 4px}
+span:hover.ceSaveButton,span:hover.ceDeleteButton{cursor:pointer}
+td.ceDay,td.ceToday,td.ceRollover,td.ceDays,td.ceSelected,div.ceToolBar,span.ceFlow,span.ceField,span.ceAction,span.ceClause,span.ceOperator,span.ceParenthesis,span.ceTab,span.ceNewLine,span.ceValue,div.ceHelp{cursor:default}

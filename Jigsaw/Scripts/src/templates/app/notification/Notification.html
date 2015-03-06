@@ -1,0 +1,29 @@
+﻿<!-- Notification quick start template -->
+<div class="dropdown">
+    <a class="btn btn-link btn-sm" data-toggle="dropdown"  data-bind="keyTipsGroup : { keyStartWith: 'Q', group: 'quick-notification-summary'}" href="#">
+        <span class="notification" data-bind="css: { global: isGlobal }">
+            <span class="notification-count" data-bind="text: errorCount() + successCount() + warningCount()">
+            </span>
+            <span class="caret"> </span>
+        </span>
+    </a>
+
+    <ul class="dropdown-menu">
+        <li>
+            <span class="label label-default">Quick Notification Summary </span>
+        </li>
+
+        <li>
+            <a href="#" data-bind="click: showNotificationsClick(2), keyTips : { parentGroup: 'quick-notification-summary' }"><span data-bind="text: errorCount"></span> Errors</a>
+        </li>
+        <li>
+            <a href="#" data-bind="click: showNotificationsClick(0), keyTips : { parentGroup: 'quick-notification-summary' }"><span data-bind="text: successCount"></span> Successful actions</a>
+        </li>
+        <li>
+            <a href="#" data-bind="click: showNotificationsClick(1), keyTips : { parentGroup: 'quick-notification-summary' }"><span data-bind="text: warningCount"></span> Warnings</a>
+        </li>
+    </ul>
+</div>
+
+
+

@@ -1,0 +1,168 @@
+﻿
+.all-space(@left: 0, @top: 0, @right:0, @bottom: 0) {
+	bottom: @bottom;
+    left: @left;
+    position: absolute;
+    right: @right;
+    top: @top;
+}
+
+.background-image(@url, @size, left, @pad: 2px) {
+    background-image: @url;
+    background-position: @pad center;
+    background-repeat: no-repeat;
+    padding: @pad @pad @pad @size+@pad;
+
+    -moz-background-size: @size auto;
+    -o-background-size: @size auto;
+    -webkit-background-size: @size auto;
+    background-size: @size auto;
+    background-color: transparent;
+}
+
+.transparent-background-image(@url, @size, @opacity, left, @pad: 2px) {
+    &:before {
+        content: "";
+        .background-image(@url, @size, left, @pad);
+        opacity: @opacity;
+        z-index: -1;
+    }
+
+}
+
+.clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.transform(@args) {
+    -moz-transform: @args;
+    -ms-transform: @args;
+    -o-transform: @args;
+    -webkit-transform: @args;
+    transform: @args;
+}
+.rotate(@degrees) {
+  -webkit-transform: rotate(@degrees);
+     -moz-transform: rotate(@degrees);
+      -ms-transform: rotate(@degrees);
+       -o-transform: rotate(@degrees);
+          transform: rotate(@degrees);
+}
+.translate(@x, @y) {
+  -webkit-transform: translate(@x, @y);
+     -moz-transform: translate(@x, @y);
+      -ms-transform: translate(@x, @y);
+       -o-transform: translate(@x, @y);
+          transform: translate(@x, @y);
+}
+.transform-origin(@args) {
+    -webkit-transform-origin: @args;
+    -moz-transform-origin: @args;
+    -o-transform-origin: @args;
+    transform-origin: @args;
+}
+
+
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+
+.field-set(@labelWidth) {
+    float: left;
+    margin-top: 10px;
+
+    header {
+        font-weight: bold;
+        margin-bottom: 2px;
+        margin-left: @labelWidth/4;
+        display: inline-block;
+    }
+
+     /*clear after last child*/
+    &:last-child {
+        .clearfix();
+    }
+
+    &:nth-child(2n+1) {
+        /*ensure two columns*/
+        clear: both;
+    }
+
+    &:first-child{
+        clear: none;
+    }
+
+    & > div {
+        margin-bottom: 2px;
+    }
+
+    label {
+        /*font-size: 13px;*/
+        line-height: 18px;
+        padding-top: 6px;
+        text-align: right;
+        width: @labelWidth;
+        display: inline-block;
+        /*leave some space for the * mark, if any*/
+        margin-right: 0.3em;
+    }
+
+    .required-star {
+        color: red;
+        margin-left: -0.2em;
+        margin-right: -0.2em;
+        font-weight: bold;
+    }
+
+    input, .input {
+        display: inline-block;
+        min-width: 180px;
+    }
+
+    .input {
+        width: 180px;
+        margin-bottom: -10px;
+        margin-top: 8px;
+    }
+
+    .k-autocomplete {
+        min-width: 190px;
+    }
+
+    .side-message {
+        transition: margin-top linear 0.2s;
+        margin-left: @labelWidth;
+        display: block;
+        visibility: hidden;
+        position: absolute;
+        margin-top: 0px;
+        max-width: 300px;
+
+        .k-callout {
+            left: 15px;
+        }
+    }
+
+    *:focus ~ .side-message {
+        visibility: visible;
+        z-index: 1001;
+        margin-top: 5px;
+    }
+
+    *:hover ~ .side-message {
+        visibility: visible;
+        z-index: 2002;
+        margin-top: 5px;
+    }
+}

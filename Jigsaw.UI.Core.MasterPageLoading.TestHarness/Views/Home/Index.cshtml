@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Test";
+}
+
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<div id="content-div">
+    <div id="progress-bar-container">
+        <div class="header">
+            <div class="title">Jigsaw</div>
+            <div class="subtitle">Overall Progress</div>
+            <div class="pgbar">
+                <div class="progress progress-striped">
+                    <div id='overall-progress' class="progress-bar bg-color-greenLight" aria-valuetransitiongoal="0" style="width: 0%;" aria-valuenow="0">100%</div>
+                </div>
+            </div>
+        </div>
+        <div class="statusContainer">
+            <span id="fileLoadingStatus" class="status">Loading Resources . .</span>
+            <span class="fileNameLoading" id="finalStatus">Completed loading.</span>
+        </div>
+    </div>
+</div>

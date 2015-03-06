@@ -1,0 +1,46 @@
+﻿<div data-bind="<%= rc.throttle? 'throttledWith': 'with'%>: item">
+    <div class="smart-form">
+        <div class="tabs" data-bind="tabstripErrorTunnel:{}">
+            <ul class="nav nav-tabs" data-bind="htmlTunnel : {id : 'viewbar-tabs', end: 'entrance'}">
+                <li class="active">
+                    <a data-toggle="tab" href="#tab-r1" data-bind="keyTipsGroup: { key : 'VD', group : 'customer-details'}">
+                        <i class="fa fa-user nav-fa-issue"></i>
+                        <span class="hidden-mobile hidden-tablet">Details</span>
+                    </a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#tab-r2" data-bind="keyTipsGroup: { key : 'VH', group : 'customer-others'}">
+                        <i class="fa fa-info nav-fa-issue"></i>
+                        <span class="hidden-mobile hidden-tablet">Others</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="tab-r1" class="tab-pane active">
+                    <div class="field-set">
+                        <header>Customer details</header>
+                        <div data-bind="field: ContactName, focus: 2000"></div>
+                        <div data-bind="field: ContactTitle"></div>
+                        <div data-bind="field: CompanyName"></div>
+                        <div data-bind="field: Phone"></div>
+                        <div data-bind="field: Fax"></div>
+                    </div>
+                    <div class="field-set">
+                        <header>Residence</header>
+                        <div data-bind="field: City"></div>
+                        <div data-bind="field: Address"></div>
+                        <div data-bind="field: PostalCode"></div>
+                    </div>
+                </div>
+
+                <div id="tab-r2" class="tab-pane fade">
+                    <div class="field-set">
+                        <header>Other</header>
+                        <div data-bind="field: CustomerID"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

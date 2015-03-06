@@ -1,0 +1,23 @@
+﻿
+<div class="customer-active-record" data-bind="resizeWhen: queryFilter.parameters,
+                                               with: queryFilter.parameters().length && queryFilter.parameters()[0]">
+    <img class="float-left square40" src="images/users.png" />
+    <div class="message-item active-record" data-bind="var: { collapsed: ko.observable(true) }">
+        <div class="header">
+            <span data-bind="text: ContactName"></span>
+            <div class="float-right">
+                <span class="pin-unpin" data-bind="checkbox: collapsed"></span>
+                <a data-bind="click: function() { $parent.queryFilter.clear() }">
+                    <span class="k-icon k-i-close" style="vertical-align: baseline"></span>
+                </a>
+            </div>
+        </div>
+        <div data-bind="visible: collapsed()">
+            <span data-bind="text: ContactName"></span>
+        </div>
+        <div class="expanded-content" data-bind="visible: !collapsed()">
+            <%= rc.controlSummary %>
+        </div>
+
+    </div>
+</div>

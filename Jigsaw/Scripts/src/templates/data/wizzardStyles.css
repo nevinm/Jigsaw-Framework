@@ -1,0 +1,30 @@
+/* data - wizzard styles */
+/* Wizzard styles */
+.wizzard .modal-header i {
+  margin-right: 5px;
+}
+.wizzard .tab-headers {
+  cursor: pointer;
+  width: 180px;
+  float: left;
+  position: absolute;
+}
+.wizzard .tab-headers .tab-header img {
+  height: 20px;
+  margin: 0 0 -3px 0;
+}
+.wizzard .tab-help {
+  float: left;
+  clear: both;
+  width: 170px;
+  position: absolute;
+  bottom: 0;
+}
+.wizzard .tab-help h2 img {
+  display: none;
+}
+.wizzard .wizzard-content {
+  margin-left: 180px;
+  height: 300px;
+  overflow-y: auto;
+}

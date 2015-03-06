@@ -1,0 +1,8 @@
+﻿
+<div>
+    <div data-bind="markReadOnlyTree: true">
+        <div data-bind="markErrorCollection: {}">
+            <% _.each(rc.tabs, function(tab) { print(tab.content) }); %>
+        </div>
+    </div>
+</div>

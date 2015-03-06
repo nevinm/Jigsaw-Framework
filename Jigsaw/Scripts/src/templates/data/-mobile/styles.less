@@ -1,0 +1,41 @@
+﻿
+@import "../styles.less";
+
+.save-buttons {
+    position: absolute;
+    right: 0;
+
+    & + div {
+        padding-top: 3px;
+    }
+}
+
+#viewLayout-viewbar {
+    .grid-selected-pointer {
+        background: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-top-color: transparent;
+        border-width: 40px 40px 40px 0;
+        //left: -40px;
+        top: 45%;
+        z-index: 24;
+        padding: 0;
+
+        position: fixed;
+        margin-left: -38px;
+    }
+
+    &.viewbar-collapsed .grid-selected-pointer {
+        display: none;
+    }
+}
+
+#viewLayout-content {
+
+   .k-grid .k-grid-filter {
+       display: none;
+   }
+
+}
+

@@ -1,0 +1,64 @@
+﻿@model Jigsaw.Server.Model.ViewbarTemplateModel
+
+@using Jigsaw.Server.Helpers
+
+<div data-bind="<%= rc.throttle? 'throttledWith': 'with'%>: item">
+    <div class="smart-form">
+        <div class="tabs" data-bind="tabstripErrorTunnel:{}">
+            <ul class="nav nav-tabs" data-bind="htmlTunnel : {id : 'viewbar-tabs', end: 'entrance'}">
+                <li class="active">
+                    <a data-toggle="tab" href=".tab-r1" data-bind="keyTipsGroup: { key : 'VD', group : 'customer-details'}">
+                        <i class="fa fa-user"></i>
+                        <span class="hidden-mobile hidden-tablet">Details</span>
+                    </a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href=".tab-r2" data-bind="keyTipsGroup: { key : 'VE', group : 'customer-extras'}">
+                        <i class="fa fa-info"></i>
+                        <span class="hidden-mobile hidden-tablet">Extras</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-r1 tab-pane active">
+
+                    <div class="field-set">
+                        <header>Employee details</header>
+                        <div data-bind="field: TitleOfCourtesy"></div>
+                        <div data-bind="field: FirstName"></div>
+                        <div data-bind="field: LastName"></div>
+                        <div data-bind="field: Title"></div>
+                        <div data-bind="field: HomePhone"></div>
+                    </div>
+
+                    <div class="field-set">
+                        <header>Residence</header>
+                        <div data-bind="field: Address"></div>
+                        <div data-bind="field: Region"></div>
+                        <div data-bind="field: City"></div>
+                        <div data-bind="field: Country"></div>
+                        <div data-bind="field: PostalCode"></div>
+                    </div>
+
+                </div>
+                <div class="tab-r2 tab-pane fade">
+                    <div class="field-set">
+                        <header>Extras</header>
+                        <div>
+                            <img data-bind="imgSrc: Photo" />
+                        </div>
+                        <div data-bind="field: BirthDate"></div>
+                        <div data-bind="field: HireDate"></div>
+                    </div>
+
+                    <div class="field-set">
+                        <header>Other</header>
+                        <div data-bind="field: EmployeeID"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>

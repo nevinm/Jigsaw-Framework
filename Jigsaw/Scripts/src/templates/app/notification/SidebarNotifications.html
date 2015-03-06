@@ -1,0 +1,57 @@
+﻿
+<li>
+    <a href="javascript:void(0)">
+        <i class="fa fa-lg fa-fw fa-comment"></i>
+        <span class="menu-item-parent" data-bind="keyTips: { key : 'NN' }">Notifications</span>
+        <span class="badge bg-color-red pull-right" data-bind="text: total"></span>
+    </a>
+
+    <ul>
+        <li data-bind="with: local">
+            <a href="javascript:void(0)">
+                <i class="fa fa-lg fa-fw fa-comment-o"></i>
+                <span class="menu-item-parent" data-bind="keyTips: { key : 'SL' }">Local Notifications</span>
+                <span class="badge bg-color-greenLight pull-right inbox-badge" data-bind="text: count"></span>
+            </a>
+
+            <ul data-bind="foreach: storage.items">
+                <li>
+                    <a class="notification">
+                        <i class="fa" data-bind="css: {
+                                            'fa-ban': Level === 'Error',
+                                            'fa-warning': Level === 'Warning',
+                                            'fa-check': Level === 'Success' }" />
+                        <span data-bind="notificationTemplate: $data"></span>&ensp;
+                        by <span class="user-name" data-bind="text: '@' + (Author || 'anonymous')"></span>&ensp;
+                        <span class="date" data-bind="text: TimeStamp.toLocaleTimeString()"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </li>
+
+        <li data-bind="with: global">
+            <a href="javascript:void(0)">
+                <i class="fa fa-lg fa-fw fa-comment"></i>
+                <span class="menu-item-parent" data-bind="keyTips: { key : 'SG' }">Global Notifications</span>
+                <span class="badge bg-color-greenLight pull-right inbox-badge" data-bind="text: count"></span>
+            </a>
+
+            <ul data-bind="foreach: storage.items">
+                <li>
+                    <div class="notification">
+                        <i class="fa" data-bind="css: {
+                                            'fa-ban': Level === 'Error',
+                                            'fa-warning': Level === 'Warning',
+                                            'fa-check': Level === 'Success' }" />
+                        <span data-bind="notificationTemplate: $data"></span>&ensp;
+                        by <span class="user-name" data-bind="text: '@' + (Author || 'anonymous')"></span>&ensp;
+                        <span class="date" data-bind="text: TimeStamp.toLocaleTimeString()"></span>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</li>
+

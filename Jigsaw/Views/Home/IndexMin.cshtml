@@ -1,0 +1,22 @@
+﻿@section styles {
+
+    @if (ViewBag.Mobile)
+    {
+        @*<script type="text/javascript" src="@Url.Content("~/scripts/kendo/kendo.mobile.js")"></script>
+            <script type="text/javascript" src="@Url.Content("~/scripts/kendo/kendo.web.js")"></script>*@
+
+        <script type="text/javascript" src="@Url.Content("~/scripts/kendo/kendo.all.js")"></script>
+    }
+    else
+    {
+        <script type="text/javascript" src="@Url.Content("~/scripts/kendo/kendo.web.js")"></script>
+    }
+
+    <script type="text/javascript" src="@Url.Content("~/scripts/knockout-kendo.js")"></script>
+}
+
+
+@section scripts {
+    <script src="~/scripts/src/_build/jigsaw.js" 
+        type="text/javascript"></script>    
+}

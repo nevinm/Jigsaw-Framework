@@ -1,0 +1,94 @@
+﻿
+<div class="wizzard" data-bind="markErrorCollection: { hasAny: hasErrors }">
+
+    <div class="modal-header">
+
+        <h4 class="pull-left">
+            <i class="<%= rc.classIdentifier %>"></i>
+            Add New <%=rc.title%> Wizzard: Step <span class="step-number" data-bind="text: Math.min(step() + 1, totalSteps)"></span>
+            of <span class="step-number" data-bind="text: totalSteps"></span>
+        </h4>
+
+        <button class="btn btn-primary pull-right" data-bind="click: saveDraft">Save Draft</button>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="modal-body">
+
+        <div data-bind="validationSummary: {}"></div>
+
+        <div class="tab-headers">
+            <% _.each(rc.tabs, function(tab, i) { %>
+            <div class="tab-header" data-bind="css: {'tab-active': step() === <%=i%>, 'tab-filled': step() >= <%=i%> },
+                                           click: function() { navigate(<%=i%>) },
+                                           with: item">
+                <%= tab.header %>
+            </div>
+            <% }); %>
+
+            <div class="tab-header" data-bind="css: {'tab-active': step() === <%=rc.tabs.length%>, 'tab-filled': step() >= <%=rc.tabs.length%> },
+                                           click: function() { navigate(<%=rc.tabs.length%>) }">Summary</div>
+        </div>
+
+        <div class="tab-help">
+            <h2>
+                <% _.each(rc.tabs, function(tab, i) { %>
+                <span data-bind="visible: step() === <%=i%>, with: item">
+                    <%= tab.header %>
+                </span>
+                <% }); %>
+                <span data-bind="visible: step() === <%=rc.tabs.length%>">
+                    Summary
+                </span>
+                Help
+            </h2>
+
+            Lorem ipsum dolor sit amet.
+        </div>
+
+        <div class="wizzard-content">
+            <div class="smart-form">
+                <div class="tab-contents clearfix" data-bind="markForceValidationErrors: forceValidation">
+                    <% _.each(rc.tabs, function(tab, i) { %>
+                    <div class="tab-content" data-bind="wizzardTabContent: { item: item, step: step, index: <%= i %>}">
+                        <%= tab.content %>
+                    </div>
+                    <% }); %>
+
+                    <div class="tab-content" data-bind="wizzardTabContent: { item: item, step: step, index: <%= rc.tabs.length %>}">
+                        <div data-bind="markReadOnlyTree: true">
+                            <% _.each(rc.tabs, function(tab) { print(tab.content) }); %>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+
+        <div class="action-buttons">
+            <div class="btn btn-default" data-bind="click: prevStep, css: {'k-state-disabled': !canGoPrev() }">
+                <i class="fa fa-arrow-circle-left"></i> Previous
+            </div>
+            <div class="btn btn-default" data-bind="click: nextStep, css: {'k-state-disabled': !canGoNext() }">
+                <i class="fa fa-arrow-circle-right"></i> Next Step
+            </div>
+            <div class="btn btn-default" data-bind="qclick: saveAndClose, css: { 'k-state-disabled': !canFinish() }">
+                <i class="fa fa-check"></i> Finish + Close
+            </div>
+            <div class="btn btn-default" data-bind="qclick: close">
+                <i class="fa fa-times"></i> Close
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

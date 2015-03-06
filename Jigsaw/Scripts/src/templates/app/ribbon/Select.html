@@ -1,0 +1,21 @@
+﻿<span class="dropdown">
+    <a class="btn txt-color-white" data-toggle="dropdown" data-bind="keyTipsGroup : { parentGroup: ribbonTabKeyTip, group: text  }" href="#">
+        <span class="txt-color-blueDark">
+            <i data-bind="attr: { class: cssClass }"> </i>
+        </span>
+        <p>
+            <span data-bind="html: text"></span> &nbsp;
+            <span class="caret"> </span>
+        </p>
+    </a>
+
+    <ul class="dropdown-menu" data-bind="foreach: options">
+        <li data-bind="css: { 'k-state-active': $parent.selected() == $data },
+                               click: function () { $parent.selected($data) },
+                               keyTips : { parentGroup: $parent.text}">
+            <a href="#" data-bind="text: $data"></a>
+        </li>
+    </ul>
+</span>
+
+

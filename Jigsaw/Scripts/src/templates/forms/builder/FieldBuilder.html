@@ -1,0 +1,21 @@
+﻿<!-- template used as wrapper for each form builder item -->
+<div class="field-builder" data-bind="foreachSelected: $parent.selected,
+    jQueryUIDraggable: { group: 'field-reorder', data: $data, wrap: true, filter: '.field-drag-holder' },
+    jQueryUIDropTarget: { group: 'field-reorder', drop: function (other) { $parent.reorderAbove(other, $data); } }">
+
+    <div class="field-drag-holder k-state-active">
+        <a class="k-button field-insert" data-bind="click: function () { $parent.insertAdderAbove($data) }">
+            <span class="k-icon k-si-plus"></span>
+        </a>
+
+        <span class="k-icon k-i-insert-m"></span>
+    </div>
+
+    <div>
+        <a class="k-button field-remove" data-bind="click: function () { $parent.removeField($data) }">
+            <span class="k-icon k-i-cancel"></span>
+        </a>
+
+        <%= rc.renderBody %>
+    </div>
+</div>

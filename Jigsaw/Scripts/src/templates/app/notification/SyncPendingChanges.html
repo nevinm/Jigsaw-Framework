@@ -1,0 +1,14 @@
+﻿
+<div>
+    <img data-bind="attr: {
+        src: online() ? 'images/online.png' : 'images/offline.png',
+        title: online() ? 'online' : 'offline',
+    }" style="margin-bottom: -8px;"></img>
+
+    <span data-bind="visible: pendingChangesCount">
+        <span data-bind="text: pendingChangesCount"></span>
+        pending changes
+    </span>
+    <span class="k-button" data-bind="qclick: sync">sync</span>
+
+</div>

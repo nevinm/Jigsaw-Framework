@@ -1,0 +1,203 @@
+﻿<div class="viewbar-content" data-bind="var: { merged: ko.observable(false) }">
+    <div class="fullscreen-patch">
+
+        <div data-bind="markVersionPagerRoot: { current: currentEntity }">
+
+            <div data-bind="messageQueue: messageQueue"></div>
+
+            <div data-bind="diffSummary: {}"></div>
+
+            <div data-bind="validationSummary: {}"></div>
+
+            <!--widget div -->
+            <div class="jarviswidget jarviswidget-sortable all-space" data-bind="measurePrev: 'top'">
+                <header role="heading">
+                    <div class="jarviswidget-ctrls" role="menu">
+
+                        <a class="button-icon" href="javascript:void(0);" data-bind="tooltip: {title: 'Export Word',  placement: 'bottom'}, qclick: wordExport, visible: options.wordExportUrl, keyTips: { key : 'VW' }">
+                            <i class="fa fa-file-word-o"></i>
+                        </a>
+
+                        <a class="button-icon" href="javascript:void(0);" data-bind="tooltip: {title: 'Export Pdf',  placement: 'bottom'}, qclick: pdfExport, visible: options.pdfExportUrl, keyTips: { key : 'VP' }">
+                            <i class="fa fa-file-pdf-o"></i>
+                        </a>
+
+                        <!-- ko if: !trackerManager.currentVersionSelected -->
+                        <a class="button-icon" href="javascript:void(0);" data-bind="checkbox: merged, keyTips: { key : 'VG' }, tooltip: {title: 'Side by Side',  placement: 'bottom'}">
+                            <i class="fa fa-code-fork"></i>
+
+                        </a>
+                        <!-- /ko -->
+
+                        <span data-bind="with: trackerManager">
+                            <!-- ko if: versionType() === 1 -->
+                            <a class="button-icon" href="javascript:void(0);" data-bind="tooltip: {title: 'Approve',  placement: 'bottom'},qclick: approve, keyTips: { key : 'VA' }">
+                                <i class="fa fa-thumbs-o-up"></i>
+                            </a>
+
+                            <a class="button-icon" href="javascript:void(0);" data-bind="tooltip: {title: 'Reject',  placement: 'bottom'}, qclick: reject,  keyTips: { key : 'VJ' }">
+                                <i class="fa fa-thumbs-o-down"></i>
+                            </a>
+                            <!-- /ko -->
+                            <!-- ko if: versionType() === 2 -->
+                            <a class="button-icon" href="javascript:void(0);" data-bind="tooltip: {title: 'Revert',  placement: 'bottom'}, qclick: revert,  keyTips: { key : 'VV' }">
+                                <i class="fa fa-undo"></i>
+                            </a>
+                            <!-- /ko -->
+                        </span>
+
+                        <!-- ko if: trackerManager.versionType() === 0 && !isReadOnly() -->
+                        <a class="button-icon" href="javascript:void(0);" data-bind="tooltip: {title: 'Save',  placement: 'bottom'}, qclick: save,  keyTips: { key : 'VS' }">
+                            <i class="fa fa-save"></i>
+                        </a>
+
+                        <a class="button-icon" href="javascript:void(0);" data-bind="tooltip: {title: 'Save+Close',  placement: 'bottom'}, qclick: saveAndClose,  keyTips: { key : 'VX' }">
+                            <i class="fa fa-save"></i>
+                            <i class="fa fa-times"></i>
+                        </a>
+                        <!-- /ko -->
+
+                        <a class="button-icon" href="javascript:void(0);" data-bind="tooltip: {title: 'FullScreen',  placement: 'bottom'}, toogleFullScreen : {  wrapperSelector : '.fullscreen-patch', class : 'fa fa-expand | fa fa-compress'}, keyTips: { key : 'VF' }">
+                            <i></i>
+                        </a>
+
+                        <a class="button-icon" href="javascript:void(0);" data-bind="tooltip: {title: 'Close',  placement: 'bottom'}, qclick: close,  keyTips: { key : 'VC' }" style="z-index: 999999">
+                            <i class="fa fa-times"></i>
+                        </a>
+
+                    </div>
+
+                    <ul class="nav nav-tabs pull-left in" data-bind="htmlTunnel : {id : 'versionpager-viewbar-tabs', end: 'exit'}"></ul>
+
+                </header>
+
+                <!-- widget div-->
+                <div role="content">
+
+                    <div class="all-space">
+
+                        <div class="version-pager-root">
+                            <div data-bind="css: { 'merged-view': merged, 'normal-view': !merged() }, markForceValidationErrors: forceValidationErrors">
+                                <div id="viewbar-region-container" data-bind="markReadOnlyTree: isReadOnly">
+                                    <%= rc.renderBody %>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="version-list-wrapper" data-bind="pinunpin: false">
+
+                            <div class="version-up-arrow-head"> </div>
+
+                            <div class="version-list" data-bind="with: item">
+                                <!-- ko foreach: Pending() -->
+                                <a class="version pending-version" data-bind="click: function() { $parents[1].trackerManager.selectPending($data) },
+                                                        css: { 'selected-version': $parents[1].trackerManager.selectedVersion() === $data }">
+
+                                    <div class="version-left-arrow"> </div>
+
+                                    <div class="audit-record-label"><strong>Audit Record:</strong> Pending</div>
+
+                                    <div class="audit-record-info">
+                                        <div data-bind="text: ModifiedBy"></div>
+                                        <div data-bind="text: moment(ModifiedDate()).format('l')"></div>
+                                    </div>
+
+                                    <div class="version-up-arrow-column"> </div>
+                                </a>
+                                <!-- /ko -->
+
+                                <a class="version" data-bind="click: function() { $parent.trackerManager.selectCurrent(); },
+                                        css: { 'selected-version': $parent.trackerManager.selectedVersion() === Current() }">
+
+                                    <div class="version-left-arrow"> </div>
+
+                                    <div class="audit-record-label"><strong>Audit Record:</strong> Modified</div>
+
+                                    <div class="audit-record-info">
+                                        <div data-bind="text: Current().ApprovedBy()"></div>
+                                        <div data-bind="text: moment(Current().ApprovedDate()).format('l')"></div>
+                                    </div>
+
+                                    <div class="version-up-arrow-column"> </div>
+                                </a>
+
+                                <!-- ko foreach: Historical() -->
+                                <a class="version historical-version" data-bind="click: function() { $parents[1].trackerManager.selectHystorical($data) },
+                                                            css: { 'selected-version': $parents[1].trackerManager.selectedVersion() === $data }">
+                                    <div class="version-left-arrow"> </div>
+
+                                    <div class="audit-record-label">
+                                        <strong>Audit Record:</strong>
+                                        <span data-bind="text: Audit()"></span>
+                                    </div>
+
+                                    <div class="audit-record-info">
+                                        <div data-bind="text: ApprovedBy"></div>
+                                        <div data-bind="text: moment(ApprovedDate()).format('l')"></div>
+                                    </div>
+
+
+
+                                </a>
+                                <!-- /ko -->
+                            </div>
+
+                            <div class="version-list-approval" data-bind="with: selectedVersion">
+
+                                <div>
+                                    <strong>Approval Workflow: </strong>
+                                    <span data-bind="text: ApprovalWorkflow()"></span>
+                                </div>
+
+                                <div data-bind="foreach: Approval">
+                                    <div class="approval-item float-left" data-bind="css: { 'approval-pending': !ApprovedDate() }">
+                                        <img class="square20" src="images/user-account.png" />
+                                        <span data-bind="text: ApprovedBy"></span>
+                                        <img class="arrow-image square20" src="images/version-approval-arrow.png" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a class="version-list-minimized" data-bind="with: item">
+                                <div class="version-count">
+                                    <img class="square20" src="images/version-pending.png" />
+                                    <strong>(<span data-bind="text: Pending().length"></span>)</strong>
+                                </div>
+                                <div class="version-count">
+                                    <img class="square20" src="images/version-historical.png" />
+                                    <strong>(<span data-bind="text: Pending().length"></span>)</strong>
+                                </div>
+
+                                <div class="minimized-info">
+                                    <div>
+                                        <strong>Created:</strong>&nbsp;
+                                        <span data-bind="text: CreatedBy()"></span>&nbsp;
+                                        <span data-bind="text: moment(CreatedDate()).format('l')"></span>
+                                    </div>
+
+                                    <div data-bind="with: $parent.selectedVersion">
+                                        <strong>Last Modified:</strong>&nbsp;
+                                        <span data-bind="text: ModifiedBy"></span>&nbsp;
+                                        <span data-bind="text: moment(ModifiedDate()).format('l')"></span>
+                                    </div>
+                                    <div data-bind="with: $parent.selectedVersion">
+                                        <strong>Final Approval:</strong>&nbsp;
+                                        <span data-bind="text: ApprovedBy"></span>&nbsp;
+                                        <span data-bind="text: moment(ApprovedDate()).format('l')"></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div class="pin-unpin checkbox checked" data-bind="checkbox: $jigsawPinUnpinCheckbox"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- end widget content -->
+
+
+            </div>
+            <!-- end widget div -->
+        </div>
+    </div>
+</div>

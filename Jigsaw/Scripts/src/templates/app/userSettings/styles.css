@@ -1,0 +1,14 @@
+/* app - user settings */
+.user-settings {
+  background-image: url(images/user-account.png);
+  background-position: 2px center;
+  background-repeat: no-repeat;
+  padding: 2px 2px 2px 22px;
+  -moz-background-size: 20px auto;
+  -o-background-size: 20px auto;
+  -webkit-background-size: 20px auto;
+  background-size: 20px auto;
+  background-color: transparent;
+  margin-top: 5px;
+  margin-left: -10px;
+}

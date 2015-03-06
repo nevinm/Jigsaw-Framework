@@ -1,0 +1,92 @@
+﻿/** this styles are for general purpose in Jigsaw, could be included within the app module or be always loaded */
+
+.all-space(@left: 0, @top: 0, @right:0, @bottom: 0) {
+	bottom: @bottom;
+    left: @left;
+    position: absolute;
+    right: @right;
+    top: @top;
+}
+
+.all-space {
+	.all-space();
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.overflow-visible {
+    overflow: visible !important;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.inline-content {
+    &> * {
+        float: left;
+    }
+}
+
+.smaller-font{
+    font-size: 80% !important;
+}
+
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.busy, .empty-region {
+    background: transparent url('./../../../images/ajax-loader.gif') no-repeat center center;
+    .all-space();
+    
+    &> * {
+        //visibility: hidden;
+        display: none;
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    &.small{
+        width: 16px;
+        height: 16px;
+
+        &.center-line {
+            margin-left: 2px;
+            margin-right: 2px;
+            margin-bottom: -5px;
+        }
+    }
+
+    &.square20 {
+        width: 20px;
+        height: 20px;
+    }
+
+    &.square40 {
+        width: 40px;
+        height: 40px;
+    }
+}

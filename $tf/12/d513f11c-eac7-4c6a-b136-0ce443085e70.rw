@@ -1,0 +1,3 @@
+
+@import "..\kendo\kendo.highcontrast.less";
+@import "_after-theme.less";

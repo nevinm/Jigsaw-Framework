@@ -1,0 +1,1 @@
+﻿This assembly will contain files required to run a Jigsaw client on ASP MVC.

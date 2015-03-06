@@ -1,0 +1,79 @@
+﻿
+<div>
+    
+    <div class="modal-header">
+        <button class="close" type="button" data-bind="click: cancel"> × </button>
+        <h4 class="modal-title">Choose Columns</h4>
+    </div>
+
+    <div class="modal-body">
+
+        <div class="column-chooser">
+
+            <div class="row">
+
+                <div class="col-md-4 smart-form well">
+                    <% _.each(rc.columns, function(column, i) { %>
+                    <label class="checkbox">
+                        <input type="checkbox" data-bind="checked: columns[<%=i%>].active">
+                        <i></i>
+                        <%= column %>
+                    </label>
+                    <% }) %>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="smart-form">
+                        <div>
+                            <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: includeHeaders">
+                                <i></i>
+                                Include title headers
+                            </label>
+                        </div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="checkbox" data-bind="checked: allPages">
+                                <i></i>
+                                Export all pages
+                            </label>
+                        </div>
+                    </div>
+
+                    <div data-bind="css: {'k-state-disabled': allPages }">
+                        <div class="form-inline">
+                            
+                            <div class="form-group">
+                                <label class="control-label">Export Page from</label>
+                                <input type="text" class="form-control" data-bind="value: pageFrom">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" >to</label>
+                                <input type="text" class="form-control" data-bind="value: pageTo" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="column-chooser-items k-block">
+
+                </div>
+
+                <div class="column-chooser-settings">
+
+                </div>-->
+
+        </div>
+
+    </div>
+
+    <div style="clear:both" />
+
+    <div class="modal-footer">
+        <div class="btn btn-primary" data-bind="click: accept">OK</div>
+        <div class="btn btn-default" data-bind="click: cancel">Cancel</div>
+    </div>
+
+</div>

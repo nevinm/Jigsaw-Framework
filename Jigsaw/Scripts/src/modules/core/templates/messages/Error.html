@@ -1,0 +1,14 @@
+﻿
+
+<div class="alert alert-block alert-danger" data-bind="var: { collapsed: ko.observable(false) }">
+    <div class="clearfix">
+        <h4 class="alert-heading pull-left">Error! <span data-bind="text: title"></span></h4>
+        <div class="pull-right">
+            <a data-bind="click: function() { window.location.reload() }">reload</a>
+            <span class="up-down" data-bind="checkbox: collapsed"></span>
+            <a href="#" data-bind="click: function() { $parent.remove($data); }" class="close">×</a>
+        </div>
+    </div>
+
+    <div data-bind="text: body, visible: !collapsed()"></div>
+</div>

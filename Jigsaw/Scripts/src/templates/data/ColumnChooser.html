@@ -1,0 +1,19 @@
+﻿
+<div class="dropdown column-chooser-dropdown">
+    <a class="btn btn-default" data-toggle="dropdown" data-bind="dropdown: { notCloseWithin : true }, keyTipsGroup : { key: 'GC', group: 'column-chooser'  }" href="#">
+        <span class="caret"> </span>
+    </a>
+
+    <ul class="dropdown-menu smart-form" data-bind="foreach: columns">
+        <li>
+            <a href="javascript:void(0);">
+                <label class="checkbox">
+                    <input type="checkbox" data-bind="checked: visible, keyTipsInput : { parentGroup: 'column-chooser' }">
+                    <i></i>
+                    <span data-bind="text: name"></span>
+                </label>
+            </a>
+        </li>
+    </ul>
+</div>
+

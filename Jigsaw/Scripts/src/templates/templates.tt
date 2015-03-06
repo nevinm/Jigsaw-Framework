@@ -1,0 +1,14 @@
+﻿<#@ template language="C#" hostspecific="True" #>
+<#@ output extension="txt" #>
+<#@ import namespace="System.IO" #>
+
+<#@ assembly name="$(SolutionDir)\Jigsaw.Server\bin\debug\Jigsaw.Server.dll" #>
+<#@ import namespace="Jigsaw.Server" #>
+<#
+var path = Path.GetDirectoryName(Host.TemplateFile);
+JigsawApplication.GenerateTemplateFiles(path, "templates/");
+#>
+
+// all modules will be generated as separated files on this directory
+
+

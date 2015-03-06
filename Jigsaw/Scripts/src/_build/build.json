@@ -1,0 +1,26 @@
+// this is the application build parameters, this is ran with the post-build command: node r.js -o build.json
+// uses the requirejs optimizer, and here can be configured which modules get merged together
+
+{
+	"baseUrl": "../",
+	"name": "entry_point",
+	"paths": {
+        "codeeffects.control": "../codeeffects/codeeffects.min",
+        "text": "../text"
+    },
+	"include": [
+			// required libraries
+			"../libs/require",
+
+			// core framework
+			"app", "modules/betaModule", "modules/testModule", 
+
+			// data modules
+			"modules/customers/js/customers-desktop", "modules/employees/js/employees", "modules/supplier/js/supplier", "modules/task/js/tasks", 
+			"modules/orders/js/orders-desktop"
+		],
+	"exclude": [],
+	"optimize": "none", //"uglify",
+	"noramlizeDirDefines": "all",
+	"out": "jigsaw.js"
+}

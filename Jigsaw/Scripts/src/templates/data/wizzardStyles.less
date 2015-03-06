@@ -1,0 +1,52 @@
+﻿/* data - wizzard styles */
+
+@import "../mixins";
+
+/* Wizzard styles */
+.wizzard {
+    @header-width: 180px;
+
+    .modal-header{
+        
+        i{
+            margin-right: 5px;
+        }
+
+    }
+
+
+    .tab-headers {
+        cursor: pointer;
+        width: @header-width;
+        float: left;
+        position: absolute;
+
+        .tab-header{
+            img {
+                height: 20px;
+                margin: 0 0 -3px 0;
+            }
+        }
+    }
+
+    .tab-help{
+        float : left;
+        clear: both;
+        width: @header-width - 10px;
+        position: absolute;
+        bottom: 0;
+
+        h2 img {
+            display: none;
+        }
+    }
+
+    .wizzard-content {
+        margin-left: @header-width;
+        height: 300px;
+        overflow-y: auto;
+    }
+
+
+   
+}

@@ -1,0 +1,530 @@
+
+Conclusion:
+  ✔ 3) Summaries used to display TEXT LABELS, they have reverted to show disabled edit controls again. Readonly Popup used to display TEXT LABELS, they have also reverted back to be disabled edit controls @done (14-11-06 10:42)
+  ✔ 4) ViewPanel Exports appear to have stopped working @done (14-11-05 08:56)
+  ✔ 5) Local/Global Notifications only works for "Customers" @done (14-11-14 08:16)
+
+  ✔ 5) Breadcrumb - When you click on Home it should navigate to start page. When you click on "Customers" when a Customer Selected, it should naviagte to Customers again i.e. Close the current customer). The URL appears to change when you click on the breadcrumb, but nothing actually happens. The breadcrumb does not work when you click on Suppliers / Tasks or any of the other pages. It was my assumption this functionality would be coded centrally, rather than each module @done (14-11-16 10:34)
+  ☐ 1) Jump to stopped working. The Messages are not displayed for correct for "Find Next" "Find Prev". Message does not clear down when to enter a different code. When Find Next / Prev buttons do show, they do not work.
+  
+  ✔ 6) Click anywhere on sidebar was supposed to collase/expand temporarily @done (14-11-16 11:30)
+  ✔ 7) Local / Global Notification links not working @done (14-11-16 10:38)
+  ✔ 13) Tasks-> save Changes successfully, but still asks if I want to save changes when navigate away @done (14-11-16 10:49)
+  ✔ 12) Mobile Save and Close does not animate away @done (14-11-06 10:42)
+
+  ✔ 2a) File > Add New | Add Wizard. Used to Flyout to the right, now the sub menu overlays. @done (14-11-02 07:46)
+  ✔ 2b) Wizards CSS is very broken @done (14-11-02 11:08)
+  ✔ 6) Sometimes when the ViewPanel is maximised, you cannot click on any of the buttons/controls.Looks like an issue with the z-index. @done (14-11-03 12:02)
+  ✔ 8) Column Chooser. Doesn't appear to work. Disappears everytime I click on it. Should be able to check multiple on/off without it disappearing @done (14-11-02 07:46)
+  ✔ 9) When Customer is selected - Ribbon should make the Current Customer Tab Active (animate/slide) @done (14-11-02 11:08)
+  ✔ 10) Sign Out, background should have a much Darker Screen @done (14-11-02 07:46)
+  ✔ 11) Tabs were supposed to degrade to just show icons when the screen size go too small @done (14-11-02 07:46)
+
+
+Phase 3:
+  ☐ CHANGE: User Details | Notification - Copy Facebook "Caption" rather than Animate Down drop down menus
+  ☐ CHANGE: Drag anything into SideBar (Create a Group, lookup Template/Icon is exist).
+  ☐ CHANGE: Drag from view panel or active panel - My items
+  ☐ Drop kendo data grid 
+  ☐ drop kendo drag drop 
+
+
+Milestone 6+:
+
+  ✔ CHANGE: Convert Twitter Bootstrap (Controls) @done (14-09-11 10:40)
+  ✔ CHANGE: Convert Twitter Bootstrap (Headers / Text) @done (14-09-11 10:41)
+  ☐ CHANGE: Convert Twitter Bootstrap (Sign In / Out)
+  ☐ CHANGE: Convert Twitter Bootstrap (Menu)
+  ✔ CHANGE: Convert Twitter Bootstrap (Notifications) @done (14-09-07 23:42)
+  ✘ CHANGE: Convert Twitter Bootstrap (Wizards) @cancelled (14-09-13 23:25)
+
+  ✘ CHANGE: Vertical "..." handle. at front of grids, used to indicate we can drag the row (alike google mail), and cursor should change when hover, grabbed. @cancelled (14-09-08 16:05)
+
+  ✔ CHANGE: Add a breadcrumb after Jigsaw logo @done (14-09-14 22:59)
+
+  ✔ CHANGE: All ribbon options to be "Captions" rather than Animate down drop down menus @done (14-09-07 14:38)
+
+  ✘ CHANGE: double click splitters  expand / collapse @cancelled (14-09-11 10:38)
+  ✔ CHANGE: Move "Merged" checkbox to a button, along side "Approved | Reject | Close". Change name to "Side by Side" @done (14-09-14 23:33)
+ 
+  ✔ Add offline configuration switch @done (14-09-07 14:38)
+  ☐ BUG/CHANGE: Should degrade in the same way Twitter Bootstrap does when the browser area size reduces
+  ☐ Add download progress support and display which items are to be synced, and which ones are stored on the local cache  
+
+  ☐ Global Notifications must be showed as BigBox Notifications
+  ☐ Drop kendo splitters
+   
+  ✘ CHANGE: Add additional Layout setting, from Twitter Bootstrap (Fixed Header, Fixed Navigation, Fixed Footer). Plus for Mobile, a Ribbon Auto Hide option, when you start to scroll down the Ribbon should automatically disappear, and when you start to scroll back up it should animate in again (Alike facebook mobile app) @cancelled (14-07-30 23:56)
+
+Milestone 6:
+  ✔ Include Bootstrap theme @done (14-08-30 18:58)
+    ✔ Create basic bootstrap sample page, to display bootstrap styles similar to (https://github.com/divshot/bootstrap-theme-white-plum/blob/master/examples/kitchen-sink.html) @done (14-07-27 01:03)
+    ✔ Fix demo pages: Image Cropping @done (14-09-04 10:28)
+    ✔ Fix demo pages: data tables when page is initialized @done (14-09-04 10:20)
+    ✔ Moris Charts - Rapheal error @done (14-09-01 05:35)
+    ✔ General UI Elements : Remote Modal Doesn't work @done (14-09-04 10:25)
+    ✔ General UI Elements:- Tooltips don't work @done (14-09-01 15:04)
+    ☐ Checkbox on Inbox, is below actual row it is for
+
+  ✔ version pager enhancements @done (14-08-04 19:41)
+  ✔ active record changes @done (14-07-02 00:45)
+    ✔ Remove tabs from ribbon (PrioritySet) @done (14-07-01 20:21)
+
+  ✔ Add missing features to the mobile version (sidebar, ribbon, grid) @done (14-09-04 10:20)
+    ✔ ribbon bar should change tabs when touch to left or oright @done (14-07-23 14:48)
+    ✔ Ensure notifications work @bug @done (14-07-27 16:19)
+    ✔ Ensure offline works @done (14-07-25 17:07)
+  ✔ When the viewPannel is align Right. Increase the limits at which we can move it Left (increase its width) @done (14-06-03 23:22)
+  ✔ Message should be removed when a user does something different (than what the message is referring to) or repeats the same thing and gets a different result @done (14-06-03 23:25)
+  ✔ Move the Export to Word / Export to PDF icons, inline with the Save | Save and Close | Close buttons @done (14-06-04 16:39)
+
+  ☐ Check application in IE9
+  ✔ Modifications to grid content area of data modules @done (14-07-17 11:04)
+
+  ✔ Fix: When the ViewPanel is aligned bottom, If the controls exceed the space, there is not scroll bar @done (14-07-02 00:45)
+  ☐ Allow the application to work using the Keyboard 
+    ✔ add keytips binding for the ribbon menus @done (14-07-23 14:49)
+    ✔ Hide KeyTips if arrow key is pressed @sergio @done (14-07-29 17:21)
+
+  ✔ Allow dropping items on the entire sidebar @done (14-07-24 09:55)
+  ✔ when sidebar is collapsed it should expand if it's clicked @done (14-07-29 16:14)
+
+  ✔ cosmetics: up/down arrow on difference summary @done (14-07-30 09:48)
+  ✔ difference summary should scroll if more than 2 items @sergio @done (14-08-08 14:56)
+
+  Final Items:
+    ☐ CHANGE: Include all Twitter bootstrap admin optons into the UI. For each navigation element in the Twitter Bootstrap Admin sample, add an equivelent in our Ribbon, which launches the sample page in the main panel (i.e. Inbox, Calendar, Forms, Graphs, Tables, Wizard etc.) 
+    ☐ CHANGE: Homepage to be Twitter Bootstrap Dashboard
+    
+    ☐ CHANGE: Notification Accordion to be 2 tabs (Local & Global)
+
+    ✔ CHANGE: Side Bar; Should be able to drag into the sidebar, even if closed. And should be able to drag anywhere in the My Items Panel. When an Item is dragged into My Items, it should create a Group i.e. "My Customers". The icon and template used should be based on a simple rule:- Use the Generic Icon/Template unless we have a specific one in place for the type of item dragged "Customer". @done (14-07-30 23:55)
+    ✔ CHANGE: Click anywhere on side bar to expand @done (14-07-30 23:55)
+    ✔ BUG: Mobile Row Arrow z-index is above popups @done (14-07-30 23:55)
+
+    ✔ CHANGE: Notifications to show in sidebar for both desktop and mobile @done (14-08-05 10:39)
+    ✔ CHANGE: Active Record Panel should have a "Clear button also". In a normal scenario, we should only show @done (14-08-04 19:39)
+    ✔ BUG: Fix Export work (word/pdf) @done (14-08-04 22:31)
+    ✔ BUG: COLUMN Choose now horizontal (regardless of Theme), on both grid chooser and export column chooser @done (14-08-04 19:57)
+    ✔ BUG: export close exports anyway @done (14-08-05 08:46)
+    ✔ Preserve Grid Column Ordering @done (14-08-08 14:56)
+    ✔ BUG: Ribbon Swipe has been implemented incorrect. The swipe should only swipe the contents of the Ribbon, not the whole page. @done (14-08-29 16:51)
+    ✘ BUG: Are Layouts preserved/saved. Layout /Theme / View Panel Height\Width / Grid Column / Grid Order / Pop-up Position\Size @cancelled (14-07-31 15:06)
+    ✔ BUG: Info messages must disappear when nolonger required @done (14-07-30 23:59)
+    ✔ BUG: View Panel Right Aligned - Wider Limit should be extened and lower limit @done (14-07-30 23:56)
+    ✔ BUG: When you resize ViewPanel when viewing TASK versions, the text all overlaps @done (14-07-31 14:53)
+    ✔ BUG: Arrow connecting pervious TASK versions, when layout RIGHT. Increase pannel width, and Arrow head is unaligned to Arrow body. @done (14-08-01 20:56)
+    ✔ BUG: View Panel Scroll when "Bottom" @done (14-08-04 18:02)
+
+
+Milestone NEXT:
+  ☐ Form Builder, Survey Scenario
+  ✔ Fix forms templates to use the rc context variable @done (14-06-05 00:52)
+  Extras:
+    ✔ Add orders module @done (14-05-11 16:58)
+    ✔ Allow navigating to a customer orders by clicking a button on the grid @done (14-05-11 16:59)
+
+
+Milestone 5 (Version Pager):
+  ✔ Version Pager (50-80 hours) @done (14-06-05 00:51)
+  ✔ add HasPending column to grid @done (14-04-12 14:37)
+  ✔ improve css for version pager on view bar @done (14-04-15 15:52)
+  ✘ Rejecting a pending version doesn't delete it on the client after it get's updated @cancelled (14-07-29 18:57)
+  ✔ add collectionSet custom binding to display labels for complex types (like collections) that can't be marked with an outline @done (14-04-16 23:23)
+  ✔ Add a menu to display the Tags associated with a task to show the differences @done (14-04-16 19:34)
+  New Todos:
+    ✔ separate the metadata from the entity caches to serialize the entities @done (14-04-12 16:41)
+    ✔ Import script metadata for the Employees and Suppliers modules @done (14-04-16 23:33)
+    ✔ Refactor grid related bindings to desktop specific files @done (14-04-19 14:39)
+      ✔ PERF: use custom view for the main data grid view to avoid sending configuration strings into HTML @done (14-04-20 11:41)
+    ✘ PERF: kendo.resize function impacts heavily on performance with the layout. This is a recursive function that is called for each node in the splitter DOM tree. this function was added with the latest version of KendoUI @cancelled (14-04-19 19:41)
+    ☐ BUG: Collapsed regions can still be resized on the main layout
+    ✔ BUG: Notifications module throws exception @done (14-07-29 18:57)
+    ✔ IE: sidebar shows scroll bars when collapsed when it shouldn't @done (14-04-15 16:54)
+    ✔ PERF: evil function kendo.resize get's called when the resize event is called on Jigsaw @done (14-04-15 14:51)
+    ✔ PERF: use display:none for #jigsaw-root element to avoid some unnecesary repaints while the user interface is being composed @done (14-04-14 22:23)
+    ✔ PERF: the resize event should buble to the root, only subscribe to the $(body) element instead of all parents @done (14-04-14 20:40)
+    ✔ PERF: Explore options for hiding 'busy' or empty regions to increase performance saving unnecesary re-paints @done (14-04-14 20:37)
+    ✘ PERF: Explore using CSS transitions for Layout animations @cancelled (14-04-14 11:49)  CSS based animations are slower for properties that affect the layout (like the width). So the best solution for this continues being JS based animations
+
+    ✔ make diff summary use the field display name instead of the field string itself, for the comparisonField binding @done (14-04-11 20:38)
+    ✔ replace kendoUI template with Underscore template to align all templates @done (14-04-11 19:41)
+    ✔ PERF: Use global variable for all unederscore templates (rc -> request context) @done (14-04-03 17:27)
+    ✔ PERF: include ko.projections pluging for faster observableArray operations @done (14-04-03 17:27)
+    ✔ PERF: Use KO v3 arrayChange to track changes in observable arrays instead of running differencing algorithms @done (14-04-11 20:27)
+    ✔ PERF: Change T4 template generation to precompile only the templates with variables (or containing the characters '<%') @done (14-04-03 18:05)
+    ✔ BUG: problem when navigating away from the ViewLayoutView and returning, KO throws error apply binding multiple times error @done (14-04-07 19:55)
+    ✔ Themes. The themes have been reduced to 3, which is great. But can we make all 3 themes work. I am not overly concerned with the way things look, but certain things are drastically different (usually positions or size) between themes. Certain things should be set in the global CSS, rather than within the themes @done (14-05-09 09:52)
+    ✔ A better Icon for the Message Notifications Expand/Collapse @done (14-05-14 18:07)
+    ✔ Reduce the Approved By, Approved Date, Modified By, Modified Date, and condense into 2 lines. Approved: {Name}{DateTime} /n Modified:{Name}{DateTime} @done (14-05-09 10:46)
+    ✔ When SideBar Collapsed, it only shows small icons for "Items" (My Customers, My Employees). It should also show My Searches @done (14-05-09 17:12)
+    ✔ The Version Pager Control is on the wrong side when Veir Bar is orientated to the Side @done (14-05-09 18:03)
+    ✘ When SideBar is orientated to the Right, unable to click on My Searches @cancelled (14-05-09 18:03)
+  New Todos (v2):
+    ✔ If we can work out a way which makes NON-Current versions (in the version pager) use labels rather than Controls. @done (14-05-14 14:06)
+    ✔ Can we please add a Summary Tab to one of the existing. i.e. What we have for the Wizzard @done (14-05-14 16:43)
+    ✔ Export. I would prefer it if EXPORT was just a button (rather than a drop down). In the same fashion the export to pdf and export to word are just icons, an Excel icon would be ideal. I notice when you click "choose columns" there is a dialog box pops up. This functionality doesn't actually work right now, but I would like to see all options via this dialog box (i.e. Choose which columns to export, chose which page[s] to export). This allow us to extend the options moving forward. @done (14-06-02 17:36)
+
+  Low:
+    ☐ PERF: Improve Union algorithm for ko observable arrays, maybe using the new arrayChange notifications
+    ☐ Javascript: sorted array for the notifications, these should be ordered by it's timestamp
+
+
+MISC:
+ ✔ kendo splitter, set maximum and minimum sizes for the splitter regions @done (14-04-15 17:39)
+ ☐ improve styles of the Employees module
+ ☐ Make all viewbar inputs to resize depending on the width of the view bar
+ ☐ Slide sign in window to the left when closed (Sign In.pdf)
+ ☐ Style loading screen
+ ☐ Show "No more results" label on the grid, when the search doesn't have any result
+ ✔ Fix splitter layout problems when default layout is selected and the browser is resized @done (14-04-01 19:16)
+ ☐ unload modules before loading new ones, to give a better user experience on the @ModuleManager
+ ✘ use a PromiseQueue for the @ModuleManager @cancelled (14-04-01 19:15)
+
+Remove Backbone + Marionette:
+ ✘ use historyjs to handle browser history (instead of Backbone.History) @cancelled (14-04-01 19:15)
+ ✔ Remove all usages of Backbone and Backbone.Marionette and write a simpler version @done (14-04-01 19:15)
+ After: 
+   ✔ Update project to latest version of TypeScript @done (14-04-01 19:15)
+   ✔ Change Template generation so all templates are precompiled to improve application performance @done (14-04-01 19:15)
+
+
+
+Milestone 4:
+  ✔ Notifications @done (14-02-23 10:16)
+  ✔ Settings @done (13-12-21 16:34)
+  ✔ Export Enhancements @done (13-12-21 16:34)
+  ✔ Complex Controls @done (14-02-04 17:38)
+  ✔ Saved Searches @done (14-02-05 19:39)
+  ✔ Wizard @done (14-02-23 20:30)
+  ✔ Fix IE Layout bug @done (14-01-04 15:57)
+  Minor Changes:
+    ✔ Error Deep Links @done (14-01-04 16:47)
+    ✔ Tooltips on headings and field titles should be driven by Metadata @done (14-03-08 11:41)
+    ✔ Drag Column Headings @done (13-12-21 16:34)
+    ✘ Group Columns @cancelled (14-02-01 22:58)
+    ✔ Red Triangle - Blue Triangle @done (13-12-27 11:24)
+  Mobile:
+    ✔ Use ListView instead of Grid to display data for the Mobile app @done (14-02-01 22:57)
+    ✔ Mobile ViewPanel Triangle @done (14-02-01 22:57)
+    ✔ Mobile Menu @done (14-02-01 22:57)
+    ✔ Pagination of items @done (14-02-10 13:07)
+New todos:
+ ✔ Item changed dialog throws error when closed on mobile version @done (14-03-10 00:16)
+ ✔ User settings module for the Mobile version @done (14-02-23 11:10)
+ ✔ Research: CSS make element fill all float remaining space @done (14-02-25 18:17)
+ ✔ Column chooser dialog @done (14-03-08 15:40)
+ ✔ @Wizzard Big space above the content in chrome @done (14-03-10 11:02)
+
+
+
+
+
+ ✔ With Inline Editing validation shoul't work on a deleted row. @done (13-09-29 13:57)
+ ✔ Employees module window doesn't appear centered when is oppened @done (13-09-29 14:10)
+
+
+MOBILE VERSION:
+ ✔ Change template of the 'Are you sure' message to remove the cancel button @done (13-09-29 14:27)
+ ✘ Store grid column order per grid per module on the local cache (Save & Load layout.pdf) @cancelled (13-10-08 10:00)
+
+ ✔ BUG when entity is changed and the page is changed, the dialog is shown twice @done (13-10-13 22:36)
+ ✔ Use icons on the tabs on the viewbar @done (13-10-08 08:39)
+ ✘ Change drag hint template (Minor Changes Part2.docx) @cancelled (13-10-13 22:36)
+ ✔ Remove messages when grid selected item is changed (Show info message.pdf) @done (13-10-13 22:38)
+
+ ✔ Improve loading screen, showing a percent is a problem (Loading Screen.pdf) @done (13-10-09 19:12)
+
+My Items:
+ ✘ Item Added to my Items message should be shown above the grid @cancelled (14-03-20 14:36)
+ ✘ Show Item already on My Items message above the grid @cancelled (14-03-20 14:36)
+ ✔ "Row removed from My Items successfully" message (Drag and Drop out of MyItems.pdf) @done (13-10-13 22:40)
+
+Jump To/Searches:
+ ✔ Show No more results message when there're no results (Simple Search.pdf) @done (13-10-10 17:10)
+ ✔ Show no results message when "Jump To" returns no matches (Simple Search.pdf) @done (13-10-13 18:47)
+ ✔ Show find next/prev message when "Jump To" returns matches (Simple Search.pdf) @done (13-10-14 20:04)
+ ✔ Show no results message after advance search (advanced search.pdf) @done (13-10-10 17:19)
+ ✔ make a delayed async 'with' custom binding to be used in the view panel, so elements @done (13-09-29 13:06)
+ ✔ in readony mode fields look like text not controls @done (13-09-26 12:07)
+ ✔ History is only working on Firefox, the callback isn't being called in other browsers @done (13-09-29 13:06)
+
+----
+
+ ✔ bug layout is reseted when the browser is resized @done (13-08-07 21:04)
+ ✔ Sidebar panel control needs to be more like an accordion @done (13-09-26 17:50)
+ ✔ Change T4 template generator to the better folder structure data/+customers/... @done (13-09-28 23:22)
+
+ ✔ have more control over the history of the browser including undoing the current navigation action @done (13-08-09 19:01)
+ ✔ prevent navigating away from the current module if there's some change @done (13-08-09 19:01)
+    could work on a history manager, where the ViewBar viewModel (or any other) can prevent from navigating away from the current url if there's some change
+
+ ✔ after a read operation the selected item is lost on the data grid, find the previously selected item @done (14-03-20 09:17)
+ ✔ make tab control tabs vertical if selected viewbar is to the right @done (13-09-28 11:19)
+ ✔ modify the validation message binding so it shows the message when the element is unfocused @done (13-09-21 23:56)
+ ✔ Add a red * after the labels of the required fields. @done (13-09-29 09:56)
+ 
+
+
+Internet Explorer Problems: 
+ ✔ Grid tabs taking more space than required @done (13-09-26 13:10)
+
+Chrome Problems:
+ ✔ Grid tabs taking more space than required @done (13-09-26 13:10)
+ ✔ When windows is opened shows the panels stacked instead of using a layout similar to a wrap panel @done (13-09-26 13:12)
+
+
+ ✔ add css styles for customer module data grid @done (08-01-2013 13:37)
+ ✔ select an element on the grid -> navigate away from customer module -> and come back -> select the same element -> the viewpanel should open again @done (08-01-2013 12:19)
+ ✔ put selected item on View panel to null when page is changed, or cancel page change if the value can't be set @done (07-14-2012 18:32)
+ ✔ refresh Grid after a change is saved to the server @done (07-15-2013 12:26)
+ ✔ viewbar layout changes when selected item is changed @done (07-15-2013 11:26)
+ ✔ ** Module manager to handle loading/unloading of modules @done (07-30-2013 23:28)
+
+Internet:
+ ✔ Fix error when adding new entity to breeze - Cannot attach an object to an EntityManager without first setting its key or setting its entityType 'AutoGeneratedKeyType' property to something other than 'None' @done (13-08-07 21:04)
+ ✔ Drag&Drop rows from the grid + using a drag template. @done (07-30-2013 23:28)
+ ✔ knockout + breeze validation, with a validation summary @done (07-30-2013 23:28)
+ ✔ Directory.EnumerateFiles - find pattern to only enumerate *.html and *.css files... "*.html | *.css" @done (07-30-2013 23:29)
+
+ ✔ read-only value binding possibly configuring ko.validation to add the html5 readonly attribute @done (13-08-07 21:04)
+ ✔ how knockout.validation can be contfigured?? @done (13-08-07 21:04)
+   a better idea could be adding a custom binding at the root of the input controls that searches for all inputs within and makes all them readonly. if the browser is html5 compatible just adding the attribute readonly=true is enought, otherwise it should be some way to do it
+   ✔ *** research about bindings that control child bindings with KO @done (13-08-07 21:05)
+
+ ✔ make cells in the grid not wrap and take only a single line with CSS @done (08-01-2013 10:20)
+ ✔ make an html validation pop up similar to WPF/SL @done (13-09-28 18:50)
+ 
+
+sidebar:
+ ✔ My Items sidebar module @done (07-31-2013 02:05)
+ ✔ Sidebar Url mapping @done (13-09-28 21:49)
+ 
+ 
+
+1ST MILESTONE [done]:
+
+  General UI:
+    ✔ basic layout (Ribbon bar, Side/Details/Main Region) @done (08-01-2013 13:50)
+    ✔ Ribbon bar should be composable based on the user modules @done (08-01-2013 13:50)
+    ✔ Tool Tips against Ribbon items @done (08-01-2013 13:50)
+    ✔ Splitters to resize the regions @done (08-01-2013 13:50)
+    ✔ Change Side/Details Region positions and Restart Layout button @done (08-01-2013 13:50)
+    ✔ Store user settings in the cache (this could be done in the server also) (or this should be by "user profile" on the server) @done (08-01-2013 13:50)
+    ✔ Theme support (could use jQuery theming), store settings in the cache @done (08-01-2013 13:50)
+    ✔ Outlook UI Theme, start developing matching this theme @done (08-01-2013 14:07)
+    ✔ Busy Indicators @done (08-01-2013 13:50)
+    ✔ Show Message and Error in the global region @done (08-01-2013 13:50)
+    ✔ Animations when loadin regions (jQuery) @done (08-01-2013 14:07)
+
+  Security:
+    ✔ User Log in/out on the server @done (08-01-2013 13:50)
+    UI on the client:
+      ✔ Dialog @done (08-01-2013 13:50)
+      ✔ returns to the same page after logued in @done (08-01-2013 13:50)
+      ✔ Check for known security issues (HTML injection, SQL injection, etc.) @done (13-12-21 16:51)
+      ✔ Caps lock warning @done (08-01-2013 13:51)
+      ✔ Message if invalid user name/password @done (08-01-2013 13:50)
+    ✔ Sign out after 5min. @done (08-01-2013 13:51)
+
+  Messages:
+    ✔ Some messages should hide after a while (JS) @done (08-01-2013 13:51)
+
+
+2ND MILESTONE - Modules:
+
+  DataGrid:
+    ✔ with pagination @done (08-01-2013 13:52)
+    ✔ reorder columns on drag @done (08-01-2013 13:52)
+    ✘ store column order on the cache @cancelled (13-08-10 14:59)
+  Tab Control:
+    ✘ changes orientation based on the region location @cancelled (13-08-07 21:06)
+      the kendo ui tab control doesn't support 
+
+  Read Only Mode:
+    ☐ ...
+
+  View Mode:
+    ✔ data validation on the client side (jQuery) @done (08-01-2013 13:52)
+    ✔ message on successfull save @done (08-01-2013 15:50)
+    ✔ dialog to View/Edit data @done (13-08-07 21:07)
+    ✔ save and close buttons @done (13-08-07 21:07)
+
+  Editable Mode:
+    ✔ load items on DataGrid @done (08-01-2013 13:57)
+    ✔ add pagination @done (08-01-2013 13:57)
+    ✔ add new item @done (13-08-07 21:07)
+    ✔ hability to add new item from ribbon @done (13-08-10 14:57)
+    ✔ data validation on the client side (jQuery) @done (08-01-2013 13:58)
+    ✔ message on successfull save @done (08-01-2013 15:50)
+    ✔ message if navigating away when unsaved changes @done (08-01-2013 13:58)
+    ✔ save and close region @done (08-01-2013 13:58)
+    ✔ hability to cancel the changes @done (08-01-2013 13:58)
+    ✘ show the data in the Details Region, "get the data again from the server using the key" @cancelled (08-01-2013 13:58)
+
+
+  Side Bar:
+    ✘ Hability to Maximize/Minimize @cancelled (08-01-2013 16:33)
+    ✘ When minimized items should change the look (CSS) @cancelled (08-01-2013 16:33)
+    ✔ Messages after adding/removing items @done (08-01-2013 13:58)
+    Drag items in from the Main Region:
+      ☐ Store item just added on the server (AJAX)
+      ✔ message after sucessfull drag @done (08-01-2013 13:58)
+      ✔ Check if the row already exist (JS) @done (08-01-2013 13:58)
+      ✘ Drag when sidebar is minimized @cancelled (08-01-2013 16:33)
+    ✔ Drag to Remove from list @done (08-01-2013 13:59)
+      ✔ styles of the dragued controls (different for different items) @done (08-01-2013 13:59)
+
+
+3RD MILESTONE:
+  
+  Inline Editing Mode:
+    ✔ add new item @done (13-12-21 16:52)
+    ☐ hability to add new item from ribbon
+    ✔ data validation on the client side @done (13-08-23 17:47)
+    ✔ message on successfull save @done (13-08-23 17:47)
+    ✔ message if navigating away when unsaved changes @done (13-08-23 17:47)
+
+  Side Bar:
+    ✔ URL Mapping @done (13-09-26 20:43)
+
+  Searchs:
+  ✔ Display busy indicator while searching @done (13-09-29 12:03)
+  ☐ No results found message
+  ✔ Jump To record id @done (13-09-21 23:56)
+    ✔ Find Next/Prev buttons when matching various records @done (13-09-21 23:56)
+  ✔ Simple/Advanced Search @done (13-09-21 23:56)
+    ✔ Using one or more parameters @done (13-09-21 23:56)
+
+  ✔ integrate breeze with CodeEffects.Rule, possibly extending breeze on both the client and the server @done (13-09-21 23:56)
+
+  Export:
+    ✔ to Excel @done (13-10-13 22:41)
+    ✔ Word/Pdf @done (13-10-13 22:41)
+    ✔ buttons on the corresponding areas @done (13-12-21 16:51)
+
+
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+ ✔ Create basic bootstrap sample page, to display bootstrap styles similar to (https://github.com/divshot/bootstrap-theme-white-plum/blob/master/examples/kitchen-sink.html) @done (14-07-27 01:03) @project(Milestone 6)
+ ✔ version pager enhancements @done (14-08-04 19:41) @project(Milestone 6)
+ ✔ active record changes @done (14-07-02 00:45) @project(Milestone 6)
+ ✔ Remove tabs from ribbon (PrioritySet) @done (14-07-01 20:21) @project(Milestone 6)
+ ✔ ribbon bar should change tabs when touch to left or right @done (14-07-23 14:48) @project(Milestone 6)
+ ✔ Ensure notifications work @bug @done (14-07-27 16:19) @project(Milestone 6)
+ ✔ Ensure offline works @done (14-07-25 17:07) @project(Milestone 6)
+ ✔ When the viewPannel is align Right. Increase the limits at which we can move it Left (increase its width) @done (14-06-03 23:22) @project(Milestone 6)
+ ✔ Message should be removed when a user does something different (than what the message is referring to) or repeats the same thing and gets a different result @done (14-06-03 23:25) @project(Milestone 6)
+ ✔ Move the Export to Word / Export to PDF icons, inline with the Save | Save and Close | Close buttons @done (14-06-04 16:39) @project(Milestone 6)
+ ✔ Modifications to grid content area of data modules @done (14-07-17 11:04) @project(Milestone 6)
+ ✔ Fix: When the ViewPanel is aligned bottom, If the controls exceed the space, there is not scroll bar @done (14-07-02 00:45) @project(Milestone 6)
+ ✔ add keytips binding for the ribbon menus @done (14-07-23 14:49) @project(Milestone 6)
+ ✔ Hide KeyTips if arrow key is pressed @sergio @done (14-07-29 17:21) @project(Milestone 6)
+ ✔ Allow dropping items on the entire sidebar @done (14-07-24 09:55) @project(Milestone 6)
+ ✔ when sidebar is collapsed it should expand if it's clicked @done (14-07-29 16:14) @project(Milestone 6)
+ ✔ cosmetics: up/down arrow on difference summary @done (14-07-30 09:48) @project(Milestone 6)
+ ✔ CHANGE: Side Bar; Should be able to drag into the sidebar, even if closed. And should be able to drag anywhere in the My Items Panel. When an Item is dragged into My Items, it should create a Group i.e. "My Customers". The icon and template used should be based on a simple rule:- Use the Generic Icon/Template unless we have a specific one in place for the type of item dragged "Customer". @done (14-07-30 23:55) @project(Milestone 6 / Final Items)
+ ✔ CHANGE: Click anywhere on side bar to expand @done (14-07-30 23:55) @project(Milestone 6)
+ ✔ BUG: Mobile Row Arrow z-index is above popups @done (14-07-30 23:55) @project(Milestone 6)
+ ✔ CHANGE: Active Record Panel should have a "Clear button also". In a normal scenario, we should only show @done (14-08-04 19:39) @project(Milestone 6)
+ ✘ BUG: Are Layouts preserved/saved. Layout /Theme / View Panel Height\Width / Grid Column / Grid Order / Pop-up Position\Size @cancelled (14-07-31 15:06) @project(Milestone 6)
+ ✔ BUG: Info messages must disappear when nolonger required @done (14-07-30 23:59) @project(Milestone 6)
+ ✔ BUG: View Panel Right Aligned - Wider Limit should be extened and lower limit @done (14-07-30 23:56) @project(Milestone 6)
+ ✔ BUG: When you resize ViewPanel when viewing TASK versions, the text all overlaps @done (14-07-31 14:53) @project(Milestone 6)
+ ✔ BUG: Arrow connecting pervious TASK versions, when layout RIGHT. Increase pannel width, and Arrow head is unaligned to Arrow body. @done (14-08-01 20:56) @project(Milestone 6)
+ ✔ BUG: View Panel Scroll when "Bottom" @done (14-08-04 18:02) @project(Milestone 6)
+ ✔ Fix forms templates to use the rc context variable @done (14-06-05 00:52) @project(Milestone NEXT)
+ ✔ Add orders module @done (14-05-11 16:58) @project(Milestone NEXT / Extras)
+ ✔ Allow navigating to a customer orders by clicking a button on the grid @done (14-05-11 16:59) @project(Milestone NEXT / Extras)
+ ✔ Version Pager (50-80 hours) @done (14-06-05 00:51) @project(Milestone 5 (Version Pager))
+ ✔ add HasPending column to grid @done (14-04-12 14:37) @project(Milestone 5 (Version Pager))
+ ✔ improve css for version pager on view bar @done (14-04-15 15:52) @project(Milestone 5 (Version Pager))
+ ✘ Rejecting a pending version doesn't delete it on the client after it get's updated @cancelled (14-07-29 18:57) @project(Milestone 5 (Version Pager))
+ ✔ add collectionSet custom binding to display labels for complex types (like collections) that can't be marked with an outline @done (14-04-16 23:23) @project(Milestone 5 (Version Pager))
+ ✔ Add a menu to display the Tags associated with a task to show the differences @done (14-04-16 19:34) @project(Milestone 5 (Version Pager))
+ ✔ separate the metadata from the entity caches to serialize the entities @done (14-04-12 16:41) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ Import script metadata for the Employees and Suppliers modules @done (14-04-16 23:33) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ Refactor grid related bindings to desktop specific files @done (14-04-19 14:39) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ PERF: use custom view for the main data grid view to avoid sending configuration strings into HTML @done (14-04-20 11:41) @project(Milestone 5 (Version Pager) / New Todos)
+ ✘ PERF: kendo.resize function impacts heavily on performance with the layout. This is a recursive function that is called for each node in the splitter DOM tree. this function was added with the latest version of KendoUI @cancelled (14-04-19 19:41) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ BUG: Notifications module throws exception @done (14-07-29 18:57) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ IE: sidebar shows scroll bars when collapsed when it shouldn't @done (14-04-15 16:54) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ PERF: evil function kendo.resize get's called when the resize event is called on Jigsaw @done (14-04-15 14:51) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ PERF: use display:none for #jigsaw-root element to avoid some unnecesary repaints while the user interface is being composed @done (14-04-14 22:23) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ PERF: the resize event should buble to the root, only subscribe to the $(body) element instead of all parents @done (14-04-14 20:40) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ PERF: Explore options for hiding 'busy' or empty regions to increase performance saving unnecesary re-paints @done (14-04-14 20:37) @project(Milestone 5 (Version Pager) / New Todos)
+ ✘ PERF: Explore using CSS transitions for Layout animations @cancelled (14-04-14 11:49)  CSS based animations are slower for properties that affect the layout (like the width). So the best solution for this continues being JS based animations @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ make diff summary use the field display name instead of the field string itself, for the comparisonField binding @done (14-04-11 20:38) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ replace kendoUI template with Underscore template to align all templates @done (14-04-11 19:41) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ PERF: Use global variable for all unederscore templates (rc -> request context) @done (14-04-03 17:27) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ PERF: include ko.projections pluging for faster observableArray operations @done (14-04-03 17:27) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ PERF: Use KO v3 arrayChange to track changes in observable arrays instead of running differencing algorithms @done (14-04-11 20:27) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ PERF: Change T4 template generation to precompile only the templates with variables (or containing the characters '<%') @done (14-04-03 18:05) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ BUG: problem when navigating away from the ViewLayoutView and returning, KO throws error apply binding multiple times error @done (14-04-07 19:55) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ Themes. The themes have been reduced to 3, which is great. But can we make all 3 themes work. I am not overly concerned with the way things look, but certain things are drastically different (usually positions or size) between themes. Certain things should be set in the global CSS, rather than within the themes @done (14-05-09 09:52) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ A better Icon for the Message Notifications Expand/Collapse @done (14-05-14 18:07) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ Reduce the Approved By, Approved Date, Modified By, Modified Date, and condense into 2 lines. Approved: {Name}{DateTime} /n Modified:{Name}{DateTime} @done (14-05-09 10:46) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ When SideBar Collapsed, it only shows small icons for "Items" (My Customers, My Employees). It should also show My Searches @done (14-05-09 17:12) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ The Version Pager Control is on the wrong side when Veir Bar is orientated to the Side @done (14-05-09 18:03) @project(Milestone 5 (Version Pager) / New Todos)
+ ✘ When SideBar is orientated to the Right, unable to click on My Searches @cancelled (14-05-09 18:03) @project(Milestone 5 (Version Pager) / New Todos)
+ ✔ If we can work out a way which makes NON-Current versions (in the version pager) use labels rather than Controls. @done (14-05-14 14:06) @project(Milestone 5 (Version Pager) / New Todos (v2))
+ ✔ Can we please add a Summary Tab to one of the existing. i.e. What we have for the Wizzard @done (14-05-14 16:43) @project(Milestone 5 (Version Pager) / New Todos (v2))
+ ✔ Export. I would prefer it if EXPORT was just a button (rather than a drop down). In the same fashion the export to pdf and export to word are just icons, an Excel icon would be ideal. I notice when you click "choose columns" there is a dialog box pops up. This functionality doesn't actually work right now, but I would like to see all options via this dialog box (i.e. Choose which columns to export, chose which page[s] to export). This allow us to extend the options moving forward. @done (14-06-02 17:36) @project(Milestone 5 (Version Pager) / New Todos (v2))
+ ✔ kendo splitter, set maximum and minimum sizes for the splitter regions @done (14-04-15 17:39) @project(MISC)
+ ✔ Fix splitter layout problems when default layout is selected and the browser is resized @done (14-04-01 19:16) @project(MISC)
+ ✘ use a PromiseQueue for the @ModuleManager @cancelled (14-04-01 19:15) @project(MISC)
+ ✘ use historyjs to handle browser history (instead of Backbone.History) @cancelled (14-04-01 19:15) @project(Remove Backbone + Marionette)
+ ✔ Remove all usages of Backbone and Backbone.Marionette and write a simpler version @done (14-04-01 19:15) @project(Remove Backbone + Marionette)
+ ✔ Update project to latest version of TypeScript @done (14-04-01 19:15) @project(Remove Backbone + Marionette / After)
+ ✔ Change Template generation so all templates are precompiled to improve application performance @done (14-04-01 19:15) @project(Remove Backbone + Marionette / After)
+ ✔ Notifications @done (14-02-23 10:16) @project(Milestone 4)
+ ✔ Settings @done (13-12-21 16:34) @project(Milestone 4)
+ ✔ Export Enhancements @done (13-12-21 16:34) @project(Milestone 4)
+ ✔ Complex Controls @done (14-02-04 17:38) @project(Milestone 4)
+ ✔ Saved Searches @done (14-02-05 19:39) @project(Milestone 4)
+ ✔ Wizard @done (14-02-23 20:30) @project(Milestone 4)
+ ✔ Fix IE Layout bug @done (14-01-04 15:57) @project(Milestone 4)
+ ✔ Error Deep Links @done (14-01-04 16:47) @project(Milestone 4 / Minor Changes)
+ ✔ Tooltips on headings and field titles should be driven by Metadata @done (14-03-08 11:41) @project(Milestone 4 / Minor Changes)
+ ✔ Drag Column Headings @done (13-12-21 16:34) @project(Milestone 4 / Minor Changes)
+ ✘ Group Columns @cancelled (14-02-01 22:58) @project(Milestone 4 / Minor Changes)
+ ✔ Red Triangle - Blue Triangle @done (13-12-27 11:24) @project(Milestone 4 / Minor Changes)
+ ✔ Use ListView instead of Grid to display data for the Mobile app @done (14-02-01 22:57) @project(Milestone 4 / Mobile)
+ ✔ Mobile ViewPanel Triangle @done (14-02-01 22:57) @project(Milestone 4 / Mobile)
+ ✔ Mobile Menu @done (14-02-01 22:57) @project(Milestone 4 / Mobile)
+ ✔ Pagination of items @done (14-02-10 13:07) @project(Milestone 4 / Mobile)
+ ✔ Item changed dialog throws error when closed on mobile version @done (14-03-10 00:16) @project(New todos)
+ ✔ User settings module for the Mobile version @done (14-02-23 11:10) @project(New todos)
+ ✔ Research: CSS make element fill all float remaining space @done (14-02-25 18:17) @project(New todos)
+ ✔ Column chooser dialog @done (14-03-08 15:40) @project(New todos)
+ ✔ @Wizzard Big space above the content in chrome @done (14-03-10 11:02) @project(New todos)
+ ✔ With Inline Editing validation shoul't work on a deleted row. @done (13-09-29 13:57) @project(New todos)
+ ✔ Employees module window doesn't appear centered when is oppened @done (13-09-29 14:10) @project(New todos)
+ ✔ Change template of the 'Are you sure' message to remove the cancel button @done (13-09-29 14:27) @project(MOBILE VERSION)
+ ✘ Store grid column order per grid per module on the local cache (Save & Load layout.pdf) @cancelled (13-10-08 10:00) @project(MOBILE VERSION)
+ ✔ BUG when entity is changed and the page is changed, the dialog is shown twice @done (13-10-13 22:36) @project(MOBILE VERSION)
+ ✔ Use icons on the tabs on the viewbar @done (13-10-08 08:39) @project(MOBILE VERSION)
+ ✘ Change drag hint template (Minor Changes Part2.docx) @cancelled (13-10-13 22:36) @project(MOBILE VERSION)
+ ✔ Remove messages when grid selected item is changed (Show info message.pdf) @done (13-10-13 22:38) @project(MOBILE VERSION)
+ ✔ Improve loading screen, showing a percent is a problem (Loading Screen.pdf) @done (13-10-09 19:12) @project(MOBILE VERSION)
+ ✘ Item Added to my Items message should be shown above the grid @cancelled (14-03-20 14:36) @project(My Items)
+ ✘ Show Item already on My Items message above the grid @cancelled (14-03-20 14:36) @project(My Items)
+ ✔ "Row removed from My Items successfully" message (Drag and Drop out of MyItems.pdf) @done (13-10-13 22:40) @project(My Items)
+ ✔ Show No more results message when there're no results (Simple Search.pdf) @done (13-10-10 17:10) @project(Jump To/Searches)
+ ✔ Show no results message when "Jump To" returns no matches (Simple Search.pdf) @done (13-10-13 18:47) @project(Jump To/Searches)
+ ✔ Show find next/prev message when "Jump To" returns matches (Simple Search.pdf) @done (13-10-14 20:04) @project(Jump To/Searches)
+ ✔ Show no results message after advance search (advanced search.pdf) @done (13-10-10 17:19) @project(Jump To/Searches)
+ ✔ make a delayed async 'with' custom binding to be used in the view panel, so elements @done (13-09-29 13:06) @project(Jump To/Searches)
+ ✔ in readony mode fields look like text not controls @done (13-09-26 12:07) @project(Jump To/Searches)
+ ✔ History is only working on Firefox, the callback isn't being called in other browsers @done (13-09-29 13:06) @project(Jump To/Searches)
+ ✔ bug layout is reseted when the browser is resized @done (13-08-07 21:04) @project(Jump To/Searches)
+ ✔ Sidebar panel control needs to be more like an accordion @done (13-09-26 17:50) @project(Jump To/Searches)
+ ✔ Change T4 template generator to the better folder structure data/+customers/... @done (13-09-28 23:22) @project(Jump To/Searches)
+ ✔ have more control over the history of the browser including undoing the current navigation action @done (13-08-09 19:01) @project(Jump To/Searches)
+ ✔ prevent navigating away from the current module if there's some change @done (13-08-09 19:01) @project(Jump To/Searches)
+  could work on a history manager, where the ViewBar viewModel (or any other) can prevent from navigating away from the current url if there's some change
+ ✔ after a read operation the selected item is lost on the data grid, find the previously selected item @done (14-03-20 09:17) @project(Jump To/Searches)
+ ✔ make tab control tabs vertical if selected viewbar is to the right @done (13-09-28 11:19) @project(Jump To/Searches)
+ ✔ modify the validation message binding so it shows the message when the element is unfocused @done (13-09-21 23:56) @project(Jump To/Searches)
+ ✔ Add a red * after the labels of the required fields. @done (13-09-29 09:56) @project(Jump To/Searches)

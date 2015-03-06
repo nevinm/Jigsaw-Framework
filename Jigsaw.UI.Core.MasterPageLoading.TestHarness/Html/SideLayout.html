@@ -1,0 +1,25 @@
+﻿
+<div data-bind="kendoSplitter: {orientation: 'horizontal', height: 'auto'}, css: {'sidebar-left': sidebarPosition() == 0, 'sidebar-right': sidebarPosition() == 1}">
+    
+    <% if (rc.sidebarLeft) { %>
+    <div data-bind="kendoSplitterPane: {collapsible: true, size: sidebarSize.px}">
+        <div id="sideLayout-sidebar">
+            <div class="busy"></div>
+        </div>
+    </div>
+    <% } %>
+
+    <div data-bind="kendoSplitterPane: {collapsible: false}">
+        <div id="sideLayout-content">
+            <div class="busy"></div>
+        </div>
+    </div>
+    
+    <% if (!rc.sidebarLeft) { %>
+    <div  data-bind="kendoSplitterPane: {collapsible: true, size: sidebarSize.px}">
+        <div id="sideLayout-sidebar">
+            <div class="busy"></div>
+        </div>
+    </div>
+    <% } %>
+</div>

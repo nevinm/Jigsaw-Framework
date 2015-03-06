@@ -1,0 +1,6 @@
+﻿Project Name	:	TestHarness-LoadingMasterPageLoading
+Description		:	This project is a TestHarness developed for loading up the page. Basically it does the following
+					1. The resource list, listsonly the resources required to graphically 
+					represent and perform the loading page functionality.
+					2. The files are loaded as per in the main jigsaw project via server side.
+					3. The js/css files are tracked and graphically represented via progress bar.

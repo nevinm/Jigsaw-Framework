@@ -1,0 +1,3 @@
+
+@import "..\kendo\kendo.default.less";
+@import "_after-theme.less";

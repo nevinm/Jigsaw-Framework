@@ -1,0 +1,77 @@
+﻿<div class="viewbar-content">
+
+    <div class="fullscreen-patch">
+
+        <div data-bind="markErrorCollection: {}">
+
+            <div data-bind="messageQueue: messageQueue"></div>
+
+            <div data-bind="validationSummary: {}"></div>
+
+            <div class="jarviswidget jarviswidget-sortable all-space" data-bind="measurePrev: 'top'">
+                <header role="heading">
+                    <div class="jarviswidget-ctrls" role="menu">
+
+                        <a class="button-icon" href="javascript:void(0);" data-bind="tooltip: {title: 'Export Word',  placement: 'bottom'}, qclick: wordExport, visible: options.wordExportUrl, keyTips: { key : 'VW' }">
+                            <i class="fa fa-file-word-o"></i>
+                        </a>
+
+                        <a class="button-icon" href="javascript:void(0);" data-bind="tooltip: {title: 'Export Pdf',  placement: 'bottom'}, qclick: pdfExport, visible: options.pdfExportUrl, keyTips: { key : 'VP' }">
+                            <i class="fa fa-file-pdf-o"></i>
+                        </a>
+
+                        <a class="button-icon" href="javascript:void(0);" data-bind="tooltip: {title: 'Save',  placement: 'bottom'}, qclick: save, visible: !isReadOnly(), keyTips: { key : 'VS' }">
+                            <i class="fa fa-save"></i>
+                        </a>
+
+                        <a class="button-icon" href="javascript:void(0);" data-bind="tooltip: {title: 'Save+Close',  placement: 'bottom'}, qclick: saveAndClose, visible: !isReadOnly(), keyTips: { key : 'VX' }">
+                            <i class="fa fa-save"></i>
+                            <i class="fa fa-times"></i>
+                        </a>
+
+
+                        <a class="button-icon" href="javascript:void(0);" data-bind="tooltip: {title: 'FullScreen',  placement: 'bottom'}, toogleFullScreen : { wrapperSelector : '.fullscreen-patch', class : 'fa fa-expand | fa fa-compress'}, keyTips: { key : 'VF' }">
+                            <i></i>
+                        </a>
+
+                        <a class="button-icon" href="javascript:void(0);" data-bind="qclick: close, tooltip: {title: 'Close',  placement: 'bottom'}, keyTips: { key : 'VC' }">
+                            <i class="fa fa-times"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="widget-toolbar" role="menu" data-bind="visible: isReadOnly">
+                        <a class="btn btn-default" data-bind="qclick: showInPopupReadOnly, keyTips: { key : 'VR' }">ReadOnly</a>
+                    </div>
+
+                    <div class="widget-toolbar" role="menu" data-bind="visible: isReadOnly">
+                        <a class="btn btn-default" data-bind="qclick: showInPopup, keyTips: { key : 'VO' }">Popup</a>
+                    </div>
+
+                    <ul class="nav nav-tabs pull-left in" data-bind="htmlTunnel : {id : 'viewbar-tabs', end: 'exit'}"></ul>
+
+                </header>
+
+                <!-- widget div-->
+                <div role="content">
+
+
+
+                    <div class="all-space">
+                        <!-- widget content -->
+                        <div data-bind="markForceValidationErrors: forceValidationErrors">
+                            <div id="viewBar-region-container" data-bind="markReadOnlyTree: isReadOnly">
+                                <%= rc.renderBody %>
+                            </div>
+                        </div>
+                        <!-- end widget content -->
+
+                    </div>
+                </div>
+                <!-- end widget div -->
+
+            </div>
+        </div>
+    </div>
+
+</div>

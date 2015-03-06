@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF87E1CF-274F-4AE7-B17C-1CD406B90059}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestHarness_LoadingMasterPageLoading</RootNamespace>
+    <AssemblyName>TestHarness-LoadingMasterPageLoading</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="scripts\lib\require.js" />
+    <Content Include="scripts\src\app.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\bootstrap-theme.min.css" />
+    <Content Include="content\bootstrap.css" />
+    <Content Include="content\custom.css" />
+    <Content Include="content\main-theme.css" />
+    <Content Include="content\overrides.css" />
+    <Content Include="content\core-styles\smartadmin-production.css" />
+    <Content Include="content\variables.css" />
+    <Content Include="content\smartadmin\img\ajax-loader.gif" />
+    <Content Include="content\smartadmin\img\alpha.png" />
+    <Content Include="content\smartadmin\img\avatars\1.png" />
+    <Content Include="content\smartadmin\img\avatars\2.png" />
+    <Content Include="content\smartadmin\img\avatars\3.png" />
+    <Content Include="content\smartadmin\img\avatars\4.png" />
+    <Content Include="content\smartadmin\img\avatars\5.png" />
+    <Content Include="content\smartadmin\img\avatars\copyright.txt" />
+    <Content Include="content\smartadmin\img\avatars\female.png" />
+    <Content Include="content\smartadmin\img\avatars\male.png" />
+    <Content Include="content\smartadmin\img\avatars\sunny-big.png" />
+    <Content Include="content\smartadmin\img\avatars\sunny.png" />
+    <Content Include="content\smartadmin\img\blank.gif" />
+    <Content Include="content\smartadmin\img\clear.png" />
+    <Content Include="content\smartadmin\img\colorblind-friendly\pt1.png" />
+    <Content Include="content\smartadmin\img\colorblind-friendly\pt2.png" />
+    <Content Include="content\smartadmin\img\colorblind-friendly\pt3.png" />
+    <Content Include="content\smartadmin\img\demo\64x64.png" />
+    <Content Include="content\smartadmin\img\demo\basic.png" />
+    <Content Include="content\smartadmin\img\demo\chat.png" />
+    <Content Include="content\smartadmin\img\demo\copyright.txt" />
+    <Content Include="content\smartadmin\img\demo\demo-smartbig-alert.png" />
+    <Content Include="content\smartadmin\img\demo\demo-smartmedium-alert.png" />
+    <Content Include="content\smartadmin\img\demo\demo-smartsmall-alert.png" />
+    <Content Include="content\smartadmin\img\demo\hero.png" />
+    <Content Include="content\smartadmin\img\demo\image-placeholder-64x64.png" />
+    <Content Include="content\smartadmin\img\demo\iphoneview.png" />
+    <Content Include="content\smartadmin\img\demo\m1.jpg" />
+    <Content Include="content\smartadmin\img\demo\m2.jpg" />
+    <Content Include="content\smartadmin\img\demo\m3.jpg" />
+    <Content Include="content\smartadmin\img\demo\newsletter.png" />
+    <Content Include="content\smartadmin\img\demo\responseimg.png" />
+    <Content Include="content\smartadmin\img\demo\s1.jpg" />
+    <Content Include="content\smartadmin\img\demo\s2.jpg" />
+    <Content Include="content\smartadmin\img\demo\s3.jpg" />
+    <Content Include="content\smartadmin\img\demo\sa-demo.png" />
+    <Content Include="content\smartadmin\img\demo\sample.jpg" />
+    <Content Include="content\smartadmin\img\demo\sidebar.png" />
+    <Content Include="content\smartadmin\img\demo\sidebarhero.png" />
+    <Content Include="content\smartadmin\img\demo\site-1.jpg" />
+    <Content Include="content\smartadmin\img\demo\site-2.jpg" />
+    <Content Include="content\smartadmin\img\demo\video.png" />
+    <Content Include="content\smartadmin\img\demo\widget-colorpicker.png" />
+    <Content Include="content\smartadmin\img\dropzone\spritemap%402x.png" />
+    <Content Include="content\smartadmin\img\dropzone\spritemap.png" />
+    <Content Include="content\smartadmin\img\favicon\1favicon.ico" />
+    <Content Include="content\smartadmin\img\favicon\favicon.ico" />
+    <Content Include="content\smartadmin\img\favicon\favicon.png" />
+    <Content Include="content\smartadmin\img\flags\de.png" />
+    <Content Include="content\smartadmin\img\flags\es.png" />
+    <Content Include="content\smartadmin\img\flags\flags.png" />
+    <Content Include="content\smartadmin\img\flags\us.png" />
+    <Content Include="content\smartadmin\img\glass-image-copyright.txt" />
+    <Content Include="content\smartadmin\img\glass.jpg" />
+    <Content Include="content\smartadmin\img\gradient\login.png" />
+    <Content Include="content\smartadmin\img\hue.png" />
+    <Content Include="content\smartadmin\img\invoice\americanexpress.png" />
+    <Content Include="content\smartadmin\img\invoice\license.txt" />
+    <Content Include="content\smartadmin\img\invoice\mastercard.png" />
+    <Content Include="content\smartadmin\img\invoice\paypal.png" />
+    <Content Include="content\smartadmin\img\invoice\visa.png" />
+    <Content Include="content\smartadmin\img\jcrop\Jcrop.gif" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_flat_0_999999_40x100.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_222222_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_2e83ff_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_428bca_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_454545_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_555555_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_888888_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_999999_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_f0ad4e_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_f6cf3b_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_ffffff_256x240.png" />
+    <Content Include="content\smartadmin\img\loading.gif" />
+    <Content Include="content\smartadmin\img\logo-blacknwhite.png" />
+    <Content Include="content\smartadmin\img\logo-blue.png" />
+    <Content Include="content\smartadmin\img\logo-o.png" />
+    <Content Include="content\smartadmin\img\logo-pale.png" />
+    <Content Include="content\smartadmin\img\logo-white.png" />
+    <Content Include="content\smartadmin\img\logo.png" />
+    <Content Include="content\smartadmin\img\mappin-default.png" />
+    <Content Include="content\smartadmin\img\minus.png" />
+    <Content Include="content\smartadmin\img\mybg.png" />
+    <Content Include="content\smartadmin\img\pattern\divider.jpg" />
+    <Content Include="content\smartadmin\img\pattern\graphy-xs.png" />
+    <Content Include="content\smartadmin\img\pattern\graphy.png" />
+    <Content Include="content\smartadmin\img\pattern\license-info.txt" />
+    <Content Include="content\smartadmin\img\pattern\lightpaperfibers.png" />
+    <Content Include="content\smartadmin\img\pattern\movable.png" />
+    <Content Include="content\smartadmin\img\pattern\nistri-xs.png" />
+    <Content Include="content\smartadmin\img\pattern\nistri.png" />
+    <Content Include="content\smartadmin\img\pattern\overlay-pattern.png" />
+    <Content Include="content\smartadmin\img\pattern\paper-xs.png" />
+    <Content Include="content\smartadmin\img\pattern\paper.png" />
+    <Content Include="content\smartadmin\img\pattern\pattern.png" />
+    <Content Include="content\smartadmin\img\pattern\sneaker_mesh_fabric-xs.png" />
+    <Content Include="content\smartadmin\img\pattern\sneaker_mesh_fabric.png" />
+    <Content Include="content\smartadmin\img\pattern\tileable_wood_texture-xs.png" />
+    <Content Include="content\smartadmin\img\pattern\tileable_wood_texture.png" />
+    <Content Include="content\smartadmin\img\plus.png" />
+    <Content Include="content\smartadmin\img\realestate\1.png" />
+    <Content Include="content\smartadmin\img\realestate\2.png" />
+    <Content Include="content\smartadmin\img\realestate\3.png" />
+    <Content Include="content\smartadmin\img\realestate\4.png" />
+    <Content Include="content\smartadmin\img\realestate\5.png" />
+    <Content Include="content\smartadmin\img\realestate\6.png" />
+    <Content Include="content\smartadmin\img\ribbon.png" />
+    <Content Include="content\smartadmin\img\sa-dark.png" />
+    <Content Include="content\smartadmin\img\sa-default.png" />
+    <Content Include="content\smartadmin\img\saturation.png" />
+    <Content Include="content\smartadmin\img\select2-spinner.gif" />
+    <Content Include="content\smartadmin\img\sort_asc.png" />
+    <Content Include="content\smartadmin\img\sort_asc_disabled.png" />
+    <Content Include="content\smartadmin\img\sort_both.png" />
+    <Content Include="content\smartadmin\img\sort_desc.png" />
+    <Content Include="content\smartadmin\img\sort_desc_disabled.png" />
+    <Content Include="content\smartadmin\img\splash\ipad-landscape.png" />
+    <Content Include="content\smartadmin\img\splash\ipad-portrait.png" />
+    <Content Include="content\smartadmin\img\splash\iphone.png" />
+    <Content Include="content\smartadmin\img\splash\sptouch-icon-iphone.png" />
+    <Content Include="content\smartadmin\img\splash\touch-icon-ipad-retina.png" />
+    <Content Include="content\smartadmin\img\splash\touch-icon-ipad.png" />
+    <Content Include="content\smartadmin\img\splash\touch-icon-iphone-retina.png" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-1.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-10.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-11.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-12.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-13.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-14.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-15.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-16.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-17.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-18.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-19.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-2.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-20-bw.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-20.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-21.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-22.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-23.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-24.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-3.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-4.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-5.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-6.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-7.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-8.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-9.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-1.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-10.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-11.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-12.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-13.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-14.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-15.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-16.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-17.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-18.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-19.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-2.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-20.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-21.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-22.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-23.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-24.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-3.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-4.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-5.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-6.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-7.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-8.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-9.jpg" />
+    <Content Include="content\smartadmin\img\versions\ajaxversion.png" />
+    <Content Include="content\smartadmin\img\versions\angularversion.png" />
+    <Content Include="content\smartadmin\img\versions\dotnetversion.png" />
+    <Content Include="content\smartadmin\img\versions\htmlversion.png" />
+    <Content Include="content\smartadmin\img\versions\phpversion.png" />
+    <Content Include="content\smartadmin\img\versions\reactversion.png" />
+    <Content Include="content\smartadmin\img\violate.jpg" />
+    <Content Include="content\smartadmin\img\voicecommand\active-btn.gif" />
+    <Content Include="content\smartadmin\img\vt-menu.png" />
+    <Content Include="content\core-styles\test-harness.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="scripts\lib\core-libs\breeze.min.js" />
+    <Content Include="scripts\lib\core-libs\kendo.all.js" />
+    <Content Include="scripts\lib\core-libs\knockout-3.1.0.js" />
+    <Content Include="scripts\lib\core-libs\q.js" />
+    <Content Include="scripts\lib\core-libs\underscore.js" />
+    <Content Include="scripts\lib\current-running-libs\consolelog.js" />
+    <Content Include="scripts\lib\current-running-libs\jquery-2.0.3.js" />
+    <Content Include="scripts\lib\jasmine-2.0.0\boot.js" />
+    <Content Include="scripts\lib\jasmine-2.0.0\console.js" />
+    <Content Include="scripts\lib\jasmine-2.0.0\jasmine-html.js" />
+    <Content Include="scripts\lib\jasmine-2.0.0\jasmine.css" />
+    <Content Include="scripts\lib\jasmine-2.0.0\jasmine.js" />
+    <Content Include="scripts\lib\jasmine-2.0.0\jasmine_favicon.png" />
+    <Content Include="scripts\samplepage\typography.html" />
+    <Content Include="scripts\main.js" />
+    <Content Include="scripts\spec\appSpec.js" />
+    <Content Include="Read Me.txt" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="content\smartadmin\img\img\avatars\" />
+    <Folder Include="content\smartadmin\img\img\colorblind-friendly\" />
+    <Folder Include="content\smartadmin\img\img\demo\" />
+    <Folder Include="content\smartadmin\img\img\dropzone\" />
+    <Folder Include="content\smartadmin\img\img\favicon\" />
+    <Folder Include="content\smartadmin\img\img\flags\" />
+    <Folder Include="content\smartadmin\img\img\gradient\" />
+    <Folder Include="content\smartadmin\img\img\invoice\" />
+    <Folder Include="content\smartadmin\img\img\jcrop\" />
+    <Folder Include="content\smartadmin\img\img\jqueryui\" />
+    <Folder Include="content\smartadmin\img\img\pattern\" />
+    <Folder Include="content\smartadmin\img\img\realestate\" />
+    <Folder Include="content\smartadmin\img\img\splash\" />
+    <Folder Include="content\smartadmin\img\img\superbox\" />
+    <Folder Include="content\smartadmin\img\img\versions\" />
+    <Folder Include="content\smartadmin\img\img\voicecommand\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1213</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1213/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,36 @@
+﻿
+<li data-bind="jQueryUIDropTarget: { drop: drop, group: 'data-grid-row', toParent: '#sidebar' }">
+    <a href="javascript:void(0);">
+        <i class="fa fa-lg fa-fw fa-user"></i>
+        <span class="menu-item-parent" data-bind="">My Items</span>
+    </a>
+
+    <ul>
+        <li>
+            <div class="remove-dropable" data-bind="jQueryUIDropTarget: { group: 'myitems-remove', drop: remove }">
+                Drag item here, to remove from custom list below
+            </div>
+        </li>
+
+        <!-- ko foreach: sets -->
+        <li>
+            <a data-bind="expandMenuWhen: collection.items">
+                <span data-bind="view: name"></span>
+                <span data-bind="text: collection.items().length" class="badge bg-color-greenLight pull-right"></span>
+            </a>
+
+            <ul>
+                <!-- ko foreach: collection.items -->
+                <li class="sidebar-myitem" data-bind="jQueryUIDraggable: { group: 'myitems-remove', wrap: true, data: $data, hintTarget: '.js-draggable-target' }">
+                    <a href="#" data-bind="click: $parent.collection.navigate($data)">
+                        <div class="draft-mark" data-bind="if: entityAspect.entityState.isDetached()">[DRAFT]</div>
+                        <div class="js-draggable-target" data-bind="view: $parent.collection.render($data)"></div>
+                    </a>
+                </li>
+                <!-- /ko -->
+            </ul>
+        </li>
+        <!-- /ko -->
+    </ul>
+
+</li>

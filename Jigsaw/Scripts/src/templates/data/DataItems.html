@@ -1,0 +1,125 @@
+﻿<!-- this template must be created with a DataItemsView to create the missing items: k-grid, column-chooser, web-rule
+    these elements aren't created with KO bindings -->
+<% var hasAdvancedSearch = rc.advancedSearchSettingsUrl || rc.advancedSearchSettings; %>
+
+<% if (rc.filterTemplate) { %>
+<div class="filter-container" data-bind="resizeWhen: queryFilter.parameters, css: { 'non-empty': queryFilter.parameters().length }">
+    <div data-bind="foreach: queryFilter.parameters">
+        <%= rc.filterTemplate %>
+        <div class="btn btn-default" data-bind="qclick: function() { return $parent.queryFilter.clear() }">Clear</div>
+    </div>
+</div>
+<% } %>
+
+<div data-bind="messageQueue: messageQueue"></div>
+
+<section class="all-space" data-bind="measurePrev: 'top'">
+    <!-- row -->
+    <div class="row">
+        <!-- SINGLE GRID -->
+        <article>
+            <div class="jarviswidget jarviswidget-sortable">
+                <header role="heading">
+
+                    <div class="jarviswidget-ctrls" role="menu">
+
+
+                        <% if (rc.excelExport) { %>
+                        <a class="button-icon hidden-sm hidden-xs" href="javascript:void(0);" data-bind="click: excelChooseColumnsExport, keyTips : { key : 'GE' }, tooltip: {title: 'Export Excel',  placement: 'bottom'}">
+                            <i class="fa fa-file-excel-o"></i>
+                        </a>
+                        <% } %>
+
+
+                        <a class="button-icon" href="javascript:void(0);" data-bind="tooltip: {title: 'Fullscreen',  placement: 'bottom'}, toogleFullScreen : { wrapperSelector : '.jarviswidget', class : 'fa fa-expand | fa fa-compress'},  keyTips : { key : 'GF' }">
+                            <i></i>
+                        </a>
+
+                    </div>
+
+                  
+                    <% if (hasAdvancedSearch) { %>
+                    <div class="widget-toolbar hidden-sm hidden-xs">
+                        <span class="advanced-search" data-bind="with: searchManager">
+                            <span class="search-input">
+
+                                <input type="text" data-bind="searchInput: { query: simpleSearchQuery, search: search, clear: clear, type: searchType }, keyTipsInput : { key : 'GA'} ">
+
+                                <a class="btn btn-default" data-bind="checkbox2: advancedPanelActive, keyTips : { key : 'GD' } ">
+                                    <i class="fa" data-bind="css: {'fa-chevron-up': advancedPanelActive, 'fa-chevron-down': !advancedPanelActive()}"></i>
+                                </a>
+
+                                <a class="btn btn-default" data-bind="qclick: search">
+                                    <i class="fa fa-search"></i>
+                                </a>
+
+                            </span>
+                        </span>
+                    </div>
+                    <% } %>
+
+                    <% if (rc.jumpTo) { %>
+                    <div class="widget-toolbar hidden-xs">
+                        <span class="jumpto-search" data-bind="with: jumpToSearch">
+                            <input type="text" data-bind="value: searchTerm, pressEnter: quickJump, keyTipsInput : { key : 'GS'} ">
+                            <a class="btn btn-default" data-bind="qclick: quickJump">
+                                <i class="fa fa-step-forward"></i>
+                            </a>
+                        </span>
+                    </div>
+                    <% } %>
+
+                    <h2>
+                        <strong class="hidden-xs"><%= rc.title %></strong> &nbsp;
+                        <% if (rc.addNew) {%>
+                        <a class="btn btn-primary btn-xs" data-bind="click: addNew, keyTips : { key : 'GN'}">
+                            <i class="fa fa-plus"></i>
+                        </a>
+                        <% } %>
+                    </h2>
+                </header>
+
+                <!-- widget div-->
+                <div role="content">
+
+                    <% if (hasAdvancedSearch) { %>
+                    <div data-bind="with: searchManager">
+                        <div id="advanced-search-container" data-bind="visible : advancedPanelActive">
+                            <!--data-bind="visibleExtended: {value : advancedPanelActive, slide : true}"-->
+                            <div id="filter-container"><!-- created by view --></div>
+                            <p class="float-right">
+                                <a class="btn btn-default" data-bind="qclick: saveAndSearch, keyTips : { key : 'XS'}">Save&Search</a>
+                                <a class="btn btn-default" data-bind="qclick: search, keyTips : { key : 'XX'}">Search</a>
+                                <a class="btn btn-danger" data-bind="click: clear, keyTips : { key : 'XC'}">Clear</a>
+                            </p>
+                        </div>
+                        <div class="clearfix"></div>
+                        &nbsp;
+                    </div>
+                    <% } %>
+
+                    <!-- widget content -->
+                    <% if (hasAdvancedSearch) { %>
+                    <div id="grid-container" class="widget-body all-space" data-bind="measurePrev: 'top'">
+                        <% } %>
+
+                        <% if (!hasAdvancedSearch) { %>
+                        <div id="grid-container" class="widget-body all-space">
+                            <% } %>
+
+
+                            <div class="k-grid" data-bind="keyTipsGrid: {key : 'GG'}"><!-- created by view --></div>
+                            <span class="column-chooser"><!-- created by view --></span>
+                        </div>
+                        <!-- end widget content -->
+
+
+                    </div>
+                    <!-- end widget div -->
+
+                </div>
+            </div>
+
+        </article><!-- GRID END -->
+    </div><!-- end row -->
+</section>

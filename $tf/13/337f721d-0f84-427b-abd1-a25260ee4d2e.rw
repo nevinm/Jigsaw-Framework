@@ -1,0 +1,2 @@
+﻿
+Scheduled Notification by <span class="user-name" data-bind="text: '@' + author"></span>

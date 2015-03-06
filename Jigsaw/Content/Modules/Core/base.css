@@ -1,0 +1,103 @@
+﻿.takeall-space {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/*title + ribbon*/
+#top-region {
+  height: 155px;
+  /*border-bottom: solid 1px;*/
+
+}
+#top-region #logo {
+  margin: 2px 0 0 5px;
+  background-image: url(./../../../images/logo_small.png);
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  padding-right: 5px;
+  border-right: 1px solid;
+}
+#top-region #caption {
+  text-align: center;
+}
+#top-region + div {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 155px;
+}
+#main-content {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* main layout
+----------------------------------------------------------*/
+.content-wrapper {
+  margin: 0 auto;
+}
+body {
+  background-color: #EFEFEF;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+}
+body #maincontent-messagequeue {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 156px;
+}
+footer {
+  clear: both;
+  background-color: #e2e2e2;
+  font-size: .8em;
+}
+.busy {
+  background: #ffffff url('./../../../images/ajax-loader.gif') no-repeat center center;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.k-splitter {
+  height: auto;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+img {
+  border: 0;
+}
+.message-item {
+  height: 59px;
+  padding: 5px;
+  border: 1px solid;
+  clear: both;
+}
+.message-item h2 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+.message-item p {
+  margin: 0px;
+}
+.message-item .close-button {
+  float: right;
+  cursor: pointer;
+}
+.message-item.info {
+  background-color: lightyellow;
+}

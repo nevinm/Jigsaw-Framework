@@ -1,0 +1,41 @@
+﻿table.ceHeader,td.ceDays{font-family:Tahoma,Geneva,sans-serif}
+div.ceToolBar input,table.ceTime input,table.ceTime select,span.ceSaveButton,span.ceDeleteButton,span.ceRulesButton{font-family:Tahoma,Arial,sans-serif;font-size:12px}
+div.ceToolBar{border:solid 1px #FF9696;text-shadow:0 1px 0 rgba(255, 212, 212, 1);padding:3px 6px;white-space:nowrap;background-color:#FFC4C4;background:-webkit-gradient(linear,left top,left bottom,from(#FFA9A9),to(#FF4444));background:-moz-linear-gradient(top,#FFA9A9,#FF4444);margin-bottom:7px}
+input.ceNameBox,input.ceDescriptionBox,div.ceHelp{text-shadow:0 1px 0 rgba(200, 200, 200, 1)}
+span.ceFlow,span.ceAction,span.ceField,span.ceClause,span.ceOperator,span.ceParenthesis,span.ceNewLine,div.ceToolBar,span.ceSaveButton,span.ceEmpty{color:#000}
+span.ceValue{color:#F00000}
+span.ceDeleteButton{color:#9E0000}
+div.ceHelp,input.ceNameBox,input.ceDescriptionBox{color:#D60000}
+input.ceNameBoxDefault,input.ceDescriptionBoxDefault{color:#FC8686}
+td.ceDays{font-size:9px;color:#FF9E9E}
+td.ceRollover,table.ceHeader,span.ceWarn{color:#FFF}
+div.ceError,input.ceError{color:#F00}
+table.ceCal,table.ceTime,div.ceMenu,div.ceToolBar input,span:hover.ceSaveButton,span:hover.ceDeleteButton,span:hover.ceRulesButton{background-color:#FFF}
+span.ceCurrent{background-color:#FA9898}
+span.ceHighlight{background-color:#FFF34D}
+span.ceWarn{background-color:#F00;background:-webkit-gradient(linear,left top,left bottom,from(#FF7575),to(#F00));background:-moz-linear-gradient(top,#FF7575,#F00)}
+td.ceSelected{background-color:#A1EB98}
+td.ceToday{background-color:#FFC9C9}
+div.ceRule{border:solid 1px #FFBFBF;padding:10px;background-color:#FFE8E8;background:-webkit-gradient(linear,left top,left bottom,from(#FCC),to(#FFFFFF));background:-moz-linear-gradient(top,#FCC,#FFFFFF)}
+td.ceRollover,table.ceHeader{background-color:#F00000;background:-webkit-gradient(linear,left top,left bottom,from(#FF1F1F),to(#CC0000));background:-moz-linear-gradient(top,#FF1F1F,#CC0000)}
+div.ceRule,div.ceToolBar{-webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px}
+table.ceCal,table.ceTime,div.ceMenu,div.ceToolBar input,span.ceSaveButton,span.ceDeleteButton,span.ceRulesButton{-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px}
+table.ceHeader,td.ceToday,td.ceRollover,td.ceSelected,span.ceFlow,span.ceField,span.ceAction,span.ceValue,span.ceClause,span.ceOperator,span.ceParenthesis,span.ceTab,span.ceNewLine{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
+span.ceFlow,span.ceAction,span.ceField,table.ceHeader,td.ceDays,span.ceSaveButton,span.ceDeleteButton,span.ceRulesButton{font-weight:bold}
+div.ceHelp{font-size:11px;padding:0 0 8px 0}
+td.ceDay,td.ceToday,td.ceRollover,td.ceDays,td.ceSelected,div.ceHelp{text-align:center}
+div.ceToolBar table td,div.ceMenu table td,table.ceCal table td,table.ceTime table td{vertical-align:middle}
+div.ceMenu table,div.ceMenu table td,div.ceRule span,div.ceToolBar table,div.ceToolBar table td,div.ceToolBar input,table.ceCal table,table.ceCal table td,table.ceTime table,table.ceTime table td{border:0}
+table.ceCal,table.ceTime,div.ceMenu{border:solid 1px #CDCDCD}
+div.ceCursorInner{border-left:solid 1px #000}
+div.ceCursorOuter{border-top:solid 1px #000;border-bottom:solid 1px #000}
+table.ceCal,table.ceTime,div.ceMenu{-moz-box-shadow:2px 2px 4px #ADADAD;-webkit-box-shadow:2px 2px 4px #ADADAD;box-shadow:2px 2px 4px #ADADAD}
+input.ceNameBox,input.ceNameBoxDefault{width:100px}
+input.ceDescriptionBox,input.ceDescriptionBoxDefault{width:170px;margin-left:4px;margin-right:4px}
+div.ceToolBar table,div.ceToolBar table td{padding:0}
+table.ceCal{padding:1px}
+div.ceMenu table td{padding:2px}
+div.ceToolBar input{padding: 2px 6px}
+td.ceDay,td.ceToday,td.ceRollover,td.ceDays,td.ceSelected,span.ceSaveButton,span.ceDeleteButton,span.ceRulesButton,span:hover.ceSaveButton,span:hover.ceDeleteButton,span:hover.ceRulesButton{padding:2px 4px}
+span:hover.ceSaveButton,span:hover.ceDeleteButton{cursor:pointer}
+td.ceDay,td.ceToday,td.ceRollover,td.ceDays,td.ceSelected,div.ceHelp,span.ceFlow,span.ceField,span.ceAction,span.ceClause,span.ceOperator,span.ceParenthesis,span.ceTab,span.ceNewLine,span.ceValue{cursor:default}

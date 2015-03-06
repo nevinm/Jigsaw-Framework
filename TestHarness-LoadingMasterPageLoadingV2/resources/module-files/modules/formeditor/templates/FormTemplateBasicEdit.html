@@ -1,0 +1,39 @@
+﻿<div data-bind="<%= rc.throttle? 'throttledWith': 'with'%>: item">
+    <div class="smart-form">
+        <div class="tabs" data-bind="tabstripErrorTunnel:{}">
+            <ul class="nav nav-tabs" data-bind="htmlTunnel : {id : 'viewbar-tabs', end: 'entrance'}">
+
+                <li class="active">
+                    <a data-toggle="tab" href="#tab-r1" data-bind="keyTipsGroup: { key : 'VD', group : 'form-details'}">
+                        <span><img width="16" height="16" src="images/users.png" /></span>
+                        Details
+                    </a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#tab-r2" data-bind="keyTipsGroup: { key : 'VH', group : 'form-others'}">
+                        <span><img width="16" height="16" src="images/documents.png" /></span>
+                        Others
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="tab-r1" class="tab-pane active">
+                    <div class="field-set">
+                        <header>Template details</header>
+                        <div data-bind="field: { property: 'FormName', focus: 2000 }"></div>
+                        <div data-bind="field: FormTitle"></div>
+                        <div data-bind="field: FormDescription"></div>
+                        <div data-bind="field: Author"></div>
+                        <div data-bind="field: LastModified"></div>
+                    </div>
+                </div>
+                <div id="tab-r2" class="tab-pane fade">
+                    <div class="field-set">
+                        <header>Other</header>
+                        <div data-bind="field: Id"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

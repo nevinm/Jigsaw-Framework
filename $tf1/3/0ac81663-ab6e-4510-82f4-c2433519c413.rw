@@ -1,0 +1,5 @@
+﻿
+<div data-bind="formItemProperty: item">
+
+</div>
+

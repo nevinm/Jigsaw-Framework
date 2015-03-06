@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Master Page Loading Test Harness";
+}
+<link href="~/Content/jasmine/jasmine.css" rel="stylesheet" />
+<link href="~/Content/test-harness/test-harness.css" rel="stylesheet" />
+<script type="text/javascript" src="~/Scripts/ConsoleLog/consolelog.js"></script>
+<script data-main="/Scripts/main.js" src="~/Scripts/require.js"></script>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <header class="test-harness-header">
+        <div class="test-col-50">
+            <p class="test-title"><b>Test Harness - Master Page Loading </b></p>
+        </div>
+        <div class="test-col-25 check-container">
+        </div>
+        <div class="test-col-25 check-container">
+        </div>
+    </header>
+}

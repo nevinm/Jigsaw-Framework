@@ -1,0 +1,289 @@
+/* app */
+/* this file contains core module collection files, and are added b the core module*/
+/*Layout styles*/
+#sideLayout-sidebar {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#sideLayout-sidebar > .k-panelbar {
+  bottom: 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  border: none;
+}
+#sideLayout-sidebar > .k-panelbar .k-content {
+  border: none;
+}
+#sideLayout-sidebar .pin-unpin.checkbox {
+  position: absolute;
+  top: 5px;
+}
+#sideLayout-sidebar.sidebar-right .minifyme {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  left: -3px;
+  right: auto;
+}
+#sideLayout-sidebar.sidebar-right .minifyme:hover {
+  left: 0;
+}
+#sidebar-collapsed {
+  display: none;
+}
+#sidebar-expanded {
+  display: block;
+  margin-top: 30px;
+}
+#sidebar.pin-unpin-collapsed #sidebar-collapsed {
+  display: block;
+}
+#sidebar.pin-unpin-collapsed #sidebar-expanded {
+  display: none;
+}
+#viewLayout-content {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+}
+#top-region #logo {
+  margin: -2px 0 0 2px;
+  border-right: 1px solid;
+  background-image: url(../../../images/logo_small.png);
+  background-position: 2px center;
+  background-repeat: no-repeat;
+  padding: 2px 2px 2px 24px;
+  -moz-background-size: 22px auto;
+  -o-background-size: 22px auto;
+  -webkit-background-size: 22px auto;
+  background-size: 22px auto;
+  background-color: transparent;
+  padding-right: 10px;
+  width: auto;
+}
+#top-region #caption {
+  text-align: center;
+}
+#top-region .breadcrumb {
+  float: left;
+  margin: 0 0 0 10px;
+  padding: 0;
+}
+#main-content {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#main-content .k-splitbar {
+  opacity: 0.1;
+}
+#active-content.empty-region {
+  position: relative;
+}
+#jigsaw-root {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  /*never show scroll bars for the body*/
+}
+#jigsaw-root #maincontent-messagequeue {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#jigsaw-root .k-splitter {
+  height: auto;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.pin-unpin-collapsed {
+  cursor: pointer;
+}
+.ribbon .quick-start {
+  position: absolute;
+  right: 30px;
+  top: -10px;
+}
+.ribbon .quick-start > * {
+  float: left;
+}
+.ribbon .up-down {
+  position: absolute;
+  right: -5px;
+  top: 3px;
+}
+.ribbon #tabStrip .tabs {
+  margin-bottom: -8px;
+}
+.ribbon #tabStrip .tabs .nav-tabs > li {
+  margin-right: 4px;
+}
+.ribbon #tabStrip .tabs .nav-tabs > li > a {
+  border-bottom: 0px;
+  border-top-width: 0 !important;
+  box-shadow: 0 -2px 0 #222222;
+  font-weight: bold;
+  margin-top: 1px !important;
+  padding: 2px 20px;
+  border-left: 1px solid #080808;
+  border-right: 1px solid #080808;
+}
+.ribbon #tabStrip .tabs .nav-tabs > li.active > a {
+  box-shadow: 0 -2px 0 #57889c;
+  background-color: #222222;
+  border-color: #080808;
+  color: white;
+  text-decoration: underline;
+}
+.ribbon #tabStrip .swiper-slide:last-child {
+  /*fix for last slide breaking to next line*/
+  margin-right: -10px;
+}
+.ribbon .swiper-container {
+  height: 80px;
+  padding: 0.3em 0.92em;
+  overflow: visible;
+  margin-top: 5px;
+}
+@media screen and (max-width: 1300px) {
+  .ribbon .swiper-container .swiper-slide {
+    width: 1300px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .ribbon .swiper-container .swiper-slide {
+    width: 100vw;
+  }
+}
+.ribbon .swiper-container .ribbon-tab {
+  -pie-watch-ancestors: 2;
+  z-index: 30;
+  padding: 5px;
+  min-width: 500px;
+  height: 80px;
+}
+.ribbon .swiper-container .ribbon-tab .ribbon-section a.btn {
+  font-size: 86%;
+  box-shadow: inherit;
+  padding: 12px 12px;
+}
+.ribbon .swiper-container .ribbon-tab .ribbon-section a.btn i {
+  font-size: 3em;
+}
+.ribbon .swiper-container .ribbon-tab .ribbon-section a.btn p {
+  margin-bottom: 0px;
+}
+.ribbon .swiper-container .ribbon-tab .content-slide-end {
+  /*background-color: red;*/
+  height: 70px;
+  float: none;
+  overflow: hidden;
+}
+.ribbon .ribbon-collapse {
+  z-index: 1;
+  position: absolute;
+  height: 78px;
+  width: 25px;
+  right: 4px;
+  top: 19px;
+  font-size: 1.5em;
+  padding-left: 5px;
+  padding-top: 55px;
+  background-color: #454545;
+}
+.ribbon .ribbon-collapse i {
+  cursor: pointer;
+}
+.ribbon .collapsed .swiper-container {
+  height: 32px;
+}
+.ribbon .collapsed .swiper-container .ribbon-tab {
+  height: 30px;
+}
+.ribbon .collapsed .swiper-container .ribbon-tab .ribbon-section-sep {
+  height: 20px;
+}
+.ribbon .collapsed .swiper-container .ribbon-tab .ribbon-section a.btn {
+  padding: 0px 5px;
+}
+.ribbon .collapsed .swiper-container .ribbon-tab .ribbon-section a.btn p {
+  display: none;
+}
+.ribbon .collapsed .swiper-container .ribbon-tab .ribbon-section a.btn i {
+  font-size: 2em;
+}
+.ribbon .collapsed .swiper-container .ribbon-tab .content-slide-end {
+  height: 25px;
+}
+.ribbon .collapsed .ribbon-collapse {
+  padding-top: 4px;
+  height: 30px;
+}
+.KeyTips__popup {
+  position: absolute;
+  width: 16px;
+  height: 17px;
+  overflow: hidden;
+  line-height: 17px;
+  font-family: "Lucida Sans", Verdana, Helvetica, Sans-Serif;
+  font-size: 11px;
+  text-align: center;
+  cursor: default;
+  display: none;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
+  opacity: 0.8;
+  z-index: 24;
+}
+.keytips-up .KeyTips__popup {
+  margin-top: -20px;
+}
+.fullscreen-mode {
+  left: 0;
+  top: 0;
+  position: fixed !important;
+  z-index: 30;
+  bottom: 0;
+  right: 0;
+}
+/* Patch for conflict with kendos style  */
+.form-control {
+  box-sizing: border-box !important;
+}
+.splitter-bar-vertical {
+  width: 6px;
+  background: #aaa;
+}
+.splitter-bar-horizontal {
+  height: 6px;
+  background: #aaa;
+}
+#parentLayout {
+  height: 100%;
+  width: 100%;
+}
+#parentLayout .ui-widget-content {
+  border: 0px solid white;
+}
+.modal-backdrop.fade.in {
+  opacity: 0.9;
+}

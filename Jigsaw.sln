@@ -1,0 +1,171 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jigsaw", "Jigsaw\Jigsaw.csproj", "{68B07DAF-E071-4512-8220-61689CFEF3E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jigsaw.Data.Northwind", "Jigsaw.Data.Northwind\Jigsaw.Data.Northwind.csproj", "{489B0FD7-7794-4F05-BFDF-1DD122298897}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jigsaw.Server", "Jigsaw.Server\Jigsaw.Server.csproj", "{99704ABD-59F7-4E47-BEA9-9A92B68CAB6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jigsaw.Data.Task", "Jigsaw.Data.Task\Jigsaw.Data.Task.csproj", "{81B7DFF3-B192-4244-8DA8-96C269F79331}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jigsaw.UI.Tests", "Jigsaw.UI.Tests\Jigsaw.UI.Tests.csproj", "{EBECD90E-0929-48EC-B5EC-DB64A7D658F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness-MasterCommon", "TestHarness-MasterCommon\TestHarness-MasterCommon.csproj", "{D86ECBF0-CA5E-48B8-A422-58D4CDD29C8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness-LoadingMasterPageLoading", "TestHarness-LoadingMasterPageLoading\TestHarness-LoadingMasterPageLoading.csproj", "{EF87E1CF-274F-4AE7-B17C-1CD406B90059}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness-LoadingMasterPageLoadingV2", "TestHarness-LoadingMasterPageLoadingV2\TestHarness-LoadingMasterPageLoadingV2.csproj", "{1AE08CE8-015D-4FCB-A82A-5C54B7AC42EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness-MasterPageRuntime", "TestHarness-MasterPageRuntime\TestHarness-MasterPageRuntime.csproj", "{D7E99754-F713-485C-96DC-F8F263BFD142}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreComponents", "CoreComponents", "{56187F74-171F-425D-8B57-7FC7BE64FBA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jigsaw.UI.Core.MasterCommon", "Jigsaw.UI.Core.MasterCommon\Jigsaw.UI.Core.MasterCommon.csproj", "{D19598CF-35FA-493A-A291-BE28AB95AB37}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestHarnesses", "TestHarnesses", "{77EA3A43-C20C-4CD4-9213-1DCF65BCB2FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreComponentsNuget", "CoreComponentsNuget", "{86E1BA19-624E-4DC3-94FA-567CD7E9050B}"
+	ProjectSection(SolutionItems) = preProject
+		Jigsaw.UI.Core.MasterCommon.1.0.0.0.nupkg = Jigsaw.UI.Core.MasterCommon.1.0.0.0.nupkg
+		Jigsaw.UI.Core.MasterPageLoading.1.0.0.0.nupkg = Jigsaw.UI.Core.MasterPageLoading.1.0.0.0.nupkg
+		Jigsaw.UI.TestHarness.Base.1.0.0.0.nupkg = Jigsaw.UI.TestHarness.Base.1.0.0.0.nupkg
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jigsaw.UI.Core.MasterCommon.TestHarness", "Jigsaw.UI.Core.MasterCommon.TestHarness\Jigsaw.UI.Core.MasterCommon.TestHarness.csproj", "{04824ECF-5CD0-4EEF-A4B7-7572C15BB923}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jigsaw.UI.TestHarness.Base", "Jigsaw.UI.TestHarness.Base\Jigsaw.UI.TestHarness.Base.csproj", "{6D94AF4C-1E92-454C-AF76-8248FEAE0A32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jigsaw.UI.Core.MasterPageLoading", "Jigsaw.UI.Core.MasterPageLoading\Jigsaw.UI.Core.MasterPageLoading.csproj", "{A6924C52-7F20-475C-862E-CEB0B47EDA57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jigsaw.UI.Core.MasterPageLoading.TestHarness", "Jigsaw.UI.Core.MasterPageLoading.TestHarness\Jigsaw.UI.Core.MasterPageLoading.TestHarness.csproj", "{2D3CB088-C420-4FB0-80BA-2764C7EC5F9F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 15
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://weirsweb.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Jigsaw\\Jigsaw.csproj
+		SccProjectName1 = Jigsaw
+		SccLocalPath1 = Jigsaw
+		SccProjectUniqueName2 = Jigsaw.Data.Northwind\\Jigsaw.Data.Northwind.csproj
+		SccProjectName2 = Jigsaw.Data.Northwind
+		SccLocalPath2 = Jigsaw.Data.Northwind
+		SccProjectUniqueName3 = Jigsaw.Server\\Jigsaw.Server.csproj
+		SccProjectName3 = Jigsaw.Server
+		SccLocalPath3 = Jigsaw.Server
+		SccProjectUniqueName4 = Jigsaw.Data.Task\\Jigsaw.Data.Task.csproj
+		SccProjectName4 = Jigsaw.Data.Task
+		SccLocalPath4 = Jigsaw.Data.Task
+		SccProjectUniqueName5 = Jigsaw.UI.Tests\\Jigsaw.UI.Tests.csproj
+		SccProjectName5 = Jigsaw.UI.Tests
+		SccLocalPath5 = Jigsaw.UI.Tests
+		SccProjectUniqueName6 = TestHarness-MasterCommon\\TestHarness-MasterCommon.csproj
+		SccProjectName6 = TestHarness-MasterCommon
+		SccLocalPath6 = TestHarness-MasterCommon
+		SccProjectUniqueName7 = TestHarness-LoadingMasterPageLoading\\TestHarness-LoadingMasterPageLoading.csproj
+		SccProjectName7 = TestHarness-LoadingMasterPageLoading
+		SccLocalPath7 = TestHarness-LoadingMasterPageLoading
+		SccProjectUniqueName8 = TestHarness-LoadingMasterPageLoadingV2\\TestHarness-LoadingMasterPageLoadingV2.csproj
+		SccProjectName8 = TestHarness-LoadingMasterPageLoadingV2
+		SccLocalPath8 = TestHarness-LoadingMasterPageLoadingV2
+		SccProjectUniqueName9 = TestHarness-MasterPageRuntime\\TestHarness-MasterPageRuntime.csproj
+		SccProjectName9 = TestHarness-MasterPageRuntime
+		SccLocalPath9 = TestHarness-MasterPageRuntime
+		SccProjectUniqueName10 = Jigsaw.UI.Core.MasterCommon\\Jigsaw.UI.Core.MasterCommon.csproj
+		SccProjectTopLevelParentUniqueName10 = Jigsaw.sln
+		SccProjectName10 = Jigsaw.UI.Core.MasterCommon
+		SccLocalPath10 = Jigsaw.UI.Core.MasterCommon
+		SccProjectUniqueName11 = Jigsaw.UI.Core.MasterCommon.TestHarness\\Jigsaw.UI.Core.MasterCommon.TestHarness.csproj
+		SccProjectTopLevelParentUniqueName11 = Jigsaw.sln
+		SccProjectName11 = Jigsaw.UI.Core.MasterCommon.TestHarness
+		SccLocalPath11 = Jigsaw.UI.Core.MasterCommon.TestHarness
+		SccProjectUniqueName12 = Jigsaw.UI.TestHarness.Base\\Jigsaw.UI.TestHarness.Base.csproj
+		SccProjectTopLevelParentUniqueName12 = Jigsaw.sln
+		SccProjectName12 = Jigsaw.UI.TestHarness.Base
+		SccLocalPath12 = Jigsaw.UI.TestHarness.Base
+		SccProjectUniqueName13 = Jigsaw.UI.Core.MasterPageLoading\\Jigsaw.UI.Core.MasterPageLoading.csproj
+		SccProjectTopLevelParentUniqueName13 = Jigsaw.sln
+		SccProjectName13 = Jigsaw.UI.Core.MasterPageLoading
+		SccLocalPath13 = Jigsaw.UI.Core.MasterPageLoading
+		SccProjectUniqueName14 = Jigsaw.UI.Core.MasterPageLoading.TestHarness\\Jigsaw.UI.Core.MasterPageLoading.TestHarness.csproj
+		SccProjectTopLevelParentUniqueName14 = Jigsaw.sln
+		SccProjectName14 = Jigsaw.UI.Core.MasterPageLoading.TestHarness
+		SccLocalPath14 = Jigsaw.UI.Core.MasterPageLoading.TestHarness
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68B07DAF-E071-4512-8220-61689CFEF3E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B07DAF-E071-4512-8220-61689CFEF3E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B07DAF-E071-4512-8220-61689CFEF3E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B07DAF-E071-4512-8220-61689CFEF3E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{489B0FD7-7794-4F05-BFDF-1DD122298897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{489B0FD7-7794-4F05-BFDF-1DD122298897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{489B0FD7-7794-4F05-BFDF-1DD122298897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{489B0FD7-7794-4F05-BFDF-1DD122298897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99704ABD-59F7-4E47-BEA9-9A92B68CAB6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99704ABD-59F7-4E47-BEA9-9A92B68CAB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99704ABD-59F7-4E47-BEA9-9A92B68CAB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99704ABD-59F7-4E47-BEA9-9A92B68CAB6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B7DFF3-B192-4244-8DA8-96C269F79331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B7DFF3-B192-4244-8DA8-96C269F79331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B7DFF3-B192-4244-8DA8-96C269F79331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B7DFF3-B192-4244-8DA8-96C269F79331}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBECD90E-0929-48EC-B5EC-DB64A7D658F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBECD90E-0929-48EC-B5EC-DB64A7D658F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBECD90E-0929-48EC-B5EC-DB64A7D658F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBECD90E-0929-48EC-B5EC-DB64A7D658F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D86ECBF0-CA5E-48B8-A422-58D4CDD29C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D86ECBF0-CA5E-48B8-A422-58D4CDD29C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D86ECBF0-CA5E-48B8-A422-58D4CDD29C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D86ECBF0-CA5E-48B8-A422-58D4CDD29C8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF87E1CF-274F-4AE7-B17C-1CD406B90059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF87E1CF-274F-4AE7-B17C-1CD406B90059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF87E1CF-274F-4AE7-B17C-1CD406B90059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF87E1CF-274F-4AE7-B17C-1CD406B90059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AE08CE8-015D-4FCB-A82A-5C54B7AC42EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AE08CE8-015D-4FCB-A82A-5C54B7AC42EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AE08CE8-015D-4FCB-A82A-5C54B7AC42EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AE08CE8-015D-4FCB-A82A-5C54B7AC42EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7E99754-F713-485C-96DC-F8F263BFD142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7E99754-F713-485C-96DC-F8F263BFD142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7E99754-F713-485C-96DC-F8F263BFD142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7E99754-F713-485C-96DC-F8F263BFD142}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D19598CF-35FA-493A-A291-BE28AB95AB37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D19598CF-35FA-493A-A291-BE28AB95AB37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D19598CF-35FA-493A-A291-BE28AB95AB37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D19598CF-35FA-493A-A291-BE28AB95AB37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04824ECF-5CD0-4EEF-A4B7-7572C15BB923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04824ECF-5CD0-4EEF-A4B7-7572C15BB923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04824ECF-5CD0-4EEF-A4B7-7572C15BB923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04824ECF-5CD0-4EEF-A4B7-7572C15BB923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D94AF4C-1E92-454C-AF76-8248FEAE0A32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D94AF4C-1E92-454C-AF76-8248FEAE0A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D94AF4C-1E92-454C-AF76-8248FEAE0A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D94AF4C-1E92-454C-AF76-8248FEAE0A32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6924C52-7F20-475C-862E-CEB0B47EDA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6924C52-7F20-475C-862E-CEB0B47EDA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6924C52-7F20-475C-862E-CEB0B47EDA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6924C52-7F20-475C-862E-CEB0B47EDA57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D3CB088-C420-4FB0-80BA-2764C7EC5F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D3CB088-C420-4FB0-80BA-2764C7EC5F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D3CB088-C420-4FB0-80BA-2764C7EC5F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D3CB088-C420-4FB0-80BA-2764C7EC5F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D19598CF-35FA-493A-A291-BE28AB95AB37} = {56187F74-171F-425D-8B57-7FC7BE64FBA1}
+		{04824ECF-5CD0-4EEF-A4B7-7572C15BB923} = {77EA3A43-C20C-4CD4-9213-1DCF65BCB2FE}
+		{6D94AF4C-1E92-454C-AF76-8248FEAE0A32} = {77EA3A43-C20C-4CD4-9213-1DCF65BCB2FE}
+		{A6924C52-7F20-475C-862E-CEB0B47EDA57} = {56187F74-171F-425D-8B57-7FC7BE64FBA1}
+		{2D3CB088-C420-4FB0-80BA-2764C7EC5F9F} = {77EA3A43-C20C-4CD4-9213-1DCF65BCB2FE}
+	EndGlobalSection
+EndGlobal

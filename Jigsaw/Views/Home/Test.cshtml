@@ -1,0 +1,34 @@
+﻿
+@section styles {
+
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/scripts/src/spec/lib/jasmine.css")">
+
+    <style>
+        #jigsaw-root{ display: none; }
+        .summary > .suite {
+            border-left: 1px solid grey;
+            padding-left: 5px;
+        }
+        .summary > .suite > .description {
+            font-size: large;
+            position: relative;
+            top: -2px;
+        }
+        .summary > .suite > .suite > .description {
+            font-size: larger;
+        }
+    </style>
+}
+
+@section scripts {
+    <script type="text/javascript">
+        var Specs=@{ WriteLiteral(ViewBag.Specs); };
+    </script>
+
+    <script type="text/javascript" src="@Url.Content("~/scripts/src/spec/lib/jasmine.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/scripts/src/spec/lib/jasmine-html.js")"></script>
+
+    <script data-main="@Url.Content("~/scripts/src/spec/entry-point.js")" 
+        src="@Url.Content("~/scripts/libs/require.js")"></script>
+}
+

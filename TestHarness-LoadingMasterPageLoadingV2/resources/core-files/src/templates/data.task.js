@@ -1,0 +1,11 @@
+define(["require", "exports"], function(require, exports) { 
+    function __underscore(template) {
+        var generate = _.template(template);
+        generate.raw = template;
+        return generate;
+    }
+    exports.DataSourceNotificationPanelItem = function() { return "Task \"<a data-bind=\"text: Entity.Name || \'un-named\', attr: { href: \'#tasks\' }\"></a>\" was <span data-bind=\"text: PreviousEntityState === \'Added\'? \'Added\': \'Modified\'\"></span>"; };
+    exports.styles = "/* data */#viewLayout-content {/*header {.background-image(url(\'images/task.png\'), 22px, left, 3px);margin: 4px;}#data-titlebar {height: 27px;}*/}#viewLayout-viewbar .field-set .k-menu {margin-left: 8em;}.task-tag {margin-right: 3px;padding: 2px;}#viewLayout-viewbar.viewbar-bottom .k-content {top: 28px;}";
+    exports.TaskEdit = function() { return "<div data-bind=\"throttledWith: selectedVersion\"><div data-bind=\"with: Entity\"><div class=\"tabs\" data-bind=\"tabstrip: {}\"><ul class=\"nav nav-tabs\" data-bind=\"htmlTunnel : {id : \'versionpager-viewbar-tabs\', end: \'entrance\'}\"><li class=\"active\"><a data-toggle=\"tab\" href=\"#tab-r1\" data-bind=\"keyTipsGroup: { key : \'VD\', group : \'task-details\'}\"><i class=\"fa fa-user nav-fa-issue\" style=\"margin-right: 5px;\"></i><span class=\"hidden-mobile hidden-tablet\">Details</span></a></li><li><a data-toggle=\"tab\" href=\"#tab-r2\" data-bind=\"keyTipsGroup: { key : \'VO\', group : \'task-others\'}\"><i class=\"fa fa-info nav-fa-issue\"></i><span class=\"hidden-mobile hidden-tablet\">Others</span></a></li></ul><div class=\"tab-content\"><div id=\"tab-r1\" class=\"tab-pane active\"><div class=\"field-set\"><header>Task details</header><div><label data-bind=\"label: {}\">Name</label><input data-bind=\"dvalue: Name, focus: 200\" /></div><div><label data-bind=\"label: {}\">Description</label><input data-bind=\"dvalue: Description\" /></div></div><div class=\"field-set\"><header>Metadata</header><div><label data-bind=\"\">Tags</label><span data-bind=\"dforeach: Tags\"><span class=\"task-tag\" data-bind=\"text: Name\"></span></span></div></div></div><div id=\"tab-r2\" class=\"tab-pane\"><div class=\"field-set\"><header>Other</header><div><label data-bind=\"label: {}\">Guid</label><input data-bind=\"dvalue: Guid\" readonly=\"readonly\" /></div></div></div></div></div></div></div>"; };
+    
+});

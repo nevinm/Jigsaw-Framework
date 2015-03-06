@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Jigsaw [Beta Enviroment]</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    @RenderSection("styles", required: false)    
+    @Html.Action("Index", "TestHarness")   
+    @if (Html.PartialExists("~/Views/Shared/MasterCommon.cshtml"))
+    {
+        @Html.Partial("~/Views/Shared/MasterCommon.cshtml");
+    }
+
+    <script src="~/Scripts/jquery.signalR-2.0.0.js"></script>
+</head>
+
+<body>
+    @RenderBody()
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/kendo/kendo.all.js"></script>
+    <script src="~/Scripts/knockout-2.0.0.js"></script>
+</body>
+</html>

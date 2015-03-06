@@ -1,0 +1,24 @@
+﻿<!-- Notification quick start template -->
+<div class="dropdown">
+    <a class="btn btn-link btn-sm" data-toggle="dropdown" data-bind="keyTipsGroup : { key: 'QT', group: 'user-quick-access-toolbar'}" href="#">
+        <span class="user-settings">
+            <span class="caret"> </span>
+        </span>
+    </a>
+
+    <ul class="dropdown-menu">
+        <li>
+            <span class="label label-default">User Quick Access Toolbar</span>
+        </li>
+
+        <li class="" data-bind="click: signButtonClicked, keyTips : { parentGroup: 'user-quick-access-toolbar' }">
+            <a href="#" data-bind="text: signButtonText"></a>
+        </li>
+        <li class="" data-bind="click: showUserDetailsButtonClicked, keyTips : { parentGroup: 'user-quick-access-toolbar' }">
+            <a href="#">Show User Details</a>
+        </li>
+        <li class="" data-bind="qclick: settingsButtonClicked, keyTips : { parentGroup: 'user-quick-access-toolbar' }">
+            <a href="#">My Settings</a>
+        </li>
+    </ul>
+</div>

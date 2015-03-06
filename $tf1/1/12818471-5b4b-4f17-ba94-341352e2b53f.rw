@@ -1,0 +1,7 @@
+﻿
+<div>
+    Add fields:
+
+    <a data-bind="click: textField">single line text</a>
+</div>
+

@@ -1,0 +1,99 @@
+﻿@model Jigsaw.UI.Core.MasterPageRuntime.TestHarness.Models.TestHarnessModel
+
+@{
+    ViewBag.Title = "Master Page Runtime Test Harness";
+}
+<link href="~/Content/jasmine/jasmine.css" rel="stylesheet" />
+<link href="~/Content/test-harness/test-harness.css" rel="stylesheet" />
+<script type="text/javascript" src="~/Scripts/ConsoleLog/consolelog.js"></script>
+
+<script src="~/Scripts/q.js"></script>
+<script src="~/Scripts/underscore.js"></script>
+
+<script data-main="/Scripts/main.js" src="~/Scripts/require.js"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <header class="test-harness-header">
+        <div class="test-col-20">
+            <p class="test-title"><b>Test Harness-MasterPageRuntime </b></p>
+            <button type="button" id="btn_force_error" class="red">
+                Force Error
+            </button>
+            <label><input type="checkbox" id="chk_alert_error" name="Alert" /><b>Alert onError</b></label>
+        </div>
+        <div class="test-col-20">
+            <button type="button" id="btn_load_sample" class="blue">
+                Load Sample Page
+            </button>
+            <button type="button" id="btn_run_specs" class="blue">
+                Run Tests
+            </button>
+            <div class="environment">
+                Environment :
+                <select id="sel_environment">
+                    <option value="TEST">Test</option>
+                    <option value="LIVE">Live</option>
+                </select>
+            </div>
+        </div>
+        <div class="test-col-15">
+            <button type="button" id="btn_glimpse" class="blue">
+                Glimpse
+            </button>
+            <button type="button" id="btn_history" class="blue">
+                History
+            </button>
+        </div>
+        <div class="test-col-15">
+            @*<asp:DropDownList cssClass='sound-event' ID="SoundList" runat="server"></asp:DropDownList>*@
+            <select id="SoundList" class="sound-event">
+                <option value='' disabled selected>Select your sounds</option>
+                <option data-src="Content/sounds/bigbox.mp3" value="BigBox">BigBox</option>
+                <option data-src="Content/sounds/smallbox.mp3" value="SmallBox">SmallBox</option>
+                <option data-src="Content/sounds/messagebox.mp3" value="Info">MessageBox</option>
+                <option data-src="Content/sounds/voice_alert.mp3" value="Error">VoiceAlert</option>
+            </select>
+            <select class="sound-event">
+                <option value='' disabled selected>Select your event</option>
+                <option value="Info">Information Message</option>
+                <option value="Error">Error Message</option>
+            </select>
+        </div>
+        <div class="test-col-15 check-container">
+            <h4 class="vertical-text">Javascripts</h4>
+            <div class="checkbox-list">
+                <div class="checkbox">
+                    <label>
+                        @Html.CheckBoxFor(model => model.RenderScripts, new { onclick = "form.submit()" })@Html.LabelFor(model => model.RenderScripts, htmlAttributes: new { @class = "control-label" })
+                    </label>
+                    @Html.ValidationMessageFor(model => model.RenderScripts, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="test-col-15 check-container">
+            <h4 class="vertical-text">CSS Styles</h4>
+            <div class="checkbox-list">
+                <div class="checkbox">
+                    <label>
+                        @Html.CheckBoxFor(model => model.RenderStyles, new { onclick = "form.submit()" })@Html.LabelFor(model => model.RenderStyles, htmlAttributes: new { @class = "control-label" })
+                    </label>
+                    @Html.ValidationMessageFor(model => model.RenderStyles, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+    </header>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div id="content-div"></div>
+    <div id="sound-container">
+        <span id='sound-name'></span><br />
+        <audio controls>
+            <source id='ogg' src="" type="audio/ogg" />
+            <source id='mp3' src="" type="audio/mpeg" />
+            <source id='wav' src="" type="audio/wav" />
+        </audio>
+    </div>
+}

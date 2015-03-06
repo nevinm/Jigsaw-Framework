@@ -1,0 +1,93 @@
+﻿/* app - notification */
+@import "../../mixins";
+
+.quick-start .notification {
+    .background-image(url(images/local-notifications.png), 20px, left);
+    margin-top: 5px;
+    margin-left: -10px;
+    margin-right: -10px;
+
+    &.global {
+        .background-image(url(images/global-notifications.png), 20px, left);
+    }
+
+    .notification-count {
+        background-color: #FF0000;
+        border: 1px solid #000000;
+        border-radius: 7px 7px 7px 7px;
+        color: #FFFFFF;
+        display: inline;
+        font-weight: bold;
+        left: -5px;
+        padding: 0 3px;
+        position: relative;
+        right: 0;
+        top: -8px;
+    }
+}
+
+.notification-list {
+    .user-name {
+        color: green;
+        font-weight: bold;
+    }
+
+    .date {
+        color: gray;
+        margin-left: 5px;
+        font-size: 80%;
+        margin-top: 5px;
+        margin-bottom: 1px;
+    }
+}
+
+#ribbon-bar {
+
+    .date {
+        float: right;
+    }
+
+    .k-tabstrip > .k-content:nth-child(2) .ribbon-section:nth-last-child(2) {
+        /* this makes the ribbon notification panel to cover all remaining space in
+        in the ribbon bar, it's assumed that the panel is on the last ribbon-section */
+        float: none;
+        overflow: hidden;
+    }
+}
+
+
+#tabStrip {
+    .swiper-wrapper .swiper-slide:first-child {
+        .content-slide {
+            .ribbon-tab .ribbon-section:nth-last-child(2) {
+                /* this makes the ribbon notification panel to cover all remaining space in
+                   in the ribbon bar, it's assumed that the panel is on the last ribbon-section 
+                float: none;
+                overflow: hidden;*/
+
+                width: 250px;
+
+                /*.notification-list {
+                    width: 90%;
+                }*/
+            }
+        }
+    }
+}
+
+.ribbon {
+
+    .notification-list {
+        height: 60px;
+    }
+
+    .collapsed {
+        .notification-list {
+            height: 10px;
+        }
+    }
+}
+
+nav ul li .notification a {
+    padding: 0 !important;
+}

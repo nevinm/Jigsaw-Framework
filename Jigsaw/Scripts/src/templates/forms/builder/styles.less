@@ -1,0 +1,114 @@
+﻿@import "../../mixins";
+
+
+#main-content #viewLayout-content {
+    padding: 5px;
+}
+
+.field-builder-collection {
+    margin-top: 10px;
+}
+
+.field-builder {
+    transition: padding-top ease-out 0.3s, opacity ease-out 0.2s;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    padding-left: 25px;
+    position: relative;
+    height: auto;
+
+    .field-insert {
+        float: left;
+        padding: 0 3px;
+        height: 18px;
+        margin-left: -1px;
+        margin-right: -1px;
+        margin-top: -3px;
+        //width: 23px;
+        .k-icon {
+            margin-top: -8px;
+        }
+    }
+
+    .field-remove {
+        float: right;
+        display: none;
+    }
+
+    .field-label {
+        display: block;
+        background-color: transparent;
+        border-color: transparent;
+        width: 70%;
+
+        &:focus {
+        }
+    }
+
+    &.can-drop:not(.drag-hint) {
+        padding-top: 5px;
+        border-top: 1px solid;
+    }
+
+    &.dragging {
+        opacity: 0.2;
+    }
+
+    .field-drag-holder {
+        left: 0px;
+        position: absolute;
+        bottom: 0px;
+        top: 0;
+        border-style: solid;
+        border-width: 1px;
+        cursor: move;
+        display: none;
+
+        & > .k-icon {
+            clear: left;
+            float: left;
+            left: 2px;
+            margin-top: -4px;
+            position: absolute;
+            top: 50%;
+        }
+    }
+
+    &:hover,
+    &.k-state-selected {
+        .field-drag-holder {
+            display: block;
+        }
+
+        .field-remove {
+            display: block;
+        }
+    }
+}
+
+.field-item-adder {
+    margin-bottom: 5px;
+
+    & > a {
+        margin-top: 2px;
+    }
+
+    .k-header {
+        margin-bottom: 2px;
+    }
+
+    .field-remove {
+        position: absolute;
+        right: 5px;
+        cursor: pointer;
+
+        .k-icon {
+            margin-top: -5px;
+        }
+    }
+
+    &:last-child .field-remove {
+        display: none;
+    }
+}

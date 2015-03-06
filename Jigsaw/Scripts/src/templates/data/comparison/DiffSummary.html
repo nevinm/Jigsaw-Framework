@@ -1,0 +1,55 @@
+﻿
+<div class="track-summary" data-bind="visible: tracks().length, var: { collapsed: ko.observable(true) }">
+    <div class="header">
+        There are <span data-bind="text: tracks().length"></span> differences from Current
+        <div class="extra-buttons">
+            <span class="up-down" data-bind="checkbox: collapsed"></span>
+        </div>
+    </div>
+
+    <div data-bind="visible: !collapsed() ">
+
+        <div id="diffSummaryCenterColumnTable">
+            <div class="fixed-center-column-table-header">
+                <div class="fixed-center-column-row">
+                    <div class="side1">
+                        <div class="center">&nbsp;</div>
+                        <div>Current</div>
+                    </div>
+                    <div class="side2">
+                        <div id="centerColumnTablePatch"> &nbsp;&nbsp; </div>
+
+                        <div>
+                            <span>Version: </span>
+                            <span class="side2-content" data-bind="text: ($parent.trackerManager.selectedVersion()
+                                               && $parent.trackerManager.selectedVersion().ApprovedDate()
+                                               && moment($parent.trackerManager.selectedVersion().ApprovedDate()).format('L LT'))
+                                               || 'Pending'"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="fixed-center-column-table" data-bind="foreach: tracks">
+                <div class="fixed-center-column-row" data-bind="click: navigate">
+                    <div class="side1">
+                        <div class="center" data-bind="text: message().field"></div>
+                        <div data-bind="text: message().original"></div>
+                    </div>
+
+                    <div class="side2">
+                        <div data-bind="text: message().value"></div>
+                    </div>
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+

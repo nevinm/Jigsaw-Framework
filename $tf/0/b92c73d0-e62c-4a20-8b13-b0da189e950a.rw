@@ -1,0 +1,3 @@
+﻿
+<input type="text" placeholder="<%= rc.placeholder %>" 
+       data-bind="value: value" />

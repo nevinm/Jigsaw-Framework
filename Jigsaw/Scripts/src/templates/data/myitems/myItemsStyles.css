@@ -1,0 +1,21 @@
+/* data - MyItems*/
+/* drag + drop */
+.can-drop {
+  cursor: copy;
+}
+/* My Items */
+#myitems-content .sidebar-myitem {
+  cursor: pointer;
+  float: left;
+  clear: both;
+  padding-left: 0;
+}
+#myitems-content .sidebar-myitem .k-in {
+  display: none;
+}
+#myitems-content .sidebar-myitem div {
+  display: inline;
+}
+#myitems-content .sidebar-myitem .draft-mark {
+  font-weight: bold;
+}

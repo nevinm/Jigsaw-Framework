@@ -1,0 +1,1710 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{68B07DAF-E071-4512-8220-61689CFEF3E8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jigsaw</RootNamespace>
+    <AssemblyName>Jigsaw</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <IsCompassProject>True</IsCompassProject>
+    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Breeze.ContextProvider, Version=1.4.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Breeze.Server.ContextProvider.1.4.11\lib\Breeze.ContextProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Breeze.ContextProvider.EF6, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Breeze.Server.ContextProvider.EF6.1.4.11\lib\Breeze.ContextProvider.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="Breeze.WebApi2, Version=1.4.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Breeze.Server.WebApi2.1.4.11\lib\Breeze.WebApi2.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeEffects.Rule">
+      <HintPath>..\3rdParty\CodeEffects.Rule\CodeEffects.Rule.dll</HintPath>
+    </Reference>
+    <Reference Include="DocX">
+      <HintPath>..\3rdParty\DocX.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.3.4.13329\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.0.2\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.AspNet, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Glimpse.AspNet.1.8.0\lib\net45\Glimpse.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Core, Version=1.8.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Glimpse.1.8.3\lib\net45\Glimpse.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Mvc4, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Glimpse.Mvc4.1.5.3\lib\net40\Glimpse.Mvc4.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\packages\NPOI.1.2.5\lib\net40\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\iTextSharp.5.5.0\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.0.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.0.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.1\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.1\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.WebHelpers.3.1.1\lib\net45\Microsoft.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.30506.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.2-unstable-9\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common">
+      <HintPath>..\packages\Ninject.Web.Common.3.0.2-unstable-6\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc">
+      <HintPath>..\packages\Ninject.MVC3.3.0.2-unstable-6\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\packages\NPOI.1.2.5\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>..\packages\NUnitTestAdapter.WithFramework.1.2\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces">
+      <HintPath>..\packages\NUnitTestAdapter.WithFramework.1.2\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnitTestAdapter.WithFramework.1.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.util">
+      <HintPath>..\packages\NUnitTestAdapter.WithFramework.1.2\lib\nunit.util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NUnit.VisualStudio.TestAdapter">
+      <HintPath>..\packages\NUnitTestAdapter.WithFramework.1.2\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.1.1\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.6.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.6.1\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.1.1\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.5.1.1\lib\net45\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.1.1\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.1\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.1\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="WebActivator">
+      <HintPath>..\packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.3.1.1\lib\net45\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.3.1.1\lib\net45\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BreezeWebApiConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\JigsawApplication.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="Connection\NotificationConnection.cs" />
+    <Compile Include="Connection\PingConnection.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ExportController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NorthwindController.cs" />
+    <Compile Include="Controllers\NotificationController.cs" />
+    <Compile Include="Controllers\OfflineController.cs" />
+    <Compile Include="Controllers\RuleController.cs" />
+    <Compile Include="Controllers\TaskController.cs" />
+    <Compile Include="Controllers\TemplateController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="GlimpseSecurityPolicy.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Notification\CustomerDataNotification.cs" />
+    <Compile Include="Notification\DataNotification.cs" />
+    <Compile Include="Notification\NorthwindNotificationRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\NorthwindIB.sdf" />
+    <Content Include="content\bootstrap\base\bootstrap.css">
+      <DependentUpon>bootstrap.less</DependentUpon>
+    </Content>
+    <Content Include="content\bootstrap\base\bootstrap.less" />
+    <Content Include="content\bootstrap\base\forms.less" />
+    <Content Include="content\bootstrap\base\grid.less" />
+    <Content Include="content\bootstrap\base\mixins.less" />
+    <Content Include="content\bootstrap\base\responsive-utilities.less" />
+    <Content Include="content\bootstrap\base\scaffolding.less" />
+    <Content Include="content\bootstrap\base\tables.less" />
+    <Content Include="content\bootstrap\base\type.less" />
+    <Content Include="content\bootstrap\base\utilities.less" />
+    <Content Include="content\bootstrap\base\variables.less" />
+    <Content Include="content\codeeffects\Black.css" />
+    <Content Include="content\codeeffects\Blue.css" />
+    <Content Include="content\codeeffects\Gray.css" />
+    <Content Include="content\codeeffects\Green.css" />
+    <Content Include="content\codeeffects\Navy.css" />
+    <Content Include="content\codeeffects\Red.css" />
+    <Content Include="content\codeeffects\White.css" />
+    <Content Include="content\kendo.mobile\images\back.png" />
+    <Content Include="content\kendo.mobile\images\wp8_icons.png" />
+    <Content Include="content\kendo.mobile\images\wp8_inverseicons.png" />
+    <Content Include="content\kendo.mobile\kendo.mobile.all.min.css" />
+    <Content Include="content\kendo.mobile\kendo.mobile.android4.min.css" />
+    <Content Include="content\kendo.mobile\kendo.mobile.common.min.css" />
+    <Content Include="content\kendo.mobile\kendo.mobile.flat.min.css" />
+    <Content Include="content\kendo.mobile\kendo.mobile.ios.min.css" />
+    <Content Include="content\kendo\Black\indeterminate.gif" />
+    <Content Include="content\kendo\Black\loading_2x.gif" />
+    <Content Include="content\kendo\Black\sprite_2x.png" />
+    <Content Include="content\kendo\BlueOpal\indeterminate.gif" />
+    <Content Include="content\kendo\BlueOpal\loading_2x.gif" />
+    <Content Include="content\kendo\BlueOpal\sprite_2x.png" />
+    <Content Include="content\kendo\Bootstrap\indeterminate.gif" />
+    <Content Include="content\kendo\Bootstrap\loading_2x.gif" />
+    <Content Include="content\kendo\Bootstrap\sprite_2x.png" />
+    <Content Include="content\kendo\Default\indeterminate.gif" />
+    <Content Include="content\kendo\Default\loading_2x.gif" />
+    <Content Include="content\kendo\Default\sprite_2x.png" />
+    <Content Include="content\kendo\Flat\editor.png" />
+    <Content Include="content\kendo\Flat\imagebrowser.png" />
+    <Content Include="content\kendo\Flat\indeterminate.gif" />
+    <Content Include="content\kendo\Flat\loading-image.gif" />
+    <Content Include="content\kendo\Flat\loading.gif" />
+    <Content Include="content\kendo\Flat\loading_2x.gif" />
+    <Content Include="content\kendo\Flat\slider-h.gif" />
+    <Content Include="content\kendo\Flat\slider-v.gif" />
+    <Content Include="content\kendo\Flat\sprite.png" />
+    <Content Include="content\kendo\Flat\sprite_2x.png" />
+    <Content Include="content\kendo\HighContrast\indeterminate.gif" />
+    <Content Include="content\kendo\HighContrast\loading_2x.gif" />
+    <Content Include="content\kendo\HighContrast\sprite_2x.png" />
+    <Content Include="content\kendo\idangerous.swiper.css" />
+    <Content Include="content\kendo\kendo.black.css">
+      <DependentUpon>kendo.black.less</DependentUpon>
+    </Content>
+    <Content Include="content\kendo\MetroBlack\indeterminate.gif" />
+    <Content Include="content\kendo\MetroBlack\loading_2x.gif" />
+    <Content Include="content\kendo\MetroBlack\sprite_2x.png" />
+    <Content Include="content\kendo\Metro\indeterminate.gif" />
+    <Content Include="content\kendo\Metro\loading_2x.gif" />
+    <Content Include="content\kendo\Metro\sprite_2x.png" />
+    <Content Include="content\kendo\Moonlight\indeterminate.gif" />
+    <Content Include="content\kendo\Moonlight\loading_2x.gif" />
+    <Content Include="content\kendo\Moonlight\sprite_2x.png" />
+    <Content Include="content\kendo\Silver\indeterminate.gif" />
+    <Content Include="content\kendo\Silver\loading_2x.gif" />
+    <Content Include="content\kendo\Silver\sprite_2x.png" />
+    <Content Include="content\kendo\textures\hsv-gradient.png" />
+    <Content Include="content\kendo\textures\hue.png" />
+    <Content Include="content\kendo\textures\transparency.png" />
+    <Content Include="content\kendo\textures\transtexture.png" />
+    <Content Include="content\kendo\Uniform\indeterminate.gif" />
+    <Content Include="content\kendo\Uniform\loading_2x.gif" />
+    <Content Include="content\kendo\Uniform\sprite_2x.png" />
+    <Content Include="content\modules\core-mobile.css">
+      <DependentUpon>core-mobile.less</DependentUpon>
+    </Content>
+    <Content Include="content\modules\core.css">
+      <DependentUpon>core.less</DependentUpon>
+    </Content>
+    <Content Include="content\modules\core.min.css">
+      <DependentUpon>core.less</DependentUpon>
+    </Content>
+    <Content Include="content\modules\core\base.css">
+      <DependentUpon>base.less</DependentUpon>
+    </Content>
+    <Content Include="content\modules\core\base.min.css">
+      <DependentUpon>base.less</DependentUpon>
+    </Content>
+    <Content Include="content\bootstrap\bootstrap.cerulean.css">
+      <DependentUpon>bootstrap.cerulean.less</DependentUpon>
+    </Content>
+    <Content Include="content\bootstrap\kendo.default.variables.css">
+      <DependentUpon>kendo.default.variables.less</DependentUpon>
+    </Content>
+    <Content Include="content\kendo\kendo.black.less" />
+    <Content Include="content\kendo\kendo.blueopal.css">
+      <DependentUpon>kendo.blueopal.less</DependentUpon>
+    </Content>
+    <Content Include="content\kendo\kendo.blueopal.less" />
+    <Content Include="content\kendo\kendo.bootstrap.less" />
+    <Content Include="content\kendo\kendo.common.css">
+      <DependentUpon>kendo.common.less</DependentUpon>
+    </Content>
+    <Content Include="content\kendo\kendo.common.less" />
+    <Content Include="content\kendo\kendo.common.min.css">
+      <DependentUpon>kendo.common.less</DependentUpon>
+    </Content>
+    <Content Include="content\kendo\kendo.default.css">
+      <DependentUpon>kendo.default.less</DependentUpon>
+    </Content>
+    <Content Include="content\kendo\kendo.default.less" />
+    <Content Include="content\kendo\kendo.highcontrast.css">
+      <DependentUpon>kendo.highcontrast.less</DependentUpon>
+    </Content>
+    <Content Include="content\kendo\kendo.highcontrast.less" />
+    <Content Include="content\kendo\kendo.metro.css">
+      <DependentUpon>kendo.metro.less</DependentUpon>
+    </Content>
+    <Content Include="content\kendo\kendo.metro.less" />
+    <Content Include="content\kendo\kendo.metroblack.css">
+      <DependentUpon>kendo.metroblack.less</DependentUpon>
+    </Content>
+    <Content Include="content\kendo\kendo.metroblack.less" />
+    <Content Include="content\kendo\kendo.moonlight.css">
+      <DependentUpon>kendo.moonlight.less</DependentUpon>
+    </Content>
+    <Content Include="content\kendo\kendo.moonlight.less" />
+    <Content Include="content\kendo\kendo.outlook.css">
+      <DependentUpon>kendo.outlook.less</DependentUpon>
+    </Content>
+    <Content Include="content\kendo\kendo.silver.css">
+      <DependentUpon>kendo.silver.less</DependentUpon>
+    </Content>
+    <Content Include="content\kendo\kendo.silver.less" />
+    <Content Include="content\kendo\kendo.uniform.css">
+      <DependentUpon>kendo.uniform.less</DependentUpon>
+    </Content>
+    <Content Include="content\kendo\kendo.uniform.less" />
+    <Content Include="content\kendo\kendo.outlook.less" />
+    <Content Include="content\bootstrap\kendo.bootstrap.less" />
+    <Content Include="content\bootstrap\cerulean\variables.less" />
+    <Content Include="content\smartadmin\fonts\fontawesome-webfont.svg" />
+    <Content Include="content\smartadmin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="content\smartadmin\img\ajax-loader.gif" />
+    <Content Include="content\smartadmin\img\alpha.png" />
+    <Content Include="content\smartadmin\img\avatars\1.png" />
+    <Content Include="content\smartadmin\img\avatars\2.png" />
+    <Content Include="content\smartadmin\img\avatars\3.png" />
+    <Content Include="content\smartadmin\img\avatars\4.png" />
+    <Content Include="content\smartadmin\img\avatars\5.png" />
+    <Content Include="content\smartadmin\img\avatars\copyright.txt" />
+    <Content Include="content\smartadmin\img\avatars\female.png" />
+    <Content Include="content\smartadmin\img\avatars\male.png" />
+    <Content Include="content\smartadmin\img\avatars\sunny-big.png" />
+    <Content Include="content\smartadmin\img\avatars\sunny.png" />
+    <Content Include="content\smartadmin\img\blank.gif" />
+    <Content Include="content\smartadmin\img\clear.png" />
+    <Content Include="content\smartadmin\img\demo\64x64.png" />
+    <Content Include="content\smartadmin\img\demo\basic.png" />
+    <Content Include="content\smartadmin\img\demo\copyright.txt" />
+    <Content Include="content\smartadmin\img\demo\demo-smartbig-alert.png" />
+    <Content Include="content\smartadmin\img\demo\demo-smartmedium-alert.png" />
+    <Content Include="content\smartadmin\img\demo\demo-smartsmall-alert.png" />
+    <Content Include="content\smartadmin\img\demo\hero.png" />
+    <Content Include="content\smartadmin\img\demo\image-placeholder-64x64.png" />
+    <Content Include="content\smartadmin\img\demo\iphoneview.png" />
+    <Content Include="content\smartadmin\img\demo\m1.jpg" />
+    <Content Include="content\smartadmin\img\demo\m2.jpg" />
+    <Content Include="content\smartadmin\img\demo\m3.jpg" />
+    <Content Include="content\smartadmin\img\demo\newsletter.png" />
+    <Content Include="content\smartadmin\img\demo\responseimg.png" />
+    <Content Include="content\smartadmin\img\demo\s1.jpg" />
+    <Content Include="content\smartadmin\img\demo\s2.jpg" />
+    <Content Include="content\smartadmin\img\demo\s3.jpg" />
+    <Content Include="content\smartadmin\img\demo\sa-demo.png" />
+    <Content Include="content\smartadmin\img\demo\sample.jpg" />
+    <Content Include="content\smartadmin\img\demo\sidebar.png" />
+    <Content Include="content\smartadmin\img\demo\sidebarhero.png" />
+    <Content Include="content\smartadmin\img\demo\site-1.jpg" />
+    <Content Include="content\smartadmin\img\demo\site-2.jpg" />
+    <Content Include="content\smartadmin\img\demo\widget-colorpicker.png" />
+    <Content Include="content\smartadmin\img\dropzone\spritemap%402x.png" />
+    <Content Include="content\smartadmin\img\dropzone\spritemap.png" />
+    <Content Include="content\smartadmin\img\favicon\1favicon.ico" />
+    <Content Include="content\smartadmin\img\favicon\favicon.ico" />
+    <Content Include="content\smartadmin\img\favicon\favicon.png" />
+    <Content Include="content\smartadmin\img\flags\flags.png" />
+    <Content Include="content\smartadmin\img\gradient\login.png" />
+    <Content Include="content\smartadmin\img\hue.png" />
+    <Content Include="content\smartadmin\img\invoice\americanexpress.png" />
+    <Content Include="content\smartadmin\img\invoice\license.txt" />
+    <Content Include="content\smartadmin\img\invoice\mastercard.png" />
+    <Content Include="content\smartadmin\img\invoice\paypal.png" />
+    <Content Include="content\smartadmin\img\invoice\visa.png" />
+    <Content Include="content\smartadmin\img\jcrop\Jcrop.gif" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_flat_0_999999_40x100.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_222222_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_2e83ff_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_428bca_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_454545_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_555555_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_888888_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_999999_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_f0ad4e_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_f6cf3b_256x240.png" />
+    <Content Include="content\smartadmin\img\jqueryui\ui-icons_ffffff_256x240.png" />
+    <Content Include="content\smartadmin\img\loading.gif" />
+    <Content Include="content\smartadmin\img\logo-blacknwhite.png" />
+    <Content Include="content\smartadmin\img\logo-blue.png" />
+    <Content Include="content\smartadmin\img\logo-o.png" />
+    <Content Include="content\smartadmin\img\logo-pale.png" />
+    <Content Include="content\smartadmin\img\logo-white.png" />
+    <Content Include="content\smartadmin\img\logo.png" />
+    <Content Include="content\smartadmin\img\mappin-default.png" />
+    <Content Include="content\smartadmin\img\minus.png" />
+    <Content Include="content\smartadmin\img\mybg.png" />
+    <Content Include="content\smartadmin\img\pattern\divider.jpg" />
+    <Content Include="content\smartadmin\img\pattern\graphy-xs.png" />
+    <Content Include="content\smartadmin\img\pattern\graphy.png" />
+    <Content Include="content\smartadmin\img\pattern\license-info.txt" />
+    <Content Include="content\smartadmin\img\pattern\lightpaperfibers.png" />
+    <Content Include="content\smartadmin\img\pattern\movable.png" />
+    <Content Include="content\smartadmin\img\pattern\nistri-xs.png" />
+    <Content Include="content\smartadmin\img\pattern\nistri.png" />
+    <Content Include="content\smartadmin\img\pattern\overlay-pattern.png" />
+    <Content Include="content\smartadmin\img\pattern\paper-xs.png" />
+    <Content Include="content\smartadmin\img\pattern\paper.png" />
+    <Content Include="content\smartadmin\img\pattern\pattern.png" />
+    <Content Include="content\smartadmin\img\pattern\sneaker_mesh_fabric-xs.png" />
+    <Content Include="content\smartadmin\img\pattern\sneaker_mesh_fabric.png" />
+    <Content Include="content\smartadmin\img\pattern\tileable_wood_texture-xs.png" />
+    <Content Include="content\smartadmin\img\pattern\tileable_wood_texture.png" />
+    <Content Include="content\smartadmin\img\plus.png" />
+    <Content Include="content\smartadmin\img\ribbon.png" />
+    <Content Include="content\smartadmin\img\sa-dark.png" />
+    <Content Include="content\smartadmin\img\sa-default.png" />
+    <Content Include="content\smartadmin\img\saturation.png" />
+    <Content Include="content\smartadmin\img\select2-spinner.gif" />
+    <Content Include="content\smartadmin\img\sort_asc.png" />
+    <Content Include="content\smartadmin\img\sort_asc_disabled.png" />
+    <Content Include="content\smartadmin\img\sort_both.png" />
+    <Content Include="content\smartadmin\img\sort_desc.png" />
+    <Content Include="content\smartadmin\img\sort_desc_disabled.png" />
+    <Content Include="content\smartadmin\img\splash\ipad-landscape.png" />
+    <Content Include="content\smartadmin\img\splash\ipad-portrait.png" />
+    <Content Include="content\smartadmin\img\splash\iphone.png" />
+    <Content Include="content\smartadmin\img\splash\sptouch-icon-iphone.png" />
+    <Content Include="content\smartadmin\img\splash\touch-icon-ipad-retina.png" />
+    <Content Include="content\smartadmin\img\splash\touch-icon-ipad.png" />
+    <Content Include="content\smartadmin\img\splash\touch-icon-iphone-retina.png" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-1.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-10.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-11.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-12.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-13.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-14.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-15.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-16.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-17.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-18.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-19.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-2.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-20-bw.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-20.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-21.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-22.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-23.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-24.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-3.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-4.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-5.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-6.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-7.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-8.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-full-9.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-1.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-10.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-11.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-12.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-13.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-14.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-15.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-16.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-17.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-18.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-19.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-2.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-20.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-21.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-22.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-23.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-24.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-3.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-4.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-5.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-6.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-7.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-8.jpg" />
+    <Content Include="content\smartadmin\img\superbox\superbox-thumb-9.jpg" />
+    <Content Include="content\smartadmin\img\versions\ajaxversion.png" />
+    <Content Include="content\smartadmin\img\versions\angularversion.png" />
+    <Content Include="content\smartadmin\img\versions\htmlversion.png" />
+    <Content Include="content\smartadmin\img\versions\phpversion.png" />
+    <Content Include="content\smartadmin\img\voicecommand\active-btn.gif" />
+    <Content Include="content\smartadmin\img\vt-menu.png" />
+    <Content Include="content\smartadmin\readme.txt" />
+    <Content Include="content\themes\kendo.bootstrap.css" />
+    <Content Include="content\themes\smartadmin.css" />
+    <Content Include="images\approve.png" />
+    <Content Include="images\bootstrap.png" />
+    <Content Include="images\excel.png" />
+    <Content Include="images\jasmine.png" />
+    <Content Include="images\orders.png" />
+    <Content Include="images\reject.png" />
+    <Content Include="images\revert.png" />
+    <Content Include="images\task.png" />
+    <Content Include="content\kendo\common-template.less" />
+    <Content Include="content\kendo\kendo.common-bootstrap.less" />
+    <Content Include="content\kendo\kendo.flat.less" />
+    <Content Include="content\kendo\type-metro.less" />
+    <Content Include="content\kendo\theme-template.less" />
+    <Content Include="content\bootstrap\base\.csscomb.json" />
+    <Content Include="content\bootstrap\base\.csslintrc" />
+    <Content Include="content\bootstrap\base\alerts.less" />
+    <Content Include="content\bootstrap\base\badges.less" />
+    <Content Include="content\bootstrap\base\breadcrumbs.less" />
+    <Content Include="content\bootstrap\base\button-groups.less" />
+    <Content Include="content\bootstrap\base\buttons.less" />
+    <Content Include="content\bootstrap\base\carousel.less" />
+    <Content Include="content\bootstrap\base\close.less" />
+    <Content Include="content\bootstrap\base\code.less" />
+    <Content Include="content\bootstrap\base\component-animations.less" />
+    <Content Include="content\bootstrap\base\dropdowns.less" />
+    <Content Include="content\bootstrap\base\glyphicons.less" />
+    <Content Include="content\bootstrap\base\input-groups.less" />
+    <Content Include="content\bootstrap\base\jumbotron.less" />
+    <Content Include="content\bootstrap\base\labels.less" />
+    <Content Include="content\bootstrap\base\list-group.less" />
+    <Content Include="content\bootstrap\base\media.less" />
+    <Content Include="content\bootstrap\base\mixins\alerts.less" />
+    <Content Include="content\bootstrap\base\mixins\background-variant.less" />
+    <Content Include="content\bootstrap\base\mixins\border-radius.less" />
+    <Content Include="content\bootstrap\base\mixins\buttons.less" />
+    <Content Include="content\bootstrap\base\mixins\center-block.less" />
+    <Content Include="content\bootstrap\base\mixins\clearfix.less" />
+    <Content Include="content\bootstrap\base\mixins\forms.less" />
+    <Content Include="content\bootstrap\base\mixins\gradients.less" />
+    <Content Include="content\bootstrap\base\mixins\grid-framework.less" />
+    <Content Include="content\bootstrap\base\mixins\grid.less" />
+    <Content Include="content\bootstrap\base\mixins\hide-text.less" />
+    <Content Include="content\bootstrap\base\mixins\image.less" />
+    <Content Include="content\bootstrap\base\mixins\labels.less" />
+    <Content Include="content\bootstrap\base\mixins\list-group.less" />
+    <Content Include="content\bootstrap\base\mixins\nav-divider.less" />
+    <Content Include="content\bootstrap\base\mixins\nav-vertical-align.less" />
+    <Content Include="content\bootstrap\base\mixins\opacity.less" />
+    <Content Include="content\bootstrap\base\mixins\pagination.less" />
+    <Content Include="content\bootstrap\base\mixins\panels.less" />
+    <Content Include="content\bootstrap\base\mixins\progress-bar.less" />
+    <Content Include="content\bootstrap\base\mixins\reset-filter.less" />
+    <Content Include="content\bootstrap\base\mixins\resize.less" />
+    <Content Include="content\bootstrap\base\mixins\responsive-visibility.less" />
+    <Content Include="content\bootstrap\base\mixins\size.less" />
+    <Content Include="content\bootstrap\base\mixins\tab-focus.less" />
+    <Content Include="content\bootstrap\base\mixins\table-row.less" />
+    <Content Include="content\bootstrap\base\mixins\text-emphasis.less" />
+    <Content Include="content\bootstrap\base\mixins\text-overflow.less" />
+    <Content Include="content\bootstrap\base\mixins\vendor-prefixes.less" />
+    <Content Include="content\bootstrap\base\modals.less" />
+    <Content Include="content\bootstrap\base\navbar.less" />
+    <Content Include="content\bootstrap\base\navs.less" />
+    <Content Include="content\bootstrap\base\normalize.less" />
+    <Content Include="content\bootstrap\base\pager.less" />
+    <Content Include="content\bootstrap\base\pagination.less" />
+    <Content Include="content\bootstrap\base\panels.less" />
+    <Content Include="content\bootstrap\base\popovers.less" />
+    <Content Include="content\bootstrap\base\print.less" />
+    <Content Include="content\bootstrap\base\progress-bars.less" />
+    <Content Include="content\bootstrap\base\responsive-embed.less" />
+    <Content Include="content\bootstrap\base\theme.less" />
+    <Content Include="content\bootstrap\base\thumbnails.less" />
+    <Content Include="content\bootstrap\base\tooltip.less" />
+    <Content Include="content\bootstrap\base\wells.less" />
+    <Content Include="content\themes\smartadmin.less" />
+    <Content Include="content\smartadmin\3.2\.csscomb.json" />
+    <Content Include="content\smartadmin\3.2\.csslintrc" />
+    <Content Include="content\smartadmin\3.2\alerts.less" />
+    <Content Include="content\smartadmin\3.2\badges.less" />
+    <Content Include="content\smartadmin\3.2\bootstrap.less" />
+    <Content Include="content\smartadmin\3.2\breadcrumbs.less" />
+    <Content Include="content\smartadmin\3.2\button-groups.less" />
+    <Content Include="content\smartadmin\3.2\buttons.less" />
+    <Content Include="content\smartadmin\3.2\carousel.less" />
+    <Content Include="content\smartadmin\3.2\close.less" />
+    <Content Include="content\smartadmin\3.2\code.less" />
+    <Content Include="content\smartadmin\3.2\component-animations.less" />
+    <Content Include="content\smartadmin\3.2\dropdowns.less" />
+    <Content Include="content\smartadmin\3.2\forms.less" />
+    <Content Include="content\smartadmin\3.2\glyphicons.less" />
+    <Content Include="content\smartadmin\3.2\grid.less" />
+    <Content Include="content\smartadmin\3.2\input-groups.less" />
+    <Content Include="content\smartadmin\3.2\jumbotron.less" />
+    <Content Include="content\smartadmin\3.2\labels.less" />
+    <Content Include="content\smartadmin\3.2\list-group.less" />
+    <Content Include="content\smartadmin\3.2\media.less" />
+    <Content Include="content\smartadmin\3.2\mixins.less" />
+    <Content Include="content\smartadmin\3.2\mixins\alerts.less" />
+    <Content Include="content\smartadmin\3.2\mixins\background-variant.less" />
+    <Content Include="content\smartadmin\3.2\mixins\border-radius.less" />
+    <Content Include="content\smartadmin\3.2\mixins\buttons.less" />
+    <Content Include="content\smartadmin\3.2\mixins\center-block.less" />
+    <Content Include="content\smartadmin\3.2\mixins\clearfix.less" />
+    <Content Include="content\smartadmin\3.2\mixins\forms.less" />
+    <Content Include="content\smartadmin\3.2\mixins\gradients.less" />
+    <Content Include="content\smartadmin\3.2\mixins\grid-framework.less" />
+    <Content Include="content\smartadmin\3.2\mixins\grid.less" />
+    <Content Include="content\smartadmin\3.2\mixins\hide-text.less" />
+    <Content Include="content\smartadmin\3.2\mixins\image.less" />
+    <Content Include="content\smartadmin\3.2\mixins\labels.less" />
+    <Content Include="content\smartadmin\3.2\mixins\list-group.less" />
+    <Content Include="content\smartadmin\3.2\mixins\nav-divider.less" />
+    <Content Include="content\smartadmin\3.2\mixins\nav-vertical-align.less" />
+    <Content Include="content\smartadmin\3.2\mixins\opacity.less" />
+    <Content Include="content\smartadmin\3.2\mixins\pagination.less" />
+    <Content Include="content\smartadmin\3.2\mixins\panels.less" />
+    <Content Include="content\smartadmin\3.2\mixins\progress-bar.less" />
+    <Content Include="content\smartadmin\3.2\mixins\reset-filter.less" />
+    <Content Include="content\smartadmin\3.2\mixins\resize.less" />
+    <Content Include="content\smartadmin\3.2\mixins\responsive-visibility.less" />
+    <Content Include="content\smartadmin\3.2\mixins\size.less" />
+    <Content Include="content\smartadmin\3.2\mixins\tab-focus.less" />
+    <Content Include="content\smartadmin\3.2\mixins\table-row.less" />
+    <Content Include="content\smartadmin\3.2\mixins\text-emphasis.less" />
+    <Content Include="content\smartadmin\3.2\mixins\text-overflow.less" />
+    <Content Include="content\smartadmin\3.2\mixins\vendor-prefixes.less" />
+    <Content Include="content\smartadmin\3.2\modals.less" />
+    <Content Include="content\smartadmin\3.2\navbar.less" />
+    <Content Include="content\smartadmin\3.2\navs.less" />
+    <Content Include="content\smartadmin\3.2\normalize.less" />
+    <Content Include="content\smartadmin\3.2\pager.less" />
+    <Content Include="content\smartadmin\3.2\pagination.less" />
+    <Content Include="content\smartadmin\3.2\panels.less" />
+    <Content Include="content\smartadmin\3.2\popovers.less" />
+    <Content Include="content\smartadmin\3.2\print.less" />
+    <Content Include="content\smartadmin\3.2\progress-bars.less" />
+    <Content Include="content\smartadmin\3.2\responsive-embed.less" />
+    <Content Include="content\smartadmin\3.2\responsive-utilities.less" />
+    <Content Include="content\smartadmin\3.2\scaffolding.less" />
+    <Content Include="content\smartadmin\3.2\tables.less" />
+    <Content Include="content\smartadmin\3.2\theme.less" />
+    <Content Include="content\smartadmin\3.2\thumbnails.less" />
+    <Content Include="content\smartadmin\3.2\tooltip.less" />
+    <Content Include="content\smartadmin\3.2\type.less" />
+    <Content Include="content\smartadmin\3.2\utilities.less" />
+    <Content Include="content\smartadmin\3.2\variables.less" />
+    <Content Include="content\smartadmin\3.2\wells.less" />
+    <Content Include="content\smartadmin\bootstrap.less" />
+    <Content Include="content\smartadmin\custom.less" />
+    <Content Include="content\smartadmin\library\animation\animation-engine.less" />
+    <Content Include="content\smartadmin\library\carouselfade\carouselfade.less" />
+    <Content Include="content\smartadmin\library\flags\flags.less" />
+    <Content Include="content\smartadmin\library\fontawesome\bordered-pulled.less" />
+    <Content Include="content\smartadmin\library\fontawesome\core.less" />
+    <Content Include="content\smartadmin\library\fontawesome\fixed-width.less" />
+    <Content Include="content\smartadmin\library\fontawesome\font-awesome.less" />
+    <Content Include="content\smartadmin\library\fontawesome\icons.less" />
+    <Content Include="content\smartadmin\library\fontawesome\larger.less" />
+    <Content Include="content\smartadmin\library\fontawesome\list.less" />
+    <Content Include="content\smartadmin\library\fontawesome\mixins.less" />
+    <Content Include="content\smartadmin\library\fontawesome\path.less" />
+    <Content Include="content\smartadmin\library\fontawesome\rotated-flipped.less" />
+    <Content Include="content\smartadmin\library\fontawesome\spinning.less" />
+    <Content Include="content\smartadmin\library\fontawesome\stacked.less" />
+    <Content Include="content\smartadmin\library\fontawesome\variables.less" />
+    <Content Include="content\smartadmin\library\jqueryui\jquery-ui-1.10.3.custom.less" />
+    <Content Include="content\smartadmin\overrides.less" />
+    <Content Include="content\smartadmin\smartadmin-production.less" />
+    <Content Include="content\smartadmin\smartadmin-skin\smartadmin-skins.less" />
+    <Content Include="content\smartadmin\smartadmin\component-fullscreen.less" />
+    <Content Include="content\smartadmin\smartadmin\component-jqueryui.less" />
+    <Content Include="content\smartadmin\smartadmin\component-pace.less" />
+    <Content Include="content\smartadmin\smartadmin\component-pricingtable.less" />
+    <Content Include="content\smartadmin\smartadmin\component-smartchat.less" />
+    <Content Include="content\smartadmin\smartadmin\component-smartforms.less" />
+    <Content Include="content\smartadmin\smartadmin\ie-fix.less" />
+    <Content Include="content\smartadmin\smartadmin\main-animated.less" />
+    <Content Include="content\smartadmin\smartadmin\main-colorpallet.less" />
+    <Content Include="content\smartadmin\smartadmin\main-container-fix.less" />
+    <Content Include="content\smartadmin\smartadmin\main-form-radiocheck.less" />
+    <Content Include="content\smartadmin\smartadmin\main-page-footer.less" />
+    <Content Include="content\smartadmin\smartadmin\main-responsive.less" />
+    <Content Include="content\smartadmin\smartadmin\main-special-class.less" />
+    <Content Include="content\smartadmin\smartadmin\main.less" />
+    <Content Include="content\smartadmin\smartadmin\page-error.less" />
+    <Content Include="content\smartadmin\smartadmin\page-extr.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-bootstrap-markdown.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-bootstrap-slider.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-bootstrap-tagsinput.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-bootstrap-timepicker.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-clockpicker.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-colorpicker.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-dataTables-cust.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-dataTables.bootstrap.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-dataTables.colReorder.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-dataTables.colVis.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-dataTables.responsive.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-dataTables.tableTools.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-dropzone.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-fd-slider.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-fullcalendar.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-ion.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-jarviswidget.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-jcrop.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-jqgrid.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-select2.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-smart-notifications.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-summernote.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-superbox.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-voicecommand.less" />
+    <Content Include="content\smartadmin\smartadmin\plugin-xeditable.less" />
+    <Content Include="content\smartadmin\smartadmin\section-ajax-msg.less" />
+    <Content Include="content\smartadmin\smartadmin\section-calendar.less" />
+    <Content Include="content\smartadmin\smartadmin\section-forum.less" />
+    <Content Include="content\smartadmin\smartadmin\section-inbox.less" />
+    <Content Include="content\smartadmin\smartadmin\section-nestables.less" />
+    <Content Include="content\smartadmin\smartadmin\section-profile.less" />
+    <Content Include="content\smartadmin\smartadmin\section-search.less" />
+    <Content Include="content\smartadmin\smartadmin\section-timeline.less" />
+    <Content Include="content\smartadmin\smartadmin\section-todo.less" />
+    <Content Include="content\smartadmin\smartadmin\top-menu.less" />
+    <Content Include="content\smartadmin\variables.less" />
+    <Content Include="content\smartadmin\main-theme.less" />
+    <Content Include="content\smartadmin\fonts\fontawesome-webfont.eot" />
+    <Content Include="content\smartadmin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="content\smartadmin\fonts\fontawesome-webfont.woff" />
+    <Content Include="content\smartadmin\fonts\FontAwesome.otf" />
+    <Content Include="content\smartadmin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="content\smartadmin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="content\smartadmin\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="scripts\libs\breeze.intellisense.js" />
+    <Content Include="images\version-approval-arrow.png" />
+    <Content Include="images\version-historical.png" />
+    <Content Include="images\version-pending.png" />
+    <Content Include="scripts\libs\breeze.min.js" />
+    <Content Include="scripts\libs\idangerous.swiper.js" />
+    <Content Include="scripts\libs\knockout-3.1.0.debug.js" />
+    <Content Include="scripts\libs\knockout-3.1.0.js" />
+    <Content Include="scripts\libs\knockout-bootstrap.js" />
+    <Content Include="scripts\libs\knockout-projections.js" />
+    <Content Include="scripts\libs\jquery.cookie.js" />
+    <Content Include="scripts\libs\moment-with-langs.js" />
+    <Content Include="scripts\libs\moment-with-langs.min.js" />
+    <Content Include="scripts\libs\moment.js" />
+    <Content Include="scripts\libs\moment.min.js" />
+    <Content Include="scripts\smartadmin\app.backup.js" />
+    <Content Include="scripts\smartadmin\app.config.js" />
+    <Content Include="scripts\smartadmin\app.js" />
+    <Content Include="scripts\smartadmin\bootstrap\bootstrap.js" />
+    <Content Include="scripts\smartadmin\demo.js" />
+    <Content Include="scripts\smartadmin\demos\applayout.html" />
+    <Content Include="scripts\smartadmin\demos\blank_.html" />
+    <Content Include="scripts\smartadmin\demos\bootstrap-forms.html" />
+    <Content Include="scripts\smartadmin\demos\buttons.html" />
+    <Content Include="scripts\smartadmin\demos\calendar.html" />
+    <Content Include="scripts\smartadmin\demos\ckeditor.html" />
+    <Content Include="scripts\smartadmin\demos\dashboard.html" />
+    <Content Include="scripts\smartadmin\demos\datatables.html" />
+    <Content Include="scripts\smartadmin\demos\difver.html" />
+    <Content Include="scripts\smartadmin\demos\dropzone.html" />
+    <Content Include="scripts\smartadmin\demos\dygraphs.html" />
+    <Content Include="scripts\smartadmin\demos\email-compose.html" />
+    <Content Include="scripts\smartadmin\demos\email-opened.html" />
+    <Content Include="scripts\smartadmin\demos\email-reply.html" />
+    <Content Include="scripts\smartadmin\demos\email-template.html" />
+    <Content Include="scripts\smartadmin\demos\email\email-list.html" />
+    <Content Include="scripts\smartadmin\demos\error404.html" />
+    <Content Include="scripts\smartadmin\demos\error500.html" />
+    <Content Include="scripts\smartadmin\demos\fa.html" />
+    <Content Include="scripts\smartadmin\demos\flags.html" />
+    <Content Include="scripts\smartadmin\demos\flot.html" />
+    <Content Include="scripts\smartadmin\demos\form-elements.html" />
+    <Content Include="scripts\smartadmin\demos\form-templates.html" />
+    <Content Include="scripts\smartadmin\demos\forum-post.html" />
+    <Content Include="scripts\smartadmin\demos\forum-topic.html" />
+    <Content Include="scripts\smartadmin\demos\forum.html" />
+    <Content Include="scripts\smartadmin\demos\gallery.html" />
+    <Content Include="scripts\smartadmin\demos\general-elements.html" />
+    <Content Include="scripts\smartadmin\demos\glyph.html" />
+    <Content Include="scripts\smartadmin\demos\gmap-xml.html" />
+    <Content Include="scripts\smartadmin\demos\grid.html" />
+    <Content Include="scripts\smartadmin\demos\image-editor.html" />
+    <Content Include="scripts\smartadmin\demos\inbox.html" />
+    <Content Include="scripts\smartadmin\demos\inline-charts.html" />
+    <Content Include="scripts\smartadmin\demos\invoice.html" />
+    <Content Include="scripts\smartadmin\demos\jqgrid.html" />
+    <Content Include="scripts\smartadmin\demos\jqui.html" />
+    <Content Include="scripts\smartadmin\demos\modal-content\modal-content-template.html" />
+    <Content Include="scripts\smartadmin\demos\modal-content\modal-voicecommand.html" />
+    <Content Include="scripts\smartadmin\demos\modal-content\model-content-1.html" />
+    <Content Include="scripts\smartadmin\demos\modal-content\model-content-2.html" />
+    <Content Include="scripts\smartadmin\demos\morris.html" />
+    <Content Include="scripts\smartadmin\demos\nestable-list.html" />
+    <Content Include="scripts\smartadmin\demos\notify\mail.html" />
+    <Content Include="scripts\smartadmin\demos\notify\notifications.html" />
+    <Content Include="scripts\smartadmin\demos\notify\tasks.html" />
+    <Content Include="scripts\smartadmin\demos\other-editors.html" />
+    <Content Include="scripts\smartadmin\demos\plugins.html" />
+    <Content Include="scripts\smartadmin\demos\pricing-table.html" />
+    <Content Include="scripts\smartadmin\demos\profile.html" />
+    <Content Include="scripts\smartadmin\demos\search.html" />
+    <Content Include="scripts\smartadmin\demos\table.html" />
+    <Content Include="scripts\smartadmin\demos\test.html" />
+    <Content Include="scripts\smartadmin\demos\timeline.html" />
+    <Content Include="scripts\smartadmin\demos\treeview.html" />
+    <Content Include="scripts\smartadmin\demos\typography.html" />
+    <Content Include="scripts\smartadmin\demos\validation.html" />
+    <Content Include="scripts\smartadmin\demos\widgets.html" />
+    <Content Include="scripts\smartadmin\demos\wizard.html" />
+    <Content Include="scripts\smartadmin\libs\jquery-2.0.2.min.js" />
+    <Content Include="scripts\smartadmin\libs\jquery-ui-1.10.3.min.js" />
+    <Content Include="scripts\smartadmin\notification\SmartNotification.js" />
+    <Content Include="scripts\smartadmin\plugin\bootstrap-progressbar\bootstrap-progressbar.backup.js" />
+    <Content Include="scripts\smartadmin\plugin\bootstrap-progressbar\bootstrap-progressbar.js" />
+    <Content Include="scripts\smartadmin\plugin\bootstrap-slider\bootstrap-slider.js" />
+    <Content Include="scripts\smartadmin\plugin\bootstrap-tags\bootstrap-tagsinput-angular.js" />
+    <Content Include="scripts\smartadmin\plugin\bootstrap-tags\bootstrap-tagsinput.js" />
+    <Content Include="scripts\smartadmin\plugin\bootstrap-timepicker\bootstrap-timepicker.js" />
+    <Content Include="scripts\smartadmin\plugin\bootstrap-wizard\jquery.bootstrap.wizard.js" />
+    <Content Include="scripts\smartadmin\plugin\bootstraptree\bootstrap-tree.js" />
+    <Content Include="scripts\smartadmin\plugin\clockpicker\clockpicker.js" />
+    <Content Include="scripts\smartadmin\plugin\colorpicker\bootstrap-colorpicker.js" />
+    <Content Include="scripts\smartadmin\plugin\datatable-responsive\datatables.responsive.js" />
+    <Content Include="scripts\smartadmin\plugin\datatables\dataTables.bootstrap.js" />
+    <Content Include="scripts\smartadmin\plugin\datatables\dataTables.colReorder.js" />
+    <Content Include="scripts\smartadmin\plugin\datatables\dataTables.colVis.js" />
+    <Content Include="scripts\smartadmin\plugin\datatables\dataTables.tableTools.js" />
+    <Content Include="scripts\smartadmin\plugin\datatables\jquery.dataTables.js" />
+    <Content Include="scripts\smartadmin\plugin\datatables\swf\copy_csv_xls.swf" />
+    <Content Include="scripts\smartadmin\plugin\datatables\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="scripts\smartadmin\plugin\delete-table-row\delete-table-row.js" />
+    <Content Include="scripts\smartadmin\plugin\dropzone\dropzone-amd-module.js" />
+    <Content Include="scripts\smartadmin\plugin\dropzone\dropzone.js" />
+    <Content Include="scripts\smartadmin\plugin\dygraphs\demo-data.js" />
+    <Content Include="scripts\smartadmin\plugin\dygraphs\dygraph-combined.js" />
+    <Content Include="scripts\smartadmin\plugin\easy-pie-chart\jquery.easy-pie-chart.js" />
+    <Content Include="scripts\smartadmin\plugin\fastclick\fastclick.js" />
+    <Content Include="scripts\smartadmin\plugin\flot\jquery.flot.cust.js" />
+    <Content Include="scripts\smartadmin\plugin\flot\jquery.flot.fillbetween.js" />
+    <Content Include="scripts\smartadmin\plugin\flot\jquery.flot.orderBar.js" />
+    <Content Include="scripts\smartadmin\plugin\flot\jquery.flot.pie.js" />
+    <Content Include="scripts\smartadmin\plugin\flot\jquery.flot.resize.js" />
+    <Content Include="scripts\smartadmin\plugin\flot\jquery.flot.tooltip.js" />
+    <Content Include="scripts\smartadmin\plugin\fuelux\wizard\wizard.js" />
+    <Content Include="scripts\smartadmin\plugin\fullcalendar\jquery.fullcalendar.js" />
+    <Content Include="scripts\smartadmin\plugin\ion-slider\ion.rangeSlider.js" />
+    <Content Include="scripts\smartadmin\plugin\jcrop\jquery.color.js" />
+    <Content Include="scripts\smartadmin\plugin\jcrop\jquery.Jcrop.js" />
+    <Content Include="scripts\smartadmin\plugin\jqgrid\grid.locale-en.js" />
+    <Content Include="scripts\smartadmin\plugin\jqgrid\jquery.jqGrid.js" />
+    <Content Include="scripts\smartadmin\plugin\jquery-form\jquery-form.min.js" />
+    <Content Include="scripts\smartadmin\plugin\jquery-nestable\jquery.nestable.js" />
+    <Content Include="scripts\smartadmin\plugin\jquery-touch\jquery.ui.touch-punch.js" />
+    <Content Include="scripts\smartadmin\plugin\jquery-validate\jquery.validate.js" />
+    <Content Include="scripts\smartadmin\plugin\js-migrate\jquery-migrate-1.2.1.js" />
+    <Content Include="scripts\smartadmin\plugin\knob\jquery.knob.js" />
+    <Content Include="scripts\smartadmin\plugin\markdown\bootstrap-markdown.js" />
+    <Content Include="scripts\smartadmin\plugin\markdown\markdown.js" />
+    <Content Include="scripts\smartadmin\plugin\markdown\to-markdown.js" />
+    <Content Include="scripts\smartadmin\plugin\masked-input\jquery.maskedinput.js" />
+    <Content Include="scripts\smartadmin\plugin\maxlength\bootstrap-maxlength.js" />
+    <Content Include="scripts\smartadmin\plugin\morris\morris-chart-settings.js" />
+    <Content Include="scripts\smartadmin\plugin\morris\morris.js" />
+    <Content Include="scripts\smartadmin\plugin\morris\morris.min.js" />
+    <Content Include="scripts\smartadmin\plugin\morris\raphael.js" />
+    <Content Include="scripts\smartadmin\plugin\morris\raphael.min.js" />
+    <Content Include="scripts\smartadmin\plugin\msie-fix\jquery.mb.browser.js" />
+    <Content Include="scripts\smartadmin\plugin\multiselect\bootstrap-multiselect.js" />
+    <Content Include="scripts\smartadmin\plugin\noUiSlider\jquery.nouislider.js" />
+    <Content Include="scripts\smartadmin\plugin\select2\select2.js" />
+    <Content Include="scripts\smartadmin\plugin\selectToUISlider\selectToUISlider.jQuery.js" />
+    <Content Include="scripts\smartadmin\plugin\slimscroll\jquery.slimscroll.js" />
+    <Content Include="scripts\smartadmin\plugin\sparkline\jquery.sparkline.js" />
+    <Content Include="scripts\smartadmin\plugin\summernote\summernote.js" />
+    <Content Include="scripts\smartadmin\plugin\superbox\superbox.js" />
+    <Content Include="scripts\smartadmin\plugin\typeahead\typeahead.js" />
+    <Content Include="scripts\smartadmin\plugin\typeahead\typeaheadjs.js" />
+    <Content Include="scripts\smartadmin\plugin\x-editable\x-editable.js" />
+    <Content Include="scripts\smartadmin\smartwidgets\jarvis.widget.js" />
+    <Content Include="scripts\smartadmin\sound\bigbox.mp3" />
+    <Content Include="scripts\smartadmin\sound\bigbox.ogg" />
+    <Content Include="scripts\smartadmin\sound\license.txt" />
+    <Content Include="scripts\smartadmin\sound\messagebox.mp3" />
+    <Content Include="scripts\smartadmin\sound\messagebox.ogg" />
+    <Content Include="scripts\smartadmin\sound\smallbox.mp3" />
+    <Content Include="scripts\smartadmin\sound\smallbox.ogg" />
+    <Content Include="scripts\smartadmin\sound\voice_alert.mp3" />
+    <Content Include="scripts\smartadmin\sound\voice_alert.ogg" />
+    <Content Include="scripts\smartadmin\sound\voice_off.mp3" />
+    <Content Include="scripts\smartadmin\sound\voice_off.ogg" />
+    <Content Include="scripts\smartadmin\sound\voice_on.mp3" />
+    <Content Include="scripts\smartadmin\sound\voice_on.ogg" />
+    <Content Include="scripts\smartadmin\speech\voicecommand.js" />
+    <Content Include="scripts\smartadmin\xml\gmap\pins.xml" />
+    <Content Include="scripts\libs\splitter.js" />
+    <Content Include="scripts\src\metadata\northwind.js" />
+    <Content Include="scripts\src\metadata\task.js" />
+    <Content Include="scripts\src\modules\smartadmin\js\bootstrap.js" />
+    <Content Include="scripts\src\modules\smartadmin\assets\demo.css" />
+    <Content Include="scripts\src\modules\smartadmin\assets\styles.css" />
+    <Content Include="scripts\src\modules\smartadmin\templates\Basic.html" />
+    <Content Include="scripts\src\modules\chatbox\assets\styles.css" />
+    <Content Include="scripts\src\modules\chatbox\js\chatbox-module.js" />
+    <Content Include="scripts\src\modules\chatbox\js\helpers.js" />
+    <Content Include="scripts\src\modules\chatbox\templates\MainChatWindow.html" />
+    <Content Include="scripts\src\modules\customers\assets\myCustomerStyles.css" />
+    <Content Include="scripts\src\modules\customers\assets\styles.css" />
+    <Content Include="scripts\src\modules\customers\js\customers-desktop.js" />
+    <Content Include="scripts\src\modules\customers\js\customers-mobile.js" />
+    <Content Include="scripts\src\modules\customers\js\helpers.js" />
+    <Content Include="scripts\src\modules\customers\templates\CustomerEdit.html" />
+    <Content Include="scripts\src\modules\customers\templates\DataSourceNotificationPanelItem.html" />
+    <Content Include="scripts\src\modules\customers\templates\mobile\CustomerListViewItem.html" />
+    <Content Include="scripts\src\modules\customers\templates\MyCustomerItem.html" />
+    <Content Include="scripts\src\modules\customers\templates\MyCustomerItemTitle.html" />
+    <Content Include="scripts\src\modules\customers\templates\MyCustomerNotificationPanelItem.html" />
+    <Content Include="scripts\src\modules\orders\js\orders-desktop.js">
+      <DependentUpon>orders-desktop.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\modules\orders\js\orders-mobile.js" />
+    <Content Include="scripts\src\modules\employees\assets\myItemStyles.css" />
+    <Content Include="scripts\src\modules\employees\assets\styles.css" />
+    <Content Include="scripts\src\modules\employees\js\employees-mobile.js" />
+    <Content Include="scripts\src\modules\employees\js\employees.js" />
+    <Content Include="scripts\src\modules\employees\js\helpers.js" />
+    <Content Include="scripts\src\modules\employees\templates\DataSourceNotificationPanelItem.html" />
+    <Content Include="scripts\src\modules\employees\templates\MyItem.html" />
+    <Content Include="scripts\src\modules\employees\templates\MyItemTitle.html" />
+    <Content Include="scripts\src\modules\formeditor\assets\codeeffects.css" />
+    <Content Include="scripts\src\modules\formeditor\assets\myCustomerStyles.css" />
+    <Content Include="scripts\src\modules\formeditor\assets\styles.css" />
+    <Content Include="scripts\src\modules\formeditor\js\form-editor.js" />
+    <Content Include="scripts\src\modules\formeditor\js\forms.js" />
+    <Content Include="scripts\src\modules\formeditor\spec\breeze-testfn.js" />
+    <Content Include="scripts\src\modules\formeditor\spec\form-editor-spec.js" />
+    <Content Include="scripts\src\modules\formeditor\templates\ControlEdit.html" />
+    <Content Include="scripts\src\modules\formeditor\templates\FormTemplateBasicEdit.html" />
+    <Content Include="scripts\src\modules\formeditor\templates\MyCustomerItem.html" />
+    <Content Include="scripts\src\modules\formeditor\templates\TemplateQueryFilter.html" />
+    <Content Include="scripts\src\modules\formeditor\templates\TestFormEdit.html" />
+    <Content Include="scripts\src\modules\supplier\assets\myItemStyles.css" />
+    <Content Include="scripts\src\modules\supplier\assets\styles.css" />
+    <Content Include="scripts\src\modules\supplier\js\supplier.js" />
+    <Content Include="scripts\src\modules\supplier\templates\DataItems.html" />
+    <Content Include="scripts\src\modules\supplier\templates\DataSourceNotificationPanelItem.html" />
+    <Content Include="scripts\src\modules\supplier\templates\MyItem.html" />
+    <Content Include="scripts\src\modules\supplier\templates\MyItemTitle.html" />
+    <Content Include="scripts\src\modules\task\assets\styles.css" />
+    <Content Include="scripts\src\modules\task\js\task-helpers.js" />
+    <Content Include="scripts\src\modules\task\js\tasks-mobile.js" />
+    <Content Include="scripts\src\modules\task\js\tasks.js" />
+    <Content Include="scripts\src\modules\task\templates\DataSourceNotificationPanelItem.html" />
+    <Content Include="scripts\src\modules\task\templates\TaskEdit.html" />
+    <Content Include="scripts\src\templates\app-mobile.js" />
+    <Content Include="scripts\src\templates\app.js" />
+    <Content Include="scripts\src\templates\app\-mobile\CoreMain.html" />
+    <Content Include="scripts\src\templates\app\-mobile\ForceOfflineNotification.html" />
+    <Content Include="scripts\src\templates\app\Dialog.html" />
+    <Content Include="scripts\src\templates\app\messages\Error.html" />
+    <Content Include="scripts\src\templates\app\messages\Generic.html" />
+    <Content Include="scripts\src\templates\app\notification\NotificationsCollapsed.html" />
+    <Content Include="scripts\src\templates\app\notification\SidebarNotifications.html" />
+    <Content Include="scripts\src\templates\app\-mobile\styles.css">
+      <DependentUpon>styles.less</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\app\widget\VirtualScrollButton.html" />
+    <Content Include="scripts\src\templates\beta.js" />
+    <Content Include="scripts\src\templates\bootstrap.js" />
+    <Content Include="scripts\src\templates\data-mobile.js" />
+    <Content Include="scripts\src\templates\data.customer-mobile.js" />
+    <Content Include="scripts\src\templates\data.customer.js" />
+    <Content Include="scripts\src\templates\data.employee.js" />
+    <Content Include="scripts\src\templates\data.js" />
+    <Content Include="scripts\src\modules\orders\templates\OrderEdit.html" />
+    <Content Include="scripts\src\modules\orders\templates\QueryFilter.html" />
+    <Content Include="scripts\src\modules\orders\assets\styles.css">
+      <DependentUpon>styles.less</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\modules\orders\templates\ActiveCustomer.html" />
+    <Content Include="scripts\src\templates\data.supplier.js" />
+    <Content Include="scripts\src\templates\data.task.js" />
+    <Content Include="scripts\src\templates\data\comparison\DiffMessage.html" />
+    <Content Include="scripts\src\templates\data\comparison\DiffCollectionTrackSummaryItem.html" />
+    <Content Include="scripts\src\templates\data\comparison\DiffTrackSummaryItem.html" />
+    <Content Include="scripts\src\templates\data\comparison\DiffSummary.html" />
+    <Content Include="scripts\src\templates\data\Field.html" />
+    <Content Include="scripts\src\templates\data\mysearches\SidebarMySearchesCollapsed.html" />
+    <Content Include="scripts\src\templates\data\VersionPagerHasPendingColumn.html" />
+    <Content Include="scripts\src\templates\data\VersionPagerViewBar.html" />
+    <Content Include="scripts\src\templates\data\ViewBarSummaryTabContent.html" />
+    <Content Include="scripts\src\templates\forms.js" />
+    <Content Include="scripts\src\templates\smartadmin.js" />
+    <Content Include="scripts\src\templates\templates.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>templates.tt</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\test.js" />
+    <Content Include="scripts\libs\underscore.js" />
+    <Content Include="scripts\src\templates\templates.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>templates.txt</LastGenOutput>
+    </Content>
+    <Content Include="scripts\src\modules\orders\assets\styles.less" />
+    <Content Include="scripts\src\templates\app\-mobile\styles.less" />
+    <Content Include="scripts\src\modules\chatbox\assets\styles.less" />
+    <Content Include="scripts\src\modules\customers\assets\myCustomerStyles.less" />
+    <Content Include="scripts\src\modules\customers\assets\styles.less" />
+    <Content Include="scripts\src\modules\formeditor\assets\myCustomerStyles.less" />
+    <Content Include="scripts\src\modules\formeditor\assets\styles.less" />
+    <Content Include="scripts\src\modules\employees\assets\myItemStyles.less" />
+    <Content Include="scripts\src\modules\employees\assets\styles.less" />
+    <Content Include="scripts\src\modules\supplier\assets\myItemStyles.less" />
+    <Content Include="scripts\src\modules\supplier\assets\styles.less" />
+    <Content Include="scripts\src\modules\task\assets\styles.less" />
+    <Content Include="scripts\src\modules\smartadmin\assets\demo.less" />
+    <Content Include="scripts\src\modules\smartadmin\assets\styles.less" />
+    <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceer40EN.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlcecompact40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceca40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\README_ENU.txt" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\msvcr90.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlcese40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceqp40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceme40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceer40EN.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlcecompact40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceca40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\README_ENU.txt" />
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
+    <None Include="content\bootstrap\bootstrap.cerulean.less" />
+    <Content Include="content\bootstrap\kendo.default.variables.less" />
+    <Content Include="content\bootstrap\template.less" />
+    <Content Include="content\modules\core-mobile.less" />
+    <Content Include="content\modules\core.less" />
+    <Content Include="content\kendo.mobile\images\kendoui.ttf" />
+    <Content Include="content\kendo.mobile\images\kendoui.woff" />
+    <None Include="content\modules\core\ribbon-bar.less" />
+    <Content Include="content\kendo\Black\editor.png" />
+    <Content Include="content\kendo\Black\imagebrowser.png" />
+    <Content Include="content\kendo\Black\loading-image.gif" />
+    <Content Include="content\kendo\Black\loading.gif" />
+    <Content Include="content\kendo\Black\slider-h.gif" />
+    <Content Include="content\kendo\Black\slider-v.gif" />
+    <Content Include="content\kendo\Black\sprite.png" />
+    <Content Include="content\kendo\BlueOpal\editor.png" />
+    <Content Include="content\kendo\BlueOpal\imagebrowser.png" />
+    <Content Include="content\kendo\BlueOpal\loading-image.gif" />
+    <Content Include="content\kendo\BlueOpal\loading.gif" />
+    <Content Include="content\kendo\BlueOpal\slider-h.gif" />
+    <Content Include="content\kendo\BlueOpal\slider-v.gif" />
+    <Content Include="content\kendo\BlueOpal\sprite.png" />
+    <Content Include="content\kendo\Bootstrap\editor.png" />
+    <Content Include="content\kendo\Bootstrap\imagebrowser.png" />
+    <Content Include="content\kendo\Bootstrap\loading-image.gif" />
+    <Content Include="content\kendo\Bootstrap\loading.gif" />
+    <Content Include="content\kendo\Bootstrap\slider-h.gif" />
+    <Content Include="content\kendo\Bootstrap\slider-v.gif" />
+    <Content Include="content\kendo\Bootstrap\sprite.png" />
+    <Content Include="content\kendo\Default\editor.png" />
+    <Content Include="content\kendo\Default\imagebrowser.png" />
+    <Content Include="content\kendo\Default\loading-image.gif" />
+    <Content Include="content\kendo\Default\loading.gif" />
+    <Content Include="content\kendo\Default\slider-h.gif" />
+    <Content Include="content\kendo\Default\slider-v.gif" />
+    <Content Include="content\kendo\Default\sprite.png" />
+    <Content Include="content\kendo\HighContrast\editor.png" />
+    <Content Include="content\kendo\HighContrast\imagebrowser.png" />
+    <Content Include="content\kendo\HighContrast\loading-image.gif" />
+    <Content Include="content\kendo\HighContrast\loading.gif" />
+    <Content Include="content\kendo\HighContrast\slider-h.gif" />
+    <Content Include="content\kendo\HighContrast\slider-v.gif" />
+    <Content Include="content\kendo\HighContrast\sprite.png" />
+    <Content Include="content\kendo\MetroBlack\editor.png" />
+    <Content Include="content\kendo\MetroBlack\imagebrowser.png" />
+    <Content Include="content\kendo\MetroBlack\loading-image.gif" />
+    <Content Include="content\kendo\MetroBlack\loading.gif" />
+    <Content Include="content\kendo\MetroBlack\slider-h.gif" />
+    <Content Include="content\kendo\MetroBlack\slider-v.gif" />
+    <Content Include="content\kendo\MetroBlack\sprite.png" />
+    <Content Include="content\kendo\Metro\editor.png" />
+    <Content Include="content\kendo\Metro\imagebrowser.png" />
+    <Content Include="content\kendo\Metro\loading-image.gif" />
+    <Content Include="content\kendo\Metro\loading.gif" />
+    <Content Include="content\kendo\Metro\slider-h.gif" />
+    <Content Include="content\kendo\Metro\slider-v.gif" />
+    <Content Include="content\kendo\Metro\sprite.png" />
+    <Content Include="content\kendo\Moonlight\editor.png" />
+    <Content Include="content\kendo\Moonlight\imagebrowser.png" />
+    <Content Include="content\kendo\Moonlight\loading-image.gif" />
+    <Content Include="content\kendo\Moonlight\loading.gif" />
+    <Content Include="content\kendo\Moonlight\slider-h.gif" />
+    <Content Include="content\kendo\Moonlight\slider-v.gif" />
+    <Content Include="content\kendo\Moonlight\sprite.png" />
+    <Content Include="content\kendo\Silver\editor.png" />
+    <Content Include="content\kendo\Silver\imagebrowser.png" />
+    <Content Include="content\kendo\Silver\loading-image.gif" />
+    <Content Include="content\kendo\Silver\loading.gif" />
+    <Content Include="content\kendo\Silver\slider-h.gif" />
+    <Content Include="content\kendo\Silver\slider-v.gif" />
+    <Content Include="content\kendo\Silver\sprite.png" />
+    <Content Include="content\kendo\textures\brushed-metal.png" />
+    <Content Include="content\kendo\textures\dots1.png" />
+    <Content Include="content\kendo\textures\dots10.png" />
+    <Content Include="content\kendo\textures\dots11.png" />
+    <Content Include="content\kendo\textures\dots12.png" />
+    <Content Include="content\kendo\textures\dots13.png" />
+    <Content Include="content\kendo\textures\dots2.png" />
+    <Content Include="content\kendo\textures\dots3.png" />
+    <Content Include="content\kendo\textures\dots4.png" />
+    <Content Include="content\kendo\textures\dots5.png" />
+    <Content Include="content\kendo\textures\dots6.png" />
+    <Content Include="content\kendo\textures\dots7.png" />
+    <Content Include="content\kendo\textures\dots8.png" />
+    <Content Include="content\kendo\textures\dots9.png" />
+    <Content Include="content\kendo\textures\glass-lighter.png" />
+    <Content Include="content\kendo\textures\glass.png" />
+    <Content Include="content\kendo\textures\highlight.png" />
+    <Content Include="content\kendo\textures\leather1.png" />
+    <Content Include="content\kendo\textures\leather2.png" />
+    <Content Include="content\kendo\textures\noise.png" />
+    <Content Include="content\kendo\textures\stripe1.png" />
+    <Content Include="content\kendo\textures\stripe2.png" />
+    <Content Include="content\kendo\textures\stripe3.png" />
+    <Content Include="content\kendo\textures\stripe4.png" />
+    <Content Include="content\kendo\textures\stripe5.png" />
+    <Content Include="content\kendo\textures\stripe6.png" />
+    <Content Include="content\kendo\Uniform\editor.png" />
+    <Content Include="content\kendo\Uniform\imagebrowser.png" />
+    <Content Include="content\kendo\Uniform\loading-image.gif" />
+    <Content Include="content\kendo\Uniform\loading.gif" />
+    <Content Include="content\kendo\Uniform\slider-h.gif" />
+    <Content Include="content\kendo\Uniform\slider-v.gif" />
+    <Content Include="content\kendo\Uniform\sprite.png" />
+    <Content Include="content\modules\core\site.css">
+      <DependentUpon>site.less</DependentUpon>
+    </Content>
+    <Content Include="content\modules\core\site.min.css">
+      <DependentUpon>site.less</DependentUpon>
+    </Content>
+    <Content Include="content\themes\kendo.black.css">
+      <DependentUpon>kendo.black.less</DependentUpon>
+    </Content>
+    <Content Include="content\themes\kendo.blueopal.css">
+      <DependentUpon>kendo.blueopal.less</DependentUpon>
+    </Content>
+    <Content Include="content\themes\kendo.default.css">
+      <DependentUpon>kendo.default.less</DependentUpon>
+    </Content>
+    <Content Include="content\themes\kendo.highcontrast.css">
+      <DependentUpon>kendo.highcontrast.less</DependentUpon>
+    </Content>
+    <Content Include="content\themes\kendo.metro.css">
+      <DependentUpon>kendo.metro.less</DependentUpon>
+    </Content>
+    <Content Include="content\themes\kendo.metroblack.css">
+      <DependentUpon>kendo.metroblack.less</DependentUpon>
+    </Content>
+    <Content Include="content\themes\kendo.moonlight.css">
+      <DependentUpon>kendo.moonlight.less</DependentUpon>
+    </Content>
+    <Content Include="content\themes\kendo.outlook.css">
+      <DependentUpon>kendo.outlook.less</DependentUpon>
+    </Content>
+    <Content Include="content\themes\kendo.silver.css">
+      <DependentUpon>kendo.silver.less</DependentUpon>
+    </Content>
+    <Content Include="content\themes\kendo.uniform.css">
+      <DependentUpon>kendo.uniform.less</DependentUpon>
+    </Content>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="content\modules\core\base.less" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\cancel.png" />
+    <Content Include="images\doc.png" />
+    <Content Include="images\documents.png" />
+    <Content Include="images\error-small.png" />
+    <Content Include="images\folder-search.gif" />
+    <Content Include="images\global-notifications.png" />
+    <Content Include="images\icon-search.png" />
+    <Content Include="images\local-notifications.png" />
+    <Content Include="images\offline.png" />
+    <Content Include="images\online.png" />
+    <Content Include="images\pdf.png" />
+    <Content Include="images\pin.png" />
+    <Content Include="images\recycle.png" />
+    <Content Include="images\save.png" />
+    <Content Include="images\save-close.png" />
+    <Content Include="images\sidebar-ribbon.png" />
+    <Content Include="images\fullscreen-ribbon.png" />
+    <Content Include="images\restartlayout-ribbon.png" />
+    <Content Include="images\success.png" />
+    <Content Include="images\unpin.png" />
+    <Content Include="images\user-account.png" />
+    <Content Include="images\users.png" />
+    <Content Include="images\viewbar-ribbon.png" />
+    <Content Include="images\theme-ribbon.png" />
+    <Content Include="images\warning.png" />
+    <Content Include="images\error-ribbon.png" />
+    <Content Include="images\login-ribbon.png" />
+    <Content Include="images\logo_small.png" />
+    <Content Include="images\message-ribbon.png" />
+    <Content Include="images\wiki.png" />
+    <Content Include="images\xls.png" />
+    <Content Include="ping.js" />
+    <Content Include="scripts\libs\breeze.debug.js" />
+    <Content Include="scripts\codeeffects\codeeffects.js">
+      <DependentUpon>codeeffects.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\codeeffects\codeeffects.min.js" />
+    <Content Include="scripts\libs\modernizr-2.7.1.js" />
+    <Content Include="scripts\libs\q.min.js" />
+    <Content Include="scripts\src\templates\app\-mobile\userSettings\UserSettings.html" />
+    <Content Include="scripts\src\templates\app\notification\RibbonNotificationPanel.html" />
+    <Content Include="scripts\src\templates\app\notification\styles.css">
+      <DependentUpon>styles.less</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\app\notification\Notification.html" />
+    <Content Include="scripts\src\templates\app\notification\SyncPendingChanges.html" />
+    <Content Include="scripts\src\templates\beta\NotificationPanelItem.html" />
+    <Content Include="scripts\src\templates\data\-mobile\styles.css">
+      <DependentUpon>styles.less</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\data\chooser\ChooserDialog.html" />
+    <Content Include="scripts\src\templates\data\mysearches\mySearchesStyles.css">
+      <DependentUpon>mySearchesStyles.less</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\data\notification\NotificationContent.html" />
+    <Content Include="scripts\src\templates\data\notification\styles.css">
+      <DependentUpon>styles.less</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\data\RequiredStar.html" />
+    <Content Include="scripts\src\templates\data\Wizzard.html" />
+    <Content Include="scripts\src\templates\data\mysearches\mySearchesStyles.less" />
+    <Content Include="scripts\src\templates\app\notification\styles.less" />
+    <Content Include="scripts\src\templates\data\notification\styles.less" />
+    <Content Include="scripts\src\templates\data\wizzardStyles.css">
+      <DependentUpon>wizzardStyles.less</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\data\wizzardStyles.less" />
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <TypeScriptCompile Include="scripts\codeeffects\_definitions.d.ts" />
+    <TypeScriptCompile Include="scripts\src\definitions\kendo.web.d.ts" />
+    <TypeScriptCompile Include="scripts\src\definitions\knockout.projections.d.ts" />
+    <TypeScriptCompile Include="scripts\src\metadata\definitions.d.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\smartadmin\js\bootstrap.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\chatbox\js\chatbox-module.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\chatbox\js\helpers.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\customers\js\customers-desktop.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\customers\js\customers-mobile.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\customers\js\helpers.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\orders\js\helpers.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\orders\js\orders-desktop.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\orders\js\orders-mobile.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\employees\js\employees-mobile.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\employees\js\employees.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\employees\js\helpers.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\formeditor\js\form-editor.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\formeditor\js\forms.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\formeditor\spec\breeze-testfn.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\formeditor\spec\form-editor-spec.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\supplier\js\supplier.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\task\js\task-helpers.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\task\js\tasks-mobile.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\task\js\tasks.ts" />
+    <TypeScriptCompile Include="scripts\src\spec\breeze-testfn.ts" />
+    <TypeScriptCompile Include="scripts\src\spec\data-spec.ts" />
+    <Content Include="scripts\libs\jquery-2.0.3.js" />
+    <TypeScriptCompile Include="scripts\src\spec\mother.ts" />
+    <Content Include="scripts\src\spec\breeze-testfn.js">
+      <DependentUpon>breeze-testfn.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="scripts\src\spec\data-desktop-spec.ts" />
+    <Content Include="scripts\src\spec\data-desktop-spec.js">
+      <DependentUpon>data-desktop-spec.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\spec\data-spec.js">
+      <DependentUpon>data-spec.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\spec\mother.js">
+      <DependentUpon>mother.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\app\InputBoxMessage.html" />
+    <Content Include="scripts\src\templates\app\userSettings\styles.css">
+      <DependentUpon>styles.less</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\app\userSettings\UserSettings.html" />
+    <Content Include="scripts\src\templates\app\userSettings\Notification.html" />
+    <Content Include="scripts\src\templates\app\widget\expandOptions.html" />
+    <Content Include="scripts\src\templates\data\-mobile\styles.less" />
+    <None Include="Properties\PublishProfiles\new.pubxml" />
+    <Content Include="scripts\src\templates\app\userSettings\styles.less" />
+    <Content Include="scripts\libs\jquery.signalR-2.0.0.js" />
+    <Content Include="scripts\kendo\kendo.all.js" />
+    <Content Include="scripts\kendo\kendo.mobile.js" />
+    <Content Include="scripts\src\definitions\signalr.d.ts" />
+    <TypeScriptCompile Include="scripts\src\app-mobile.ts" />
+    <Content Include="scripts\src\app-desktop.js">
+      <DependentUpon>app-desktop.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\app-mobile.js">
+      <DependentUpon>app-mobile.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\app.js">
+      <DependentUpon>app.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="scripts\src\modules\data-mobile.ts" />
+    <Content Include="scripts\src\modules\data-desktop.js">
+      <DependentUpon>data-desktop.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\modules\data-mobile.js">
+      <DependentUpon>data-mobile.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\modules\data.js">
+      <DependentUpon>data.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\app\DragWrap.html" />
+    <Content Include="scripts\src\templates\app\ribbon\Button.html" />
+    <Content Include="scripts\src\templates\app\ribbon\Select.html" />
+    <Content Include="scripts\src\templates\app\sidebar\Sidebar.html" />
+    <Content Include="scripts\src\templates\data\-mobile\ViewBar.html" />
+    <Content Include="scripts\src\templates\data\ColumnChooser.html" />
+    <Content Include="scripts\src\templates\data\myitems\SidebarMyItemsCollapsed.html" />
+    <Content Include="scripts\src\templates\data\mysearches\SidebarMySearches.html" />
+    <Content Include="scripts\src\templates\forms\BuilderFieldShortcuts.html" />
+    <Content Include="scripts\src\templates\forms\builder\TextFieldBuilderProperty.html" />
+    <Content Include="scripts\src\templates\forms\builder\FormItemProperty.html" />
+    <Content Include="scripts\src\templates\forms\builder\styles.css">
+      <DependentUpon>styles.less</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\forms\builder\styles.less" />
+    <TypeScriptCompile Include="scripts\src\spec\entry-point.ts" />
+    <Content Include="scripts\src\spec\app-spec.js">
+      <DependentUpon>app-spec.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\spec\entry-point.js">
+      <DependentUpon>entry-point.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\app\LoadingScreen.html" />
+    <Content Include="scripts\src\templates\data\DataItems.html" />
+    <Content Include="scripts\src\templates\data\JumpToMultipleResultsMessage.html" />
+    <Content Include="scripts\src\templates\forms\builder\TextFieldBuilder.html" />
+    <Content Include="scripts\src\templates\forms\builder\ItemAdder.html" />
+    <Content Include="scripts\src\templates\forms\builder\FieldBuilder.html" />
+    <Content Include="scripts\src\templates\forms\MetaContent.html" />
+    <Content Include="scripts\src\templates\forms\builder\Tab.html" />
+    <Content Include="scripts\src\templates\forms\display\TextField.html" />
+    <Content Include="scripts\src\templates\forms\display\FieldWrapper.html" />
+    <Content Include="Views\Template\EmployeeViewbar.cshtml" />
+    <Content Include="Views\Template\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
+    <TypeScriptCompile Include="scripts\codeeffects\codeeffects.ts" />
+    <Content Include="scripts\libs\jquery.fileDownload.js" />
+    <Content Include="scripts\kendo\kendo.web.js" />
+    <Content Include="scripts\libs\knockout-kendo.js" />
+    <Content Include="scripts\libs\knockout.validation.js" />
+    <Content Include="scripts\libs\q.js" />
+    <Content Include="scripts\libs\screenfull.js" />
+    <Content Include="scripts\src\definitions\breeze.d.ts" />
+    <TypeScriptCompile Include="scripts\src\definitions\webrule.d.ts" />
+    <Content Include="scripts\src\definitions\knockout.mapping.d.ts" />
+    <Content Include="scripts\libs\knockout.mapping.js" />
+    <Content Include="content\modules\core\site.less" />
+    <TypeScriptCompile Include="scripts\src\modules\data-desktop.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\data.ts" />
+    <Content Include="scripts\src\definitions\knockout.validation.d.ts" />
+    <Content Include="scripts\src\templates\app\styles.css">
+      <DependentUpon>styles.less</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\data\ValidationMessage.html" />
+    <Content Include="scripts\src\templates\data\codeeffects.css" />
+    <Content Include="scripts\src\templates\data\TrackSummary.html" />
+    <Content Include="scripts\src\templates\data\myitems\myItemsStyles.css">
+      <DependentUpon>myItemsStyles.less</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\data\styles.css">
+      <DependentUpon>styles.less</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\data\styles.less" />
+    <Content Include="scripts\src\templates\app\styles.less" />
+    <Content Include="scripts\src\templates\mixins.css">
+      <DependentUpon>mixins.less</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\mixins.less" />
+    <Content Include="scripts\src\templates\data\myitems\myItemsStyles.less" />
+    <Content Include="content\themes\kendo.default.less" />
+    <Content Include="content\themes\kendo.black.less" />
+    <Content Include="content\themes\kendo.blueopal.less" />
+    <Content Include="content\themes\kendo.bootstrap.less" />
+    <Content Include="content\themes\kendo.highcontrast.less" />
+    <Content Include="content\themes\kendo.metroblack.less" />
+    <Content Include="content\themes\kendo.metro.less" />
+    <Content Include="content\themes\kendo.outlook.less" />
+    <Content Include="content\themes\kendo.moonlight.less" />
+    <Content Include="content\themes\kendo.uniform.less" />
+    <Content Include="content\themes\kendo.silver.less" />
+    <Content Include="content\themes\_after-theme.less" />
+    <TypeScriptCompile Include="scripts\src\app.ts" />
+    <Content Include="scripts\src\definitions\Q.d.ts" />
+    <Content Include="scripts\src\templates\app\QuestionMessage.html" />
+    <Content Include="scripts\src\templates\beta\BetaMain.html" />
+    <Content Include="scripts\src\templates\data\PopupLayout.html" />
+    <Content Include="scripts\src\templates\data\ViewBar.html" />
+    <Content Include="scripts\src\templates\app\-mobile\ViewLayout.html" />
+    <Content Include="scripts\src\templates\app\LoginForm.html" />
+    <Content Include="scripts\src\templates\data\myitems\SidebarMyItems.html" />
+    <Content Include="scripts\src\_build\build.json" />
+    <Content Include="scripts\src\_build\jigsaw.js" />
+    <Content Include="Views\Home\IndexMin.cshtml" />
+    <TypeScriptCompile Include="scripts\src\definitions\_definitions.d.ts" />
+    <Content Include="scripts\src\templates\app\ViewLayout.html" />
+    <Content Include="scripts\src\templates\app\SideLayout.html" />
+    <Content Include="scripts\src\spec\lib\jasmine.d.ts" />
+    <Content Include="scripts\src\definitions\underscore.d.ts" />
+    <Content Include="scripts\src\modules\betaModule.js">
+      <DependentUpon>betaModule.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="scripts\src\modules\betaModule.ts" />
+    <TypeScriptCompile Include="scripts\src\spec\app-spec.ts" />
+    <Content Include="scripts\src\spec\lib\jasmine-html.js" />
+    <Content Include="scripts\src\spec\lib\jasmine.css" />
+    <Content Include="scripts\src\spec\lib\jasmine.js" />
+    <Content Include="scripts\src\spec\lib\JasmineAdapter.js" />
+    <Content Include="scripts\text.js" />
+    <Content Include="scripts\src\templates\test\TestMain.html" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <TypeScriptCompile Include="scripts\src\entry_point.ts" />
+    <Content Include="scripts\src\entry_point.js">
+      <DependentUpon>entry_point.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\modules\testModule.js">
+      <DependentUpon>testModule.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\src\templates\app\CoreMain.html" />
+    <Content Include="scripts\r.js" />
+    <Content Include="scripts\libs\require.js" />
+    <Content Include="scripts\src\definitions\jquery.d.ts" />
+    <Content Include="scripts\src\definitions\knockout.d.ts" />
+    <Content Include="scripts\src\definitions\require.d.ts" />
+    <TypeScriptCompile Include="scripts\src\app-desktop.ts" />
+    <TypeScriptCompile Include="scripts\src\modules\testModule.ts" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <TypeScriptCompile Include="scripts\src\templates\definitions.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jigsaw.Data.Northwind\Jigsaw.Data.Northwind.csproj">
+      <Project>{489B0FD7-7794-4F05-BFDF-1DD122298897}</Project>
+      <Name>Jigsaw.Data.Northwind</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jigsaw.Data.Task\Jigsaw.Data.Task.csproj">
+      <Project>{81B7DFF3-B192-4244-8DA8-96C269F79331}</Project>
+      <Name>Jigsaw.Data.Task</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jigsaw.Server\Jigsaw.Server.csproj">
+      <Project>{99704abd-59f7-4e47-bea9-9a92b68cab6c}</Project>
+      <Name>Jigsaw.Server</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="scripts\smartadmin\plugin\ckeditor\" />
+    <Folder Include="scripts\smartadmin\plugin\ie-placeholder\" />
+    <Folder Include="scripts\smartadmin\plugin\pace\" />
+    <Folder Include="scripts\smartadmin\plugin\throttle-denounce\" />
+    <Folder Include="scripts\smartadmin\plugin\vectormap\" />
+    <Folder Include="scripts\src\modules\data\" />
+    <Folder Include="scripts\src\templates\app\-mobile\notification\" />
+    <Folder Include="Views\Smartadmin\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1775</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2816/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:2816/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+</Project>

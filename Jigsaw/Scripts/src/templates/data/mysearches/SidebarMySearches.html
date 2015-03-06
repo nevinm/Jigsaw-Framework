@@ -1,0 +1,35 @@
+﻿
+<li>
+    <a href="javascript:void(0)">
+        <i class="fa fa-lg fa-fw fa-search"></i>
+        <span class="menu-item-parent" data-bind="keyTips: { key : 'SS' }">My Searches</span>
+        <span data-bind="text: storage.items().length" class="badge bg-color-greenLight pull-right"></span>
+    </a>
+
+    <ul data-bind="with: storage" style="display: none;">
+        <li>
+            <div class="remove-dropable" data-bind="jQueryUIDropTarget: { group: 'mysearches-remove', drop: remove }">
+                Drag item here, to remove from custom list below
+            </div>
+        </li>
+
+        <!-- ko foreach: items -->
+        <li class="saved-search">
+            <a>
+                <span class="search-name" data-bind="jQueryUIDraggable: { group: 'mysearches-remove', wrap: true, data: $data }">
+                    <span class="search-group" data-bind="text: '[' + group + ']'"></span>
+                    <span data-bind="text: name"></span>
+                </span>
+
+                <span class="btn btn-default btn-xs" data-bind="qclick: function () { return $parent.load($data) }">
+                    <i class="fa fa-paper-plane-o "></i>
+                </span>
+                <span class="btn btn-primary btn-xs" data-bind="qclick: function () { return $parent.loadAndExecute($data) }">
+                    <i class="fa fa-paper-plane "></i>
+                </span>
+            </a>
+        </li>
+        <!-- /ko -->
+    </ul>
+
+</li>

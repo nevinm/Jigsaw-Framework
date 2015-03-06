@@ -1,0 +1,11 @@
+﻿
+<div class="notification-list k-block" data-bind="foreach: notifications">
+    <div class="notification">
+        <img class="small" data-bind="attr: {src: Level === 'Success'? 'images/success.png': Level === 'Error'? 'images/error-small.png': 'images/warning.png' }" />
+        <span data-bind="notificationTemplate: $data"></span>
+         by <span class="user-name" data-bind="text: '@' + (Author || 'anonymous')"></span>
+        <span class="date" data-bind="text: TimeStamp.toLocaleTimeString()"></span>
+    </div>
+</div>
+
+
