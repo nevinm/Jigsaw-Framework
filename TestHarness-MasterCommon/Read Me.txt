@@ -1,8 +1,0 @@
-Project Name	:	TestHarness-MasterCommon
-Description		:	This project is a TestHarness developed for the Master Common Jigsay UI layer. Basically it does the following
-					1.	BaseLine CSS and Core Libraries expected to be loaded by all modules (JQuery etc.). Just the absolute core libraries
-					2.	Load Resources 
-					3.	Global Error Catch
-					4.	Set/Read Global Application Variables (e.g. Current Environment (Test/Live))
-
-					

@@ -1,6 +1,0 @@
-﻿Project Name	:	TestHarness-MasterPageRuntime
-Description		:	This project is a TestHarness developed for the following:
-					1. The Sound files are imported and played on selection.
-					2. The Glimpse feature is added.
-					3. Show History and Invokes URL mapping. [To be done].
-					4. Raising an event, ouputs to console and alerts if neccessary. [To be done].
